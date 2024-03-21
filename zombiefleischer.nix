@@ -30,4 +30,4 @@ in
 			shell = pkgs.zsh;
 		};
 	};	
-};
+}
