@@ -156,6 +156,7 @@
     helix
     junction
     lazygit
+    libnotify
     neofetch
     neovim
     partition-manager
