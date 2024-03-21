@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -23,11 +24,11 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "192.168.178.34" ];
+  networking.nameservers = ["192.168.178.34"];
 
   # Set up ports
   # barrier
-  networking.firewall.allowedTCPPorts = [ 24800 ];
+  networking.firewall.allowedTCPPorts = [24800];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -51,7 +52,7 @@
   services.xserver.enable = true;
 
   # Set graphics drivers
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
@@ -65,6 +66,16 @@
 
   # Configure console keymap
   console.keyMap = "us-acentos";
+
+  fileSystems."/home/zombiefleischer/Zombiecloud" = {
+    device = "/dev/disk/by-uuid/46187b7b-75c5-48bb-aa0d-6b0e94f9f2fa";
+    fsType = "ext4";
+    options = [
+      "users"
+      "nofail"
+      "x-gvfs-show"
+    ];
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -87,7 +98,7 @@
   };
 
   # Enable goxlr-utility
-  services.udev.packages = [ pkgs.goxlr-utility ];
+  services.udev.packages = [pkgs.goxlr-utility];
   xdg.autostart.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -97,7 +108,7 @@
   users.users.zombiefleischer = {
     isNormalUser = true;
     description = "Zombiefleischer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
       kate
@@ -117,31 +128,43 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (makeAutostartItem
+    (
+      makeAutostartItem
       {
         name = "goxlr-utility";
-	package = goxlr-utility;
+        package = goxlr-utility;
       }
     )
     alejandra
-    (makeAutostartItem
+    (
+      makeAutostartItem
       {
         name = "barrier";
-	package = barrier;
+        package = barrier;
       }
     )
     bat
+    btop
+    catppuccin
+    catppuccin-kvantum
+    catppuccin-papirus-folders
     doas
     eza
     fzf
     git
+    gparted
+    helix
     junction
     lazygit
     neofetch
     neovim
+    partition-manager
     tldr
+    unzip
+    usbtop
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    zoxide
     zsh
   ];
 
@@ -153,7 +176,7 @@
     hackgen-nf-font
   ];
   fonts.fontDir.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = [ "HackGen35 Console NF" ];
+  fonts.fontconfig.defaultFonts.monospace = ["HackGen35 Console NF"];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -166,11 +189,13 @@
 
   # Enable doas as an alternative to sudo
   security.doas.enable = true;
-  security.doas.extraRules = [{
-    users = ["zombiefleischer"];
-    keepEnv = true;
-    noPass = true;
-  }];
+  security.doas.extraRules = [
+    {
+      users = ["zombiefleischer"];
+      keepEnv = true;
+      noPass = true;
+    }
+  ];
 
   # List services that you want to enable:
 
@@ -195,5 +220,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
