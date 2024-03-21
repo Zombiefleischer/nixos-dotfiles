@@ -28,6 +28,6 @@ in
 			description = "${cfg.userDescription}";
 			extraGroups = ["networkmanager" "wheel"];
 			shell = pkgs.zsh;
-		}
-	}	
-}
+		};
+	};	
+};
