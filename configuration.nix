@@ -115,6 +115,7 @@
       nextcloud-client
       oh-my-zsh
       plasma-browser-integration
+      protonmail-bridge
       signal-desktop
       telegram-desktop
       thunderbird
