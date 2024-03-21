@@ -112,6 +112,7 @@
     packages = with pkgs; [
       firefox
       kate
+      nextcloud-client
       oh-my-zsh
       plasma-browser-integration
       signal-desktop
