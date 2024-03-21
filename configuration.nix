@@ -110,6 +110,8 @@
     description = "Zombiefleischer";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
+      bitwarden
+      bitwarden-cli
       firefox
       kate
       nextcloud-client
