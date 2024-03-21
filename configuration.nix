@@ -4,12 +4,15 @@
 {
   config,
   pkgs,
+  lib,
+  inputs,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./zombiefleischer.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   # Define Main User
@@ -33,6 +36,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.nameservers = ["192.168.178.34"];
+
+  # Enable Bluetooth
+  hardware.bluetooth.enable = true;
 
   # Set up ports
   # barrier
@@ -134,6 +140,14 @@
     ];
   };
 
+  home-manager = {
+    # also pass inputs to home-manager modules
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "zombiefleischer" = import ./home.nix;
+    };
+  };
+
   # Activate protonmail bridge
   systemd.user.services.protonmail-bridge = {
     description = "Protonmail Bridge";
@@ -169,6 +183,7 @@
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
+    delta
     doas
     eza
     fzf
