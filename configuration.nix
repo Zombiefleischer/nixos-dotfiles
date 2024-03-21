@@ -16,7 +16,7 @@
   main-user.enable = true;
   main-user.userName = "zombiefleischer";
   main-user.userDescription = "Zombiefleischer";
-  
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -67,9 +67,9 @@
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "intl";
+    variant = "intl";
   };
 
   # Configure console keymap
