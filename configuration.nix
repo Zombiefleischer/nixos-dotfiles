@@ -9,8 +9,14 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./zombiefleischer.nix
   ];
 
+  # Define Main User
+  main-user.enable = true;
+  main-user.userName = "zombiefleischer";
+  main-user.userDescription = "Zombiefleischer";
+  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -108,9 +114,9 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zombiefleischer = {
-    isNormalUser = true;
-    description = "Zombiefleischer";
-    extraGroups = ["networkmanager" "wheel"];
+    # isNormalUser = true;
+    # description = "Zombiefleischer";
+    # extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       bitwarden
       bitwarden-cli
