@@ -190,10 +190,12 @@
     fzf
     git
     gparted
+    gnupg1
     helix
     junction
     lazygit
     libnotify
+    lm_sensors
     neofetch
     neovim
     partition-manager
