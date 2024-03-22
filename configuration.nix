@@ -129,6 +129,7 @@
       firefox
       kate
       nextcloud-client
+      obsidian
       oh-my-zsh
       plasma-browser-integration
       protonmail-bridge
