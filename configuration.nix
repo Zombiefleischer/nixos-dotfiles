@@ -199,6 +199,7 @@
     neofetch
     neovim
     partition-manager
+    pinentry
     tldr
     unzip
     usbtop
