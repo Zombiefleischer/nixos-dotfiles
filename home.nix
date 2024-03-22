@@ -69,7 +69,7 @@
   #  /etc/profiles/per-user/zombiefleischer/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "hx";
   };
 
   # Let Home Manager install and manage itself.
