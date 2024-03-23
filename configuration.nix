@@ -130,6 +130,7 @@
       telegram-desktop
       thunderbird
       tidal-hifi
+      vesktop
       vivaldi
     ];
   };
