@@ -193,6 +193,7 @@
     lazydocker
     lazygit
     libnotify
+    libunity
     lm_sensors
     neofetch
     neovim
