@@ -189,6 +189,7 @@
     gnupg1
     helix
     junction
+    lazydocker
     lazygit
     libnotify
     lm_sensors
