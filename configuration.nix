@@ -12,7 +12,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./zombiefleischer.nix
-    inputs.home-manager.nixosModules.default
   ];
 
   # Define Main User
