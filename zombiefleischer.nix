@@ -28,7 +28,7 @@ in {
     users.users.${cfg.userName} = {
       isNormalUser = true;
       description = "${cfg.userDescription}";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "docker"];
       shell = pkgs.zsh;
     };
   };

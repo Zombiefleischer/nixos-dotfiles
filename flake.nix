@@ -4,8 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    foundryvtt.url = "github:reckenrode/nix-foundryvtt";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +23,6 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
-        inputs.foundryvtt.nixosModules.foundryvtt
       ];
     };
   };
