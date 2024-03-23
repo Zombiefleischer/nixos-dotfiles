@@ -34,8 +34,8 @@
   hardware.bluetooth.enable = true;
 
   # Set up ports
-  # barrier
-  networking.firewall.allowedTCPPorts = [24800];
+  # barrier foundryvtt
+  networking.firewall.allowedTCPPorts = [24800 30000];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
