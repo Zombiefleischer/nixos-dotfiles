@@ -11,9 +11,6 @@
       version = "11.0.0+315";
     };
   };
-  service.caddy = {
-    enable = true;
-  };
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [80 443];
