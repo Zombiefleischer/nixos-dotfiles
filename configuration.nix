@@ -35,7 +35,7 @@
 
   # Set up ports
   # barrier foundryvtt
-  networking.firewall.allowedTCPPorts = [24800 30000];
+  networking.firewall.allowedTCPPorts = [24800 30000 30001];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
