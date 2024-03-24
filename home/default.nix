@@ -18,6 +18,7 @@ in {
 
   # *.nix file can be omitted if the name is default.nix
   imports = [
+    # ./droidcam
     ./helix
     ./lsps
   ];

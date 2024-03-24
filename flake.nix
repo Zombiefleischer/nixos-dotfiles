@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    catppuccin.url = "github:Stonks3141/ctp-nix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +24,7 @@
 
   outputs = {
     self,
+    catppuccin,
     nixpkgs,
     envfs,
     home-manager,
@@ -34,6 +37,7 @@
       modules = [
         ./configuration.nix
         envfs.nixosModules.envfs
+        catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
           home-manager = {
