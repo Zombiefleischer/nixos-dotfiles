@@ -185,6 +185,7 @@
     neovim
     partition-manager
     pinentry
+    qpwgraph
     tldr
     unzip
     usbtop
