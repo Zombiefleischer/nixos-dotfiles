@@ -2,10 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  config,
   pkgs,
-  lib,
-  inputs,
   ...
 }: {
   imports = [
@@ -135,14 +132,6 @@
     ];
   };
 
-  home-manager = {
-    # also pass inputs to home-manager modules
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "zombiefleischer" = import ./home.nix;
-    };
-  };
-
   # Activate protonmail bridge
   systemd.user.services.protonmail-bridge = {
     description = "Protonmail Bridge";
@@ -188,7 +177,6 @@
     git
     gparted
     gnupg1
-    helix
     junction
     lazydocker
     lazygit
