@@ -175,6 +175,7 @@
     gparted
     gnupg1
     junction
+    kdialog
     lazydocker
     lazygit
     libnotify
