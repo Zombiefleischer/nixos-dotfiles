@@ -1,12 +1,14 @@
-{ inputs, system, ... }:
-let
+{
+  inputs,
+  system,
+  ...
+}: let
   overlays = [
     (final: prev: {
       helix = inputs.helix-master.packages.${system}.default;
     })
   ];
-in
-{
+in {
   home.stateVersion = "24.05";
 
   nixpkgs = {

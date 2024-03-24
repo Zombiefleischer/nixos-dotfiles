@@ -26,12 +26,11 @@
     envfs,
     home-manager,
     ...
-  } @ inputs:
-  let
+  } @ inputs: let
     system = "x86_64-linux";
   in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs system; };
+    nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs system;};
       modules = [
         ./configuration.nix
         envfs.nixosModules.envfs
@@ -40,9 +39,9 @@
           home-manager = {
             # useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = { inherit inputs system; };
+            extraSpecialArgs = {inherit inputs system;};
             users."zombiefleischer" = {
-              imports = [ ./home ];
+              imports = [./home];
             };
           };
         }
