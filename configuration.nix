@@ -179,11 +179,13 @@
     lazydocker
     lazygit
     libnotify
+    libsForQt5.kdelibs4support
     libunity
     lm_sensors
     neofetch
     neovim
     partition-manager
+    pavucontrol
     pinentry
     qpwgraph
     tldr
