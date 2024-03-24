@@ -13,23 +13,39 @@
       url = "github:Mic92/envfs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helix-master = {
+      url = "github:SoraTenshi/helix/new-daily-driver";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     envfs,
+    home-manager,
     ...
-  } @ inputs: let
+  } @ inputs:
+  let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = { inherit inputs system; };
       modules = [
         ./configuration.nix
-        inputs.home-manager.nixosModules.default
         envfs.nixosModules.envfs
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            # useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = { inherit inputs system; };
+            users."zombiefleischer" = {
+              imports = [ ./home ];
+            };
+          };
+        }
       ];
     };
   };
