@@ -6,17 +6,17 @@
   ...
 }:
 stdenv.mkDerivation rec {
-  name = "v4l2loopback-dc-${version}-${kernel.version}";
+  name = "v4l2loopback-dc";
   version = "2.1.2";
 
   src = fetchFromGitHub {
     owner = "dev47apps";
     repo = "droidcam";
     rev = "v${version}";
-    sha256 = "d650513327d69f0a359120e66aa7e9b462a9b341c2176df296fb560b45bff43f";
+    sha256 = "NZ6sKLE/Sq4VBJSf7iG0CgdVwmU8JXQH/utbobBEFi0=";
   };
 
-  sourceRoot = "source/linux/v4l2loopback";
+  sourceRoot = "source/v4l2loopback";
   hardeningDisable = ["pic" "format"];
   nativeBuildInputs = kernel.moduleBuildDependencies;
 
