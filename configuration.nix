@@ -210,6 +210,7 @@
   # Install fonts
   fonts.packages = with pkgs; [
     hackgen-nf-font
+    (nerdfonts.override {fonts = ["Hack"];})
   ];
   fonts.fontDir.enable = true;
   fonts.fontconfig.defaultFonts.monospace = ["HackGen35 Console NF"];
