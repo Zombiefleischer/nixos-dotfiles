@@ -8,5 +8,6 @@ in {
   boot.kernelModules = [v4l2loopback-dc];
   home.packages = [
     pkgs.droidcam
+    pkgs.android-tools
   ];
 }
