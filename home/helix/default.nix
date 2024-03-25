@@ -13,7 +13,7 @@ _: {
         rainbow-brackets = true;
         bufferline = "always";
         rulers = [80 120 160];
-        popup-borders = "all";
+        popup-border = "all";
         soft-wrap = {
           enable = true;
         };

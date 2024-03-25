@@ -193,9 +193,13 @@
     usbtop
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    xdg-desktop-portal-kde
     zoxide
     zsh
   ];
+
+  # Enable Firefox Plasma Browser Integration
+  nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
 
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
