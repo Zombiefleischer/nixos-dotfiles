@@ -199,7 +199,9 @@
   ];
 
   # Enable Firefox Plasma Browser Integration
-  nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
+  programs.firefox.nativeMessagingHosts.packages = with pkgs; [
+    plasma-browser-integration
+  ];
 
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
