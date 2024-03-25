@@ -187,6 +187,7 @@
     partition-manager
     pavucontrol
     pinentry
+    playerctl
     qpwgraph
     tldr
     unzip
