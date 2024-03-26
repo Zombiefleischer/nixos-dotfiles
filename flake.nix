@@ -1,23 +1,25 @@
 {
-  description = "Nixos config flake";
+  description = "Zombiefleischers personal NixOS config flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     catppuccin.url = "github:Stonks3141/ctp-nix";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     envfs = {
       url = "github:Mic92/envfs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.1.0";
+
     helix-master = {
       url = "github:SoraTenshi/helix/new-daily-driver";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -25,9 +27,10 @@
   outputs = {
     self,
     catppuccin,
-    nixpkgs,
     envfs,
     home-manager,
+    nix-flatpak,
+    nixpkgs,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -36,9 +39,10 @@
       specialArgs = {inherit inputs system;};
       modules = [
         ./configuration.nix
-        envfs.nixosModules.envfs
         catppuccin.nixosModules.catppuccin
+        envfs.nixosModules.envfs
         home-manager.nixosModules.home-manager
+        nix-flatpak.nixosModules.nix-flatpak
         {
           home-manager = {
             # useGlobalPkgs = true;
