@@ -248,6 +248,9 @@
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;
 
+  # Enable Flatpaks
+  services.flatpak.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
