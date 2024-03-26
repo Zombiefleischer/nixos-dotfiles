@@ -9,5 +9,8 @@
 
     # Typescript & Javascript
     pkgs.nodePackages.typescript-language-server
+
+    # TMate
+    pkgs.tmate
   ];
 }

@@ -4,5 +4,9 @@
     pkgs.android-tools
   ];
 
-  home.file.".config/droidcam".source = ./droidcam;
+  xdg.configFile = {
+    "droidcam" = {
+      source = ./droidcam;
+    };
+  };
 }

@@ -213,11 +213,13 @@
 
   # Install fonts
   fonts.packages = with pkgs; [
-    hackgen-nf-font
     (nerdfonts.override {fonts = ["Hack"];})
+    noto-fonts
+    noto-fonts-emoji
+    noto-fonts-cjk
   ];
   fonts.fontDir.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = ["HackGen35 Console NF"];
+  fonts.fontconfig.defaultFonts.monospace = ["Hack Nerd Font"];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -247,9 +249,6 @@
 
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;
-
-  # Enable Flatpaks
-  services.flatpak.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
