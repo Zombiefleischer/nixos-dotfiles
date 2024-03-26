@@ -39,6 +39,7 @@ _: {
           render = "all";
           characters = {
             # space = "·";
+            space = " ";
             nbsp = "⍽";
             tab = "→";
             newline = "⤶";
