@@ -20,6 +20,11 @@ stdenv.mkDerivation rec {
   hardeningDisable = ["pic" "format"];
   nativeBuildInputs = kernel.moduleBuildDependencies;
 
+  preBuild = ''
+    substituteInPlace Makefile \
+    --replace "width=320 height=240" "width=1920 height=1080"
+  '';
+
   makeFlags = [
     "KERNELRELEASE=${kernel.modDirVersion}"
     "KERNEL_DIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build"
