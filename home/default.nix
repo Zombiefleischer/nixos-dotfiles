@@ -14,7 +14,11 @@ in {
   nixpkgs = {
     overlays = overlays;
     config.allowUnfree = true;
+    config.allowUnfreePredicate = _: true;
   };
+
+  # TODO: configure git in another module
+  programs.git.enable = true;
 
   # *.nix file can be omitted if the name is default.nix
   imports = [
