@@ -182,6 +182,7 @@
     libsForQt5.kdelibs4support
     libunity
     lm_sensors
+    lsof
     neofetch
     neovim
     partition-manager
