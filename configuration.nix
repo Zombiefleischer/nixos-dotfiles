@@ -211,6 +211,13 @@
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
 
+  # Stuff for flatpak
+  services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-kde];
+  };
+
   # Install fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack"];})
