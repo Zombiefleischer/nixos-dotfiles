@@ -43,6 +43,7 @@
         ./home/flatpak
         ./modules/bindfs
         ./modules/steam
+        ./modules/variables
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
