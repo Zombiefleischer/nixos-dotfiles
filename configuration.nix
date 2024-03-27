@@ -155,6 +155,7 @@
       }
     )
     alejandra
+    appimage-run
     (
       makeAutostartItem
       {
