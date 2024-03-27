@@ -172,8 +172,9 @@
     eza
     fzf
     git
-    gparted
+    gnome-builder
     gnupg1
+    gparted
     junction
     kdialog
     lazydocker
