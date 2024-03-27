@@ -44,6 +44,7 @@ _: {
       "org.ryujinx.Ryujinx"
       "io.github.nokse22.asciidraw"
       "com.github.k4zmu2a.spacecadetpinball"
+      "nl.v0yd.Capsule"
     ];
   };
 }

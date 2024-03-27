@@ -172,7 +172,6 @@
     eza
     fzf
     git
-    gnome-builder
     gnupg1
     gparted
     junction
