@@ -1,8 +1,9 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     pkgs.mangohud
     pkgs.gamescope
   ];
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;

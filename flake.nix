@@ -42,6 +42,7 @@
         ./configuration_wl.nix # Wayland
         ./home/flatpak
         ./modules/bindfs
+        ./modules/steam
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
