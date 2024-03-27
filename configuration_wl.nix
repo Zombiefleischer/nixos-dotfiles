@@ -116,6 +116,7 @@
       bitwarden
       bitwarden-cli
       firefox
+      floorp
       kate
       nextcloud-client
       obsidian
