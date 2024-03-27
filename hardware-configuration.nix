@@ -10,6 +10,7 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./modules/droidcam
+    ./modules/obs
   ];
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];

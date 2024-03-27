@@ -14,6 +14,10 @@ _: {
         appId = "io.github.diegopvlk.Dosage";
         origin = "flathub";
       }
+      {
+        appId = "com.github.tchx84.Flatseal";
+        origin = "flathub";
+      }
     ];
   };
 }

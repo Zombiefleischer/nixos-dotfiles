@@ -7,7 +7,7 @@
 }:
 stdenv.mkDerivation rec {
   name = "v4l2loopback-dc";
-  version = "2.1.2";
+  version = "2.1.3";
 
   src = fetchFromGitHub {
     owner = "dev47apps";
