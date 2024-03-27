@@ -23,6 +23,7 @@ in {
   # *.nix file can be omitted if the name is default.nix
   imports = [
     ./droidcam
+    ./firefox
     ./helix
     ./lsps
     ./minecraft
