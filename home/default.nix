@@ -25,6 +25,7 @@ in {
     ./droidcam
     ./helix
     ./lsps
+    ./minecraft
     ./obs
   ];
 }
