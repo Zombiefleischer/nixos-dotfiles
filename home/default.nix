@@ -28,5 +28,6 @@ in {
     ./lsps
     ./minecraft
     ./obs
+    ./tools
   ];
 }
