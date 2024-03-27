@@ -178,6 +178,10 @@
     git
     gnupg1
     gparted
+    # (makeAutostartItem {
+    # name = "input-leap";
+    # package = "input-leap";
+    # })
     junction
     kdialog
     lazydocker
