@@ -38,7 +38,8 @@
     nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs system;};
       modules = [
-        ./configuration.nix
+        # ./configuration.nix # X11
+        ./configuration_wl.nix # Wayland
         ./home/flatpak
         ./modules/bindfs
         catppuccin.nixosModules.catppuccin
