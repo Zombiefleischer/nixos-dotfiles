@@ -28,6 +28,10 @@ _: {
             "/home/zombiefleischer/.local/share/fonts:ro"
             "/home/zombiefleischer/.icons:ro"
             "/home/zombiefleischer/.themes:ro"
+            "/run/current-system/sw/share/X11/fonts:ro"
+          ];
+          devices = [
+            "dri"
           ];
         };
       };

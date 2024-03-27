@@ -40,6 +40,7 @@
       modules = [
         ./configuration.nix
         ./home/flatpak
+        ./modules/bindfs
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak

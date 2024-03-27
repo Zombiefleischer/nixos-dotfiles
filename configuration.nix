@@ -219,14 +219,16 @@
   };
 
   # Install fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack"];})
-    noto-fonts
-    noto-fonts-emoji
-    noto-fonts-cjk
-  ];
-  fonts.fontDir.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = ["Hack Nerd Font"];
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override {fonts = ["Hack"];})
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk
+    ];
+    fontDir.enable = true;
+    fontconfig.defaultFonts.monospace = ["Hack Nerd Font"];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
