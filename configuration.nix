@@ -255,7 +255,13 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.settings.PermitRootLogin = "no";
-  programs.ssh.startAgent = true;
+  programs.ssh = {
+    startAgent = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+      IdentityFile ~/.ssh/zombiehacker.ed25519
+    '';
+  };
 
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;
