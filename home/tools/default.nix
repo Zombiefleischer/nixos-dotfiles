@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   home.packages = [
-    pkgs.ranger
     pkgs.gamemode
+    pkgs.krita
+    pkgs.ranger
+    pkgs.wacomtablet
   ];
 }
