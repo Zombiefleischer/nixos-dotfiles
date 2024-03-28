@@ -158,6 +158,7 @@
     # name = "input-leap";
     # package = "input-leap";
     # })
+    imagemagick
     junction
     kdialog
     lazydocker
