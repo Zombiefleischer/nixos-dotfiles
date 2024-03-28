@@ -44,6 +44,7 @@
         ./modules/bindfs
         ./modules/firefox-addons
         ./modules/steam
+        ./modules/time_i18n
         ./modules/variables
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
