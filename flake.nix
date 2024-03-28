@@ -42,6 +42,7 @@
         ./configuration_wl.nix # Wayland
         ./home/flatpak
         ./modules/bindfs
+        ./modules/firefox-addons
         ./modules/steam
         ./modules/variables
         catppuccin.nixosModules.catppuccin

@@ -31,24 +31,6 @@
   # barrier foundryvtt
   networking.firewall.allowedTCPPorts = [24800 30000 30001];
 
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "de_DE.UTF-8";
-    LC_MEASUREMENT = "de_DE.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -60,12 +42,6 @@
   services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.defaultSession = "plasmax11";
   programs.xwayland.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "intl";
-  };
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -189,10 +165,12 @@
     libnotify
     libsForQt5.kdelibs4support
     libunity
+    libva
     lm_sensors
     lsof
     neofetch
     neovim
+    nvidia-vaapi-driver
     partition-manager
     pavucontrol
     pinentry
@@ -201,29 +179,29 @@
     tldr
     unzip
     usbtop
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
+    wayland
+    wayland-utils
     wget
+    wl-clipboard
     xclip
     xdg-desktop-portal-kde
     xsel
+    xwayland
     yank
     zoxide
     zsh
   ];
 
-  # Enable Firefox Plasma Browser Integration
-  programs.firefox.nativeMessagingHosts.packages = with pkgs; [
-    plasma-browser-integration
-  ];
-
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
 
-  # Stuff for flatpak
+  # Stuff for flatpak and wayland
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [pkgs.xdg-desktop-portal-kde];
+    # wlr.enable = true;
   };
 
   # Install fonts
@@ -257,7 +235,7 @@
     }
   ];
 
-  # List services that you want to enable:
+  ## List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
