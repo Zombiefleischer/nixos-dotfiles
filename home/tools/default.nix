@@ -4,15 +4,22 @@
     bitwarden-cli
     floorp
     gamemode
+    gh
     kate
     krita
+    lutris
     nextcloud-client
     obsidian
     oh-my-zsh
     plasma-browser-integration
     protonmail-bridge
+    protonup-qt
     ranger
-    signal-desktop
+    (makeAutostartItem {
+      name = "signal-desktop";
+      package = signal-desktop;
+    })
+    steamtinkerlaunch
     telegram-desktop
     thunderbird
     tidal-hifi
