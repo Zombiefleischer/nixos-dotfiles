@@ -88,24 +88,6 @@
     isNormalUser = true;
     description = "Zombiefleischer";
     extraGroups = ["networkmanager" "wheel" "docker"];
-    packages = with pkgs; [
-      bitwarden
-      bitwarden-cli
-      firefox
-      floorp
-      kate
-      nextcloud-client
-      obsidian
-      oh-my-zsh
-      plasma-browser-integration
-      protonmail-bridge
-      signal-desktop
-      telegram-desktop
-      thunderbird
-      tidal-hifi
-      vesktop
-      vivaldi
-    ];
   };
 
   # Activate protonmail bridge

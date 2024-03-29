@@ -67,7 +67,13 @@ in {
   system.activationScripts = {
     wallpaper-engine-kde-plugin.text = ''
       wallpaperenginetarget=share/plasma/wallpapers/com.github.casout.wallpaperEngineKde
-      ln -s ${wallpaper-engine-kde-plugin}/$wallpaperenginetarget /home/zombiefleischer/.local/$wallpaperenginetarget
+      targetPath=/home/zombiefleischer/.local/$wallpaperenginetarget
+      # Check if the target path already exists
+      if [ ! -e "$targetPath" ]; then
+        ln -s ${wallpaper-engine-kde-plugin}/$wallpaperenginetarget /home/zombiefleischer/.local/$wallpaperenginetarget
+      else
+        echo "Target path $targetPath already exists. Skipping link creation."
+      fi
     '';
   };
 }
