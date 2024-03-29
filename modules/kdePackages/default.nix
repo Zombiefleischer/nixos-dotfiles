@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs.kdePackages; [
+    kde-gtk-config
     kwallet
     kwallet-pam
     kwalletmanager
