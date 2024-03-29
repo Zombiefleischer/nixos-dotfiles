@@ -160,6 +160,7 @@
     # })
     imagemagick
     junction
+    jq
     kdialog
     lazydocker
     lazygit
