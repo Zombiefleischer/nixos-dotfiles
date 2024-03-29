@@ -64,4 +64,10 @@ in {
     qt5.qtwebsockets
     (python3.withPackages (python-pkgs: [python-pkgs.websockets]))
   ];
+  system.activationScripts = {
+    wallpaper-engine-kde-plugin.text = ''
+      wallpaperenginetarget=share/plasma/wallpapers/com.github.casout.wallpaperEngineKde
+      ln -s ${wallpaper-engine-kde-plugin}/$wallpaperenginetarget /home/zombiefleischer/.local/$wallpaperenginetarget
+    '';
+  };
 }
