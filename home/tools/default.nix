@@ -23,10 +23,7 @@
     telegram-desktop
     thunderbird
     tidal-hifi
-    (makeAutostartItem {
-      name = "vesktop";
-      package = vesktop;
-    })
+    vesktop
     vivaldi
     wacomtablet
   ];
