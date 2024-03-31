@@ -8,6 +8,7 @@
     kate
     krita
     lutris
+    masterpdfeditor
     nextcloud-client
     obsidian
     oh-my-zsh
