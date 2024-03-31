@@ -5,6 +5,8 @@
     kwallet-pam
     kwalletmanager
     ksshaskpass
+    plasma5support
+    qtmultimedia
     qtstyleplugin-kvantum
     wayland
     wayland-protocols
