@@ -16,6 +16,7 @@
     protonmail-bridge
     protonup-qt
     ranger
+    rar
     (makeAutostartItem {
       name = "signal-desktop";
       package = signal-desktop;
@@ -24,6 +25,7 @@
     telegram-desktop
     thunderbird
     tidal-hifi
+    unar
     vesktop
     vivaldi
     wacomtablet
