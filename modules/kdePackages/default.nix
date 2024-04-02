@@ -1,11 +1,27 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs.kdePackages; [
+    kbackup
+    kcalc
     kde-gtk-config
+    kdenlive
+    kjournald
+    kmines
+    kmousetool
+    kmouth
+    knotes
+    kolf
+    kompare
+    konquest
+    kruler
+    kspaceduel
+    ksshaskpass
+    ksystemlog
     kwallet
     kwallet-pam
     kwalletmanager
-    ksshaskpass
+    palapeli
     plasma5support
+    plasma-wayland-protocols
     qtmultimedia
     qtstyleplugin-kvantum
     wayland
