@@ -1,7 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -36,6 +40,15 @@
 
   # Set graphics drivers
   services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = false;
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+  };
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
@@ -132,6 +145,7 @@
     delta
     doas
     eza
+    ffmpeg-full
     fzf
     git
     gnupg1
@@ -154,6 +168,9 @@
     lsof
     neofetch
     neovim
+    nvidia-optical-flow-sdk
+    nvidia-system-monitor-qt
+    nvidia-texture-tools
     nvidia-vaapi-driver
     partition-manager
     pavucontrol
