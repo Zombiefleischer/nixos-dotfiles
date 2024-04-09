@@ -150,6 +150,7 @@
     git
     gnupg1
     gparted
+    home-manager
     # (makeAutostartItem {
     # name = "input-leap";
     # package = "input-leap";
