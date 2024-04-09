@@ -34,7 +34,7 @@
     tidal-hifi
     unar
     vesktop
-    vivaldi
+    # vivaldi
     wacomtablet
   ];
 }
