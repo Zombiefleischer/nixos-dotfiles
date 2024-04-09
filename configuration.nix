@@ -181,7 +181,6 @@
     unzip
     usbtop
     vim
-    vivaldi
     wayland
     wayland-utils
     wget
