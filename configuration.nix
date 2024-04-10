@@ -163,6 +163,7 @@
     lazydocker
     lazygit
     libnotify
+    libportal
     libsForQt5.kdelibs4support
     libunity
     libva
