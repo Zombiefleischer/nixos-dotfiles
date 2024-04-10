@@ -151,11 +151,12 @@
     gnupg1
     gparted
     home-manager
+    imagemagick
     # (makeAutostartItem {
     # name = "input-leap";
     # package = "input-leap";
     # })
-    imagemagick
+    input-leap
     junction
     jq
     kdialog
