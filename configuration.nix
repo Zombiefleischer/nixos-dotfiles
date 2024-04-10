@@ -171,6 +171,7 @@
     lsof
     neofetch
     neovim
+    nix-output-monitor
     nvidia-optical-flow-sdk
     nvidia-system-monitor-qt
     nvidia-texture-tools
