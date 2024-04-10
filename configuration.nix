@@ -142,14 +142,17 @@
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
+    clinfo
     delta
     doas
     eza
     ffmpeg-full
     fzf
     git
+    glxinfo
     gnupg1
     gparted
+    gpu-viewer
     home-manager
     imagemagick
     # (makeAutostartItem {
@@ -185,6 +188,7 @@
     unzip
     usbtop
     vim
+    vulkan-tools
     wayland
     wayland-utils
     wget
