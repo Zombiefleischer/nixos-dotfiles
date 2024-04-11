@@ -24,6 +24,7 @@
     plasma-wayland-protocols
     qtmultimedia
     qtstyleplugin-kvantum
+    qtwebsockets
     wayland
     wayland-protocols
     xdg-desktop-portal-kde
