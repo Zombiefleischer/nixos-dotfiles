@@ -168,6 +168,7 @@
     libnotify
     libportal
     libsForQt5.kdelibs4support
+    libsForQt6.qtwebsockets
     libunity
     libva
     lm_sensors
