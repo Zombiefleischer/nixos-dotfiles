@@ -12,6 +12,7 @@
     krename
     krita
     # kstars
+    libreoffice
     lutris
     masterpdfeditor
     nextcloud-client
