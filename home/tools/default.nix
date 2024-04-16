@@ -35,6 +35,7 @@
     unar
     vesktop
     vivaldi
+    vlc
     wacomtablet
   ];
 }
