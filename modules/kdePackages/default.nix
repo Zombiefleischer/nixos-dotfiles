@@ -10,7 +10,7 @@
     kmouth
     knotes
     kolf
-    kompare
+    # kompare
     konquest
     kruler
     kspaceduel
