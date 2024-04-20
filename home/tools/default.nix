@@ -34,7 +34,7 @@
     thunderbird
     tidal-hifi
     unar
-    vesktop
+    # vesktop
     vivaldi
     vlc
     wacomtablet
