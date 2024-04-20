@@ -51,9 +51,9 @@
   };
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.defaultSession = "plasmax11";
+  services.displayManager.defaultSession = "plasmax11";
   programs.xwayland.enable = true;
 
   # Configure console keymap
