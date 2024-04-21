@@ -45,6 +45,8 @@ _: {
       "io.github.nokse22.asciidraw"
       "com.github.k4zmu2a.spacecadetpinball"
       "io.github.aandrew_me.ytdn"
+      "xyz.ketok.Speedtest"
+      "org.librecad.librecad"
     ];
   };
 }
