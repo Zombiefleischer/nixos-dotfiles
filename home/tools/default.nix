@@ -38,5 +38,6 @@
     vivaldi
     vlc
     wacomtablet
+    zrok
   ];
 }
