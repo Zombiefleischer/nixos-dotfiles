@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs.kdePackages; [
+    discover
     kbackup
     kcalc
     kde-gtk-config
