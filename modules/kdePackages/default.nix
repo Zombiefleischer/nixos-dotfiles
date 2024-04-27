@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs.kdePackages; [
     discover
+    dolphin-plugins
     kbackup
     kcalc
     kde-gtk-config
