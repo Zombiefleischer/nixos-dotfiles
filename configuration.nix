@@ -172,7 +172,6 @@
     libva
     lm_sensors
     lsof
-    neofetch
     neovim
     nix-output-monitor
     nvidia-optical-flow-sdk

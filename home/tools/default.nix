@@ -4,9 +4,11 @@
     bitwarden
     bitwarden-cli
     codevis
+    fastfetch
     floorp
     gamemode
     gh
+    hyfetch
     kate
     kile
     krename
@@ -34,6 +36,7 @@
     thunderbird
     tidal-hifi
     unar
+    uwuify
     vesktop
     vivaldi
     vlc
