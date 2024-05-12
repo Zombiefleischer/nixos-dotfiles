@@ -38,6 +38,7 @@
     unar
     uwuify
     vesktop
+    via
     vivaldi
     vlc
     wacomtablet
