@@ -24,6 +24,7 @@
     plasma-browser-integration
     protonmail-bridge
     protonup-qt
+    qmk
     ranger
     rar
     rsibreak
@@ -39,6 +40,7 @@
     uwuify
     vesktop
     via
+    vial
     vivaldi
     vlc
     wacomtablet
