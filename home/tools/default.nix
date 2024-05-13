@@ -17,6 +17,7 @@
     libreoffice
     lutris
     masterpdfeditor
+    mc
     nextcloud-client
     obsidian
     oh-my-zsh
