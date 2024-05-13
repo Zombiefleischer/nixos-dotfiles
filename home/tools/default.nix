@@ -5,6 +5,7 @@
     bitwarden-cli
     codevis
     fastfetch
+    filezilla
     floorp
     gamemode
     gh
