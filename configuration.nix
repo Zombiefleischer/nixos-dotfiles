@@ -214,7 +214,7 @@
   # Install fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Hack"];})
+      (nerdfonts.override {fonts = ["Hack" "FiraMono" "FiraCode"];})
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk
