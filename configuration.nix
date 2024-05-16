@@ -219,7 +219,7 @@
       noto-fonts-emoji
       noto-fonts-cjk
     ];
-    enableDefaultFonts = false;
+    enableDefaultPackages = false;
     fontDir.enable = true;
     fontconfig.defaultFonts.monospace = ["Hack Nerd Font"];
   };
