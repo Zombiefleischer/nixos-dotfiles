@@ -215,8 +215,8 @@
   fonts = {
     packages = with pkgs; [
       (nerdfonts.override {fonts = ["Hack" "FiraMono" "FiraCode"];})
-      dejavu-fonts
-      liberation-fonts
+      # dejavu-fonts
+      # liberation-fonts
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk
