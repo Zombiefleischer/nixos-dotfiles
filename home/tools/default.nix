@@ -19,6 +19,7 @@
     lutris
     masterpdfeditor
     mc
+    ncdu
     nextcloud-client
     obsidian
     oh-my-zsh
