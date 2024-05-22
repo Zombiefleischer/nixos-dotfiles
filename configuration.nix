@@ -219,7 +219,7 @@ in {
   # Install fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Hack" "FiraMono" "FiraCode"];})
+      (nerdfonts.override {fonts = ["Hack" "FiraCode" "CaskaydiaCove"];})
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default
