@@ -5,7 +5,12 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  ligaturedHackFonts = pkgs.runCommand "ligatured-hack" {buildInputs = [pkgs.fontconfig];} ''
+    mkdir -p $out/share/fonts
+    cp ${./fonts/Ligatured-Hack}/* $out/share/fonts/
+  '';
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -215,13 +220,18 @@
   fonts = {
     packages = with pkgs; [
       (nerdfonts.override {fonts = ["Hack" "FiraMono" "FiraCode"];})
-      # dejavu-fonts
-      # liberation-fonts
+      dejavu_fonts # default
+      freefont_ttf # default
+      gyre-fonts # default
+      liberation_ttf # default
+      unifont # default
       noto-fonts
       noto-fonts-emoji
+      noto-fonts-color-emoji # default
       noto-fonts-cjk
+      ligaturedHackFonts
     ];
-    enableDefaultPackages = true;
+    enableDefaultPackages = false;
     fontDir.enable = true;
     fontconfig.defaultFonts.monospace = ["Hack Nerd Font"];
   };
