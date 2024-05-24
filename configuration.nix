@@ -5,12 +5,7 @@
   config,
   pkgs,
   ...
-}: let
-  ligaturedHackFonts = pkgs.runCommand "ligatured-hack" {buildInputs = [pkgs.fontconfig];} ''
-    mkdir -p $out/share/fonts
-    cp ${./fonts/Ligatured-Hack}/* $out/share/fonts/
-  '';
-in {
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -220,7 +215,7 @@ in {
   # Install fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Hack" "FiraCode" "CaskaydiaCove"];})
+      (nerdfonts.override {fonts = ["Hack" "FiraCode" "CaskaydiaCode"];})
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default
