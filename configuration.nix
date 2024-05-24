@@ -225,7 +225,6 @@
       noto-fonts-emoji
       noto-fonts-color-emoji # default
       noto-fonts-cjk
-      ligaturedHackFonts
     ];
     enableDefaultPackages = false;
     fontDir.enable = true;
