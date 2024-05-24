@@ -148,6 +148,7 @@ in {
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
+    cudaPackages.cudatoolkit
     delta
     doas
     eza
