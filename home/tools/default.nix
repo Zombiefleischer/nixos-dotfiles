@@ -35,6 +35,7 @@
       name = "signal-desktop";
       package = signal-desktop;
     })
+    smartmontools
     steamtinkerlaunch
     telegram-desktop
     thunderbird
