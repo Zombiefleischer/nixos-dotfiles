@@ -9,6 +9,7 @@
     floorp
     gamemode
     gh
+    glaxnimate
     hyfetch
     kate
     kile
