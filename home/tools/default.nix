@@ -1,5 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    ansible
+    ansible-doctor
+    ansible-language-server
+    ansible-later
+    ansible-lint
     audacity
     bitwarden
     bitwarden-cli
