@@ -17,6 +17,7 @@
     krita
     # kstars
     libreoffice
+    lunarvim
     lutris
     masterpdfeditor
     mc
