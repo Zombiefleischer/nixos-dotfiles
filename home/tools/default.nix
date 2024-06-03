@@ -48,6 +48,7 @@
     vial
     vivaldi
     vlc
+    vscodium
     wacomtablet
     zrok
   ];
