@@ -103,6 +103,19 @@
     extraGroups = ["networkmanager" "wheel" "docker"];
   };
 
+  # Enable passwordless sudo
+  security.sudo.extraRules = [
+    {
+      users = ["zombiefleischer"];
+      commands = [
+        {
+          command = "ALL";
+          options = ["NOPASSWD" "SETENV"];
+        }
+      ];
+    }
+  ];
+
   # Activate protonmail bridge
   systemd.user.services.protonmail-bridge = {
     description = "Protonmail Bridge";
