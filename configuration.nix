@@ -145,7 +145,6 @@
     clinfo
     cudaPackages.cudatoolkit
     delta
-    doas
     eza
     ffmpeg-full
     fzf
@@ -239,16 +238,6 @@
 
   # Enable zsh for all users
   users.defaultUserShell = pkgs.zsh;
-
-  # Enable doas as an alternative to sudo
-  security.doas.enable = true;
-  security.doas.extraRules = [
-    {
-      users = ["zombiefleischer"];
-      keepEnv = true;
-      noPass = true;
-    }
-  ];
 
   ## List services that you want to enable:
 
