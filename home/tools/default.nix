@@ -9,6 +9,7 @@
     bitwarden
     bitwarden-cli
     codevis
+    davinci-resolve
     fastfetch
     filezilla
     floorp
