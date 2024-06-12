@@ -39,6 +39,7 @@
     ranger
     rar
     rsibreak
+    scanmem
     (makeAutostartItem {
       name = "signal-desktop";
       package = signal-desktop;
