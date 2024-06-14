@@ -55,6 +55,7 @@
     via
     vial
     vivaldi
+    vivaldi-ffmpeg-codecs
     vlc
     vscodium
     wacomtablet
