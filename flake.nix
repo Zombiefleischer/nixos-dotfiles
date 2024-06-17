@@ -44,6 +44,7 @@
         ./modules/bindfs
         ./modules/firefox-addons
         ./modules/kdePackages
+        ./modules/keychron
         ./modules/openrgb
         ./modules/steam
         ./modules/time_i18n
