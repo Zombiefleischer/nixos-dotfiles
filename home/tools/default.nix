@@ -59,6 +59,7 @@
     vlc
     vscodium
     wacomtablet
+    zed-editor
     zrok
   ];
 }
