@@ -12,7 +12,7 @@
     davinci-resolve
     fastfetch
     filezilla
-    # floorp
+    floorp
     gamemode
     gh
     glaxnimate
