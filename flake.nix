@@ -13,6 +13,8 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.3.0";
 
+    nixified-ai.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     helix-master = {
       url = "github:SoraTenshi/helix/new-daily-driver";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +32,7 @@
     envfs,
     home-manager,
     nix-flatpak,
+    nixified-ai,
     nixpkgs,
     ...
   } @ inputs: let
@@ -52,6 +55,7 @@
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
+        nixified-ai.nixosModules.invokeai-nvidia
         home-manager.nixosModules.home-manager
         {
           home-manager = {
