@@ -219,6 +219,9 @@
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
 
+  # Enable QMK access
+  hardware.keyboard.qmk.enable = true;
+
   # Stuff for flatpak and wayland
   services.dbus.enable = true;
   xdg.portal = {
