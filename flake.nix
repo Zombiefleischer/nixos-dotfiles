@@ -13,6 +13,8 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.3.0";
 
+    nixified-ai.url = "github:nixified-ai/flake/2";
+
     helix-master = {
       url = "github:SoraTenshi/helix/new-daily-driver";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +32,7 @@
     envfs,
     home-manager,
     nix-flatpak,
+    nixified-ai,
     nixpkgs,
     ...
   } @ inputs: let
@@ -45,6 +48,7 @@
         ./modules/firefox-addons
         ./modules/kdePackages
         ./modules/keychron
+        ./modules/nixified-ai
         ./modules/openrgb
         ./modules/steam
         ./modules/time_i18n
