@@ -50,6 +50,7 @@
     thunderbird
     tidal-hifi
     unar
+    usbutils
     uwuify
     vesktop
     via
