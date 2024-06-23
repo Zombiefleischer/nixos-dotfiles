@@ -43,6 +43,7 @@
         ./home/flatpak
         ./modules/bindfs
         ./modules/firefox-addons
+        ./modules/fonts
         ./modules/kdePackages
         ./modules/keychron
         ./modules/openrgb
