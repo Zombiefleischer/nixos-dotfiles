@@ -17,6 +17,7 @@
     gh
     glaxnimate
     hyfetch
+    inkscape-with-extensions
     kate
     kile
     krename
