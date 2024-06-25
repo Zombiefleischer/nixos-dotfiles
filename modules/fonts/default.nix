@@ -8,7 +8,7 @@
     cp ${./Pentiment}/* $out/share/fonts/
   '';
 in {
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     PentimentFonts
   ];
 }
