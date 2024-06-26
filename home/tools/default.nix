@@ -15,6 +15,7 @@
     floorp
     gamemode
     gh
+    gimp-with-plugins
     glaxnimate
     hyfetch
     inkscape-with-extensions
@@ -22,6 +23,7 @@
     kile
     krename
     krita
+    krita-plugin-gmic
     # kstars
     libreoffice
     lunarvim
