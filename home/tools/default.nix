@@ -35,6 +35,7 @@
     obsidian
     oh-my-zsh
     okteta
+    owofetch
     plasma-browser-integration
     protonmail-bridge
     protonup-qt

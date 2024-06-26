@@ -159,7 +159,7 @@
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
-    cudaPackages.cudatoolkit
+    # cudaPackages.cudatoolkit
     delta
     eza
     ffmpeg-full
