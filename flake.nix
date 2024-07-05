@@ -39,6 +39,7 @@
       specialArgs = {inherit inputs system;};
       modules = [
         ./configuration.nix # plasma6/Wayland
+        ./drv/libx52.nix
         ./drv/wallpaper-engine-kde.nix
         ./home/flatpak
         ./modules/bindfs
