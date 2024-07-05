@@ -1,48 +1,49 @@
-{
-  lib,
-  stdenv,
-  fetchurl,
-  automake,
-  autoconf,
-  gettext,
-  hidapi,
-  libtool,
-  libusb1,
-  libevdev,
-  pkg-config,
-  python3,
-  doxygen,
-  cmocka,
-  git,
-}:
-stdenv.mkDerivation rec {
+{pkgs ? import <nixpkgs> {}}:
+pkgs.stdenv.mkDerivation {
   pname = "libx52";
-  version = "0.3.2";
-  src = fetchurl {
-    url = "https://github.com/nirenjan/libx52/releases/download/v${version}/${pname}_${version}.orig.tar.gz";
-    sha256 = "c4d4cdce7f2fce85871f3b1a4bf0f8122eb2969e62ee0d381984c9d26e0a8e25";
+  version = "v0.3.2"; # You can set the appropriate version here
+
+  src = pkgs.fetchFromGitHub {
+    owner = "nirenjan";
+    repo = "libx52";
+    rev = "v0.3.2"; # You can specify a particular revision or tag here
+    sha256 = "0lmf73cnv6gn86s9xk6brlnsf5zvjsyks8hkdjynlvqx8mjzfbf5"; # Update with the correct sha256
   };
 
-  nativeBuildInputs = [automake autoconf libtool pkg-config python3 gettext doxygen cmocka git];
-  buildInputs = [hidapi libusb1 libevdev];
+  buildInputs = [
+    pkgs.automake
+    pkgs.autoconf
+    pkgs.gettext
+    pkgs.hidapi
+    pkgs.libtool
+    pkgs.libusb1
+    pkgs.libevdev
+    pkgs.pkg-config
+    pkgs.python3
+    pkgs.git
+  ];
+
+  nativeBuildInputs = [
+    pkgs.pkg-config
+  ];
 
   configurePhase = ''
-    cd ${src}/build
-    ../configure --prefix=$out --localstatedir=/var --sysconfdir=/etc --disable-silent-rules --disable-maintainer-mode
+    ./autogen.sh
+    ./configure --prefix=$out --localstatedir=/var --sysconfdir=/etc
   '';
 
-  buildPhase = "make";
+  buildPhase = ''
+    make
+  '';
 
   installPhase = ''
-    make install DESTDIR=$out
-    rmdir $out/var/run
-    rmdir $out/var/log
+    make install
   '';
 
-  meta = with lib; {
-    description = "Driver for the Saitek X52 and X52 Pro HOTAS Joystick.";
+  meta = {
+    description = "Library for interfacing with the Saitek X52 Flight Control System";
     homepage = "https://github.com/nirenjan/libx52";
-    license = licenses.gpl2;
-    maintainers = [maintainers.yourself];
+    license = pkgs.lib.licenses.gpl3;
+    maintainers = with pkgs.lib.maintainers; [maintainers.yourself];
   };
 }
