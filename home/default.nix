@@ -25,6 +25,8 @@ in {
     ./droidcam
     ./firefox
     ./helix
+    ./i3
+    ./hyprland
     ./lsps
     ./minecraft
     ./obs

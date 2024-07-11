@@ -46,18 +46,32 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     open = false;
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.production;
   };
+  boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasmax11";
   programs.xwayland.enable = true;
+
+  # Enable Hyprland
+  programs.hyprland.enable = true;
+
+  # Enable i3
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+      dmenu
+      i3status
+      i3lock
+    ];
+  };
 
   # Configure console keymap
   console.keyMap = "us-acentos";
