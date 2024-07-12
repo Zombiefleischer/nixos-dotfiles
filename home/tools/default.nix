@@ -65,6 +65,7 @@
     vscodium
     wacomtablet
     wine
+    winetricks
     zed-editor
     zrok
   ];
