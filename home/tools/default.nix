@@ -64,6 +64,7 @@
     vlc
     vscodium
     wacomtablet
+    wine
     zed-editor
     zrok
   ];
