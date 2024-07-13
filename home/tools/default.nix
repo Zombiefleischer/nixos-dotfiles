@@ -64,7 +64,7 @@
     vlc
     vscodium
     wacomtablet
-    wineWow64Packages.full
+    wineWowPackages.full
     winetricks
     zed-editor
     zrok
