@@ -19,6 +19,7 @@
     glaxnimate
     hyfetch
     inkscape-with-extensions
+    input-leap
     kate
     kile
     krename

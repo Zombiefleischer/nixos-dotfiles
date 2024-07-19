@@ -185,11 +185,6 @@
     gpu-viewer
     home-manager
     imagemagick
-    # (makeAutostartItem {
-    # name = "input-leap";
-    # package = "input-leap";
-    # })
-    input-leap
     junction
     jq
     kdialog
