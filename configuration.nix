@@ -189,6 +189,7 @@
     kdialog
     lazydocker
     lazygit
+    legacyPackages.x86_64-linux.libportal
     libnotify
     libportal
     libsForQt5.kdelibs4support
