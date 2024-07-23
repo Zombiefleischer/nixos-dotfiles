@@ -12,6 +12,7 @@
     kmouth
     knotes
     kolf
+    kolourpaint
     # kompare
     konquest
     kruler
