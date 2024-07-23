@@ -8,6 +8,7 @@
     audacity
     bitwarden
     bitwarden-cli
+    cbonsai
     codevis
     davinci-resolve
     fastfetch
