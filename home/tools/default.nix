@@ -17,6 +17,7 @@
     gh
     gimp-with-plugins
     glaxnimate
+    gomatrix
     hyfetch
     inkscape-with-extensions
     input-leap
@@ -37,6 +38,8 @@
     oh-my-zsh
     okteta
     owofetch
+    pipes
+    pipes-rs
     plasma-browser-integration
     protonmail-bridge
     protonup-qt
