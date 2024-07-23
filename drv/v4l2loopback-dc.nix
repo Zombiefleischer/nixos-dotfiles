@@ -11,9 +11,9 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "dev47apps";
-    repo = "droidcam";
+    repo = "droidcam-linux-client";
     rev = "v${version}";
-    sha256 = "NZ6sKLE/Sq4VBJSf7iG0CgdVwmU8JXQH/utbobBEFi0=";
+    sha256 = "Pwq7PDj+MH1wzrUyfva2F2+oELm4Sb1EJPUUCsHYb7k=";
   };
 
   sourceRoot = "source/v4l2loopback";
