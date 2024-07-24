@@ -67,7 +67,6 @@
     vesktop
     via
     vial
-    vimPlugins.catppuccin-nvim
     vivaldi
     vivaldi-ffmpeg-codecs
     vlc
