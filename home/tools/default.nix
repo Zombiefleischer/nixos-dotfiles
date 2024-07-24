@@ -8,6 +8,7 @@
     audacity
     bitwarden
     bitwarden-cli
+    cava
     cbonsai
     codevis
     davinci-resolve
