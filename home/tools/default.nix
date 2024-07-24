@@ -74,6 +74,7 @@
     wacomtablet
     wineWowPackages.full
     winetricks
+    yazi
     zed-editor
     zrok
   ];
