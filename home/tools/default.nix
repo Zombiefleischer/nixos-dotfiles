@@ -25,6 +25,8 @@
     input-leap
     kate
     kile
+    kitty
+    kittysay
     krename
     krita
     krita-plugin-gmic
