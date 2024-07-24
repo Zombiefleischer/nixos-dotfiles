@@ -48,8 +48,8 @@
     protonmail-bridge
     protonup-qt
     qmk
-    ranger
     rar
+    ripgrep
     rsibreak
     scanmem
     (makeAutostartItem {
