@@ -35,7 +35,6 @@ in {
 
     ./desktop-files/edhm-ui.nix
     # ./desktop-files/veadotube.nix
-    ./desktop-files/vivaldi.nix
   ];
 
   home.sessionVariables = {
