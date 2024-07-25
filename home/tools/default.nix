@@ -25,7 +25,7 @@
     input-leap
     kate
     kile
-    kitty
+    # kitty
     kittysay
     krename
     krita
