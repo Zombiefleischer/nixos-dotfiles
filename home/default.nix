@@ -24,6 +24,7 @@ in {
   imports = [
     ./droidcam
     ./firefox
+    ./floorp
     ./helix
     ./hyprland
     ./i3

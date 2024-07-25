@@ -14,7 +14,7 @@
     davinci-resolve
     fastfetch
     filezilla
-    floorp
+    # floorp # Override in home/floorp/default.nix - see https://github.com/nix-community/home-manager/issues/5132
     gamemode
     gh
     gimp-with-plugins
