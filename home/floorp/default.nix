@@ -1,7 +1,5 @@
-{pkgs ? import <nixpkgs> {}, ...}: let
-  pkg = pkgs.floorp;
-in
-  pkg.overrideAttrs (old: {
+{pkgs, ...}: {
+  pkgs.floorp.overrideAttrs = old: {
     name = "floorp-cleaned";
 
     buildCommand =
@@ -12,10 +10,11 @@ in
         set -euo pipefail
 
         set -x
-        cp -rs --no-preserve=mode "${pkg.out}" "$out"
+        cp -rs --no-preserve=mode "${pkgs.floorp.out}" "$out"
         set +x
 
         rm -R $out/lib/firefox
         rm -R $out/lib/mozilla
       '';
-  })
+  };
+}
