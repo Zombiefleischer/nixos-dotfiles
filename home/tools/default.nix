@@ -14,7 +14,22 @@
     davinci-resolve
     fastfetch
     filezilla
-    # floorp # Override in home/floorp/default.nix - see https://github.com/nix-community/home-manager/issues/5132
+    # floorp # Override - see https://github.com/nix-community/home-manager/issues/5132
+    (floorp.overrideAttrs (old: {
+      name = "floorp-cleaned";
+      buildCommand =
+        /*
+        bash
+        */
+        ''
+          set -euo pipefail
+          set -x
+          cp -rs --no-preserve=mode "${pkgs.floorp.out}" "$out"
+          set +x
+          rm -R $out/lib/firefox
+          rm -R $out/lib/mozilla
+        '';
+    }))
     gamemode
     gh
     gimp-with-plugins
