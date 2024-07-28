@@ -118,6 +118,6 @@
       "f7" = "remove_marker";
     };
 
-    extraConfig = "";
+    # extraConfig = "";
   };
 }
