@@ -38,7 +38,7 @@
       tab_title_template = ''"{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{sup.index}{title}"'';
 
       # Color scheme
-      background_opacity = 0.7;
+      background_opacity = "0.75";
       dynamic_background_opacity = true;
 
       # Advanced
