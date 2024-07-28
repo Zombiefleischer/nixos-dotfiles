@@ -16,14 +16,14 @@
 
     settings = {
       # Cursor customization
-      cursor_shape = block;
+      cursor_shape = "block";
 
       # Scrollback
       scrollback_lines = 10000;
 
       # Mouse
-      copy_on_select = clipboard;
-      strip_trailing_spaces = smart;
+      copy_on_select = "clipboard";
+      strip_trailing_spaces = "smart";
 
       # Terminal bell
       enable_audio_bell = false;
@@ -34,8 +34,8 @@
       hide_window_decoration = true;
 
       # Tab bar
-      tab_bar_style = powerline;
-      tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{sup.index}{title}";
+      tab_bar_style = "powerline";
+      tab_title_template = ''"{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{sup.index}{title}"'';
 
       # Color scheme
       background_opacity = 0.75;
