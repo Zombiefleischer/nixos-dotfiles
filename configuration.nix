@@ -39,7 +39,7 @@
 
   # Set up ports
   # barrier foundryvtt
-  networking.firewall.allowedTCPPorts = [24800 23253];
+  networking.firewall.allowedTCPPorts = [24800];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
