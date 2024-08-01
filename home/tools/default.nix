@@ -45,7 +45,7 @@
     krename
     krita
     krita-plugin-gmic
-    # kstars
+    kstars
     libreoffice
     lunarvim
     lutris
