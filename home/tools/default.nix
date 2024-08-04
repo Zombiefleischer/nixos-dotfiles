@@ -60,6 +60,7 @@
     pipes
     pipes-rs
     plasma-browser-integration
+    powertop
     protonmail-bridge
     protonup-qt
     qmk
