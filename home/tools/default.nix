@@ -34,7 +34,6 @@
     gh
     gimp-with-plugins
     glaxnimate
-    go
     gomatrix
     hyfetch
     inkscape-with-extensions
