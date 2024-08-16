@@ -191,7 +191,6 @@
     jq
     kdialog
     lazydocker
-    lazygit
     libportal
     libnotify
     libportal

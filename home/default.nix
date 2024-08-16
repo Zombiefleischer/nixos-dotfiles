@@ -27,6 +27,7 @@ in {
     ./hyprland
     ./i3
     ./kitty
+    ./lazygit
     ./lsps
     ./minecraft
     ./obs
