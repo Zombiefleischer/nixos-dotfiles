@@ -35,22 +35,23 @@
   } @ inputs: let
     system = "x86_64-linux";
   in {
+    # Leviathan
     nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs system;};
       modules = [
-        ./configuration.nix # plasma6/Wayland
+        ./machines/Leviathan/configuration.nix # plasma6/Wayland
         # ./drv/libx52.nix # not working atm
         ./drv/wallpaper-engine-kde.nix
-        ./home/flatpak
-        ./modules/bindfs
-        ./modules/firefox-addons
-        ./modules/fonts
-        ./modules/kdePackages
-        ./modules/keychron
-        ./modules/openrgb
-        ./modules/steam
-        ./modules/time_i18n
-        ./modules/variables
+        ./machines/Leviathan/modules/flatpak
+        ./machines/Leviathan/modules/bindfs
+        ./machines/Leviathan/modules/firefox-addons
+        ./machines/Leviathan/modules/fonts
+        ./machines/Leviathan/modules/kdePackages
+        ./machines/Leviathan/modules/keychron
+        ./machines/Leviathan/modules/openrgb
+        ./machines/Leviathan/modules/steam
+        ./machines/Leviathan/modules/time_i18n
+        ./machines/Leviathan/modules/variables
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
@@ -61,7 +62,26 @@
             useUserPackages = true;
             extraSpecialArgs = {inherit inputs system;};
             users."zombiefleischer" = {
-              imports = [./home];
+              imports = [./machines/Leviathan/home];
+            };
+          };
+        }
+      ];
+    };
+
+    # Cthulhu
+    nixosConfigurations.Cthulhu = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs system;};
+      modules = [
+        catppuccin.nixosModules.catppuccin
+        envfs.nixosModules.envfs
+        nix-flatpak.nixosModules.nix-flatpak
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useUserPackages = true;
+            extraSpecialArgs = {inherit inputs system;};
+            users."zombiefleischer" = {
             };
           };
         }

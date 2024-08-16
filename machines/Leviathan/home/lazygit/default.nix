@@ -12,7 +12,6 @@
         };
       };
       gui = {
-        showIcons = true;
         authorColors = {
           "Max Schönleben" = "#00dded";
           "Max Schoenleben" = "#00dded";
@@ -31,6 +30,7 @@
         };
         nerdFontsVersion = "3";
         commandLogSize = 15;
+        showBottomLine = true;
       };
       promptToReturnFromSubprocess = true; # false @ work
     };
