@@ -35,6 +35,7 @@
     kdialog
     krename
     lazydocker
+    libnotify
     lm_sensors
     lsof
     lunarvim
