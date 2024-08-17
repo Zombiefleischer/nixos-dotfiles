@@ -11,9 +11,6 @@
     ./hardware-configuration.nix
   ];
 
-  nix.settings.trusted-substituters = ["https://ai.cachix.org"];
-  nix.settings.trusted-public-keys = ["ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc="];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,7 +18,7 @@
   # Use the latest Linux Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "Leviathan"; # Define your hostname.
+  networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -31,37 +28,43 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = [
+      pkgs.networkmanager-fortisslvpn
+    ];
+  };
   networking.nameservers = ["192.168.178.34"];
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
-  # Set up ports
-  # barrier foundryvtt
-  networking.firewall.allowedTCPPorts = [24800];
+  # Set your time zone.
+  time.timeZone = "Europe/Berlin";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_GB.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "de_DE.UTF-8";
+    LC_IDENTIFICATION = "de_DE.UTF-8";
+    LC_MEASUREMENT = "de_DE.UTF-8";
+    LC_MONETARY = "de_DE.UTF-8";
+    LC_NAME = "de_DE.UTF-8";
+    LC_NUMERIC = "de_DE.UTF-8";
+    LC_PAPER = "de_DE.UTF-8";
+    LC_TELEPHONE = "de_DE.UTF-8";
+    LC_TIME = "de_DE.UTF-8";
+  };
 
   # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-
-  # Set graphics drivers
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    open = true;
-    nvidiaSettings = true;
-
-    package = config.boot.kernelPackages.nvidiaPackages.production;
-  };
-  boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
+  programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.defaultSession = "plasmax11";
-  programs.xwayland.enable = true;
 
   # Enable Hyprland
   programs.hyprland.enable = true;
@@ -73,21 +76,18 @@
       dmenu
       i3status
       i3lock
+      rofi
     ];
+  };
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "intl";
   };
 
   # Configure console keymap
   console.keyMap = "us-acentos";
-
-  fileSystems."/home/zombiefleischer/Zombiecloud" = {
-    device = "/dev/disk/by-uuid/46187b7b-75c5-48bb-aa0d-6b0e94f9f2fa";
-    fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-      "x-gvfs-show"
-    ];
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -108,17 +108,13 @@
     #media-session.enable = true;
   };
 
-  # Enable goxlr-utility
-  services.udev.packages = [pkgs.goxlr-utility];
-  xdg.autostart.enable = true;
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zombiefleischer = {
     isNormalUser = true;
-    description = "Zombiefleischer";
+    description = "Max Schönleben";
     extraGroups = ["networkmanager" "wheel" "docker" "plugdev"];
   };
 
@@ -135,14 +131,8 @@
     }
   ];
 
-  # Activate protonmail bridge
-  systemd.user.services.protonmail-bridge = {
-    description = "Protonmail Bridge";
-    enable = true;
-    script = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --noninteractive --log-level info";
-    wantedBy = ["graphical-session.target"];
-    partOf = ["graphical-session.target"];
-  };
+  # Install firefox.
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -153,91 +143,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (
-      makeAutostartItem
-      {
-        name = "goxlr-utility";
-        package = goxlr-utility;
-      }
-    )
-    alejandra
-    appimage-run
-    #(
-    #  makeAutostartItem
-    #  {
-    #    name = "barrier";
-    #    package = barrier;
-    #  }
-    #)
-    bat
-    btop
-    catppuccin
-    catppuccin-kvantum
-    catppuccin-papirus-folders
-    clinfo
-    # cudaPackages.cudatoolkit
-    delta
-    eza
-    ffmpeg-full
-    fzf
-    git
-    glxinfo
-    gnupg1
-    gparted
-    gpu-viewer
-    home-manager
-    imagemagick
-    junction
-    jq
-    kdialog
-    lazydocker
-    libnotify
-    libportal
-    libsForQt5.kdelibs4support
-    libunity
-    libva
-    lm_sensors
-    lsof
-    neovim
-    nix-output-monitor
-    nvidia-optical-flow-sdk
-    nvidia-system-monitor-qt
-    nvidia-texture-tools
-    nvidia-vaapi-driver
-    partition-manager
-    pavucontrol
-    pinentry
-    playerctl
-    qpwgraph
-    tldr
-    unzip
-    usbtop
-    vim
-    vulkan-tools
-    wayland
-    wayland-utils
-    wget
-    wl-clipboard
-    xclip
-    xsel
-    xwayland
-    yank
-    zoxide
-    zsh
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
-
-  # Enable xone for Xbox Controller
-  hardware.xone.enable = true;
-
-  # Enable QMK access
-  hardware.keyboard.qmk.enable = true;
 
   # Stuff for flatpak and wayland
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [pkgs.xdg-desktop-portal-kde];
-    # wlr.enable = true;
   };
 
   # Install fonts
@@ -268,7 +182,7 @@
   # Enable zsh for all users
   users.defaultUserShell = pkgs.zsh;
 
-  ## List services that you want to enable:
+  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -277,15 +191,15 @@
     startAgent = true;
     extraConfig = ''
       AddKeysToAgent yes
-      IdentityFile ~/.ssh/zombiehacker.ed25519
+      IdentityFile ~/.ssh/mschoenleben_nextbike.ed25519
     '';
   };
 
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  # Open ports in the firewall. [ ssh barrier ]
+  networking.firewall.allowedTCPPorts = [22 24800];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -296,5 +210,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 }

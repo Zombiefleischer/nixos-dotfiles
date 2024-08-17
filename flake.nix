@@ -73,6 +73,9 @@
     nixosConfigurations.Cthulhu = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs system;};
       modules = [
+        ./machines/Cthulhu/configuration.nix
+        ./machines/Cthulhu/modules/kdePackages
+
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
@@ -82,7 +85,9 @@
             useUserPackages = true;
             extraSpecialArgs = {inherit inputs system;};
             users."zombiefleischer" = {
+              imports = [./machines/Cthulhu/home];
             };
+            backupFileExtension = "hm.bak";
           };
         }
       ];

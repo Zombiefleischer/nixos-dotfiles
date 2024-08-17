@@ -1,0 +1,76 @@
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    alejandra
+    ansible
+    ansible-doctor
+    ansible-language-server
+    ansible-lint
+    appimage-run
+    # barrier
+    bat
+    bitwarden
+    bitwarden-cli
+    btop
+    catppuccin
+    catppuccin-kvantum
+    catppuccin-papirus-folders
+    clinfo
+    # delta
+    eza
+    fastfetch
+    ffmpeg-full
+    fzf
+    git
+    gh
+    glxinfo
+    gnupg1
+    gparted
+    home-manager
+    imagemagick
+    hyfetch
+    input-leap
+    junction
+    jq
+    kate
+    kdialog
+    krename
+    lazydocker
+    lm_sensors
+    lsof
+    lunarvim
+    ncdu
+    neovim
+    # networkmanager-fortisslvpn
+    nix-output-monitor
+    obsidian
+    oh-my-zsh
+    owofetch
+    plasma-browser-integration
+    playerctl
+    powertop
+    ripgrep
+    scanmem
+    slack
+    smartmontools
+    thunderbird
+    tldr
+    unar
+    unzip
+    usbtop
+    usbutils
+    uwuify
+    vim
+    vlc
+    vscode-fhs
+    wget
+    wl-clipboard
+    xclip
+    xsel
+    xwayland
+    yank
+    yazi
+    zed-editor
+    zoxide
+    zsh
+  ];
+}
