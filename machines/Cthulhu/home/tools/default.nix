@@ -54,7 +54,7 @@
     kubectl
     kubectl-neat
     kubectl-tree
-    kubectl-klok
+    kubectl-klock
     kubectl-ktop
     kubectx
     kubernetes-helm

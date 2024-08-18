@@ -1,6 +1,6 @@
 {...}: {
   programs.awscli = {
-    enable = true;
+    enable = false;
   };
   programs.k9s = {
     enable = true;
