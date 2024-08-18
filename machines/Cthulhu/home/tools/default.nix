@@ -3,8 +3,7 @@
     alejandra
     ansible
     ansible-doctor
-    ansible-language-server
-    ansible-lint
+    ansible-navigator
     appimage-run
     # barrier
     bat
@@ -19,12 +18,29 @@
     eza
     fastfetch
     ffmpeg-full
+    (floorp.overrideAttrs (old: {
+      name = "floorp-cleaned";
+      buildCommand =
+        /*
+        bash
+        */
+        ''
+          set -euo pipefail
+          set -x
+          cp -rs --no-preserve=mode "${pkgs.floorp.out}" "$out"
+          set +x
+          rm -R $out/lib/firefox
+          rm -R $out/lib/mozilla
+        '';
+    }))
     fzf
     git
     gh
     glxinfo
     gnupg1
     gparted
+    helm-docs
+    helmfile
     home-manager
     imagemagick
     hyfetch
@@ -33,7 +49,14 @@
     jq
     kate
     kdialog
+    kittysay
     krename
+    kubectl
+    kubectl-neat
+    kubectl-tree
+    kubectl-top
+    kubectx
+    kubernetes-helm
     lazydocker
     libnotify
     lm_sensors
@@ -45,6 +68,7 @@
     nix-output-monitor
     obsidian
     oh-my-zsh
+    opentofu
     owofetch
     plasma-browser-integration
     playerctl
@@ -53,6 +77,7 @@
     scanmem
     slack
     smartmontools
+    space-cadet-pinball
     thunderbird
     tldr
     unar
