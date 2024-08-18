@@ -26,7 +26,6 @@ in {
     ./kitty
     ./lazygit
     ./lsps
-    ./tofu
     ./tools
   ];
 
