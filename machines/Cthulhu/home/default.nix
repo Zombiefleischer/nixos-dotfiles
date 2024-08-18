@@ -26,6 +26,7 @@ in {
     ./kitty
     ./lazygit
     ./lsps
+    ./thunderbird
     ./tools
   ];
 
