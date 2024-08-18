@@ -78,7 +78,6 @@
         ./machines/Cthulhu/modules/flatpak
         ./machines/Cthulhu/modules/kdePackages
         ./machines/Cthulhu/modules/time_i18n
-        ./machines/Cthulhu/modules/tofu
 
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
