@@ -75,7 +75,6 @@
       modules = [
         ./machines/Cthulhu/configuration.nix
         ./machines/Cthulhu/modules/bindfs
-        ./machines/Cthulhu/modules/firefox-addons
         ./machines/Cthulhu/modules/flatpak
         ./machines/Cthulhu/modules/kdePackages
         ./machines/Cthulhu/modules/time_i18n

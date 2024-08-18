@@ -3,7 +3,7 @@
     alejandra
     ansible
     ansible-doctor
-    ansible-navigator
+    # ansible-navigator
     appimage-run
     # barrier
     bat
@@ -54,7 +54,8 @@
     kubectl
     kubectl-neat
     kubectl-tree
-    kubectl-top
+    kubectl-klok
+    kubectl-ktop
     kubectx
     kubernetes-helm
     lazydocker
