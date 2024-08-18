@@ -66,6 +66,7 @@
             users."zombiefleischer" = {
               imports = [./machines/Leviathan/home];
             };
+            backupFileExtension = "hm.bak";
           };
         }
       ];
