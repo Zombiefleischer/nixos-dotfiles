@@ -53,6 +53,7 @@
     ncdu
     nextcloud-client
     nh
+    nvd
     obsidian
     oh-my-zsh
     okteta
