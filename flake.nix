@@ -41,6 +41,7 @@
       modules = [
         ./machines/Leviathan/configuration.nix # plasma6/Wayland
         # ./drv/libx52.nix # not working atm
+        ./machines/Leviathan/drv/klassy.nix
         ./machines/Leviathan/drv/wallpaper-engine-kde.nix
         ./machines/Leviathan/modules/flatpak
         ./machines/Leviathan/modules/bindfs
@@ -48,6 +49,7 @@
         ./machines/Leviathan/modules/fonts
         ./machines/Leviathan/modules/kdePackages
         ./machines/Leviathan/modules/keychron
+        ./machines/Leviathan/modules/nh
         ./machines/Leviathan/modules/openrgb
         ./machines/Leviathan/modules/steam
         ./machines/Leviathan/modules/time_i18n
