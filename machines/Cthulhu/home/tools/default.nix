@@ -65,7 +65,6 @@
     lunarvim
     ncdu
     neovim
-    # networkmanager-fortisslvpn
     nix-output-monitor
     obsidian
     oh-my-zsh

@@ -40,7 +40,6 @@
     input-leap
     kate
     kile
-    # kitty
     kittysay
     krename
     krita
