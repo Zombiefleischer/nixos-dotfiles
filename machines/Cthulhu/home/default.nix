@@ -19,8 +19,13 @@ in {
 
   # *.nix file can be omitted if the name is default.nix
   imports = [
+    ./aws
+    ./firefox
+    ./git
+    ./go
     ./kitty
     ./lazygit
+    ./lsps
     ./tools
   ];
 
