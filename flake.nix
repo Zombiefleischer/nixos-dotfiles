@@ -80,6 +80,7 @@
         ./machines/Cthulhu/modules/bindfs
         ./machines/Cthulhu/modules/flatpak
         ./machines/Cthulhu/modules/kdePackages
+        ./machines/Cthulhu/modules/nh
         ./machines/Cthulhu/modules/time_i18n
 
         catppuccin.nixosModules.catppuccin
