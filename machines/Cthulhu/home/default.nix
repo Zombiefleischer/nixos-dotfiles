@@ -1,6 +1,7 @@
 {
   inputs,
   system,
+  pkgs,
   ...
 }: let
   overlays = [
@@ -20,6 +21,7 @@ in {
   # *.nix file can be omitted if the name is default.nix
   imports = [
     ./aws
+    ./catppuccin
     ./firefox
     ./git
     ./go

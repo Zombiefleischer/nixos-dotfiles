@@ -21,19 +21,18 @@
   networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    auto-optimise-store = true;
+    trusted-users = ["root" "@wheel"];
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager = {
-    enable = true;
-    plugins = [
-      pkgs.networkmanager-fortisslvpn
-    ];
-  };
+  networking.networkmanager.enable = true;
   networking.nameservers = ["192.168.178.34"];
 
   # Enable Bluetooth
@@ -92,6 +91,7 @@
   };
 
   # Enable passwordless sudo
+  security.sudo.wheelNeedsPassword = false;
   security.sudo.extraRules = [
     {
       users = ["zombiefleischer"];
@@ -151,6 +151,9 @@
   programs.mtr.enable = true;
   programs.zsh.enable = true;
   programs.kdeconnect.enable = true;
+  programs.neovim.defaultEditor = true;
+  programs.light.enable = true;
+  programs.direnv.enable = true;
 
   # Enable zsh for all users
   users.defaultUserShell = pkgs.zsh;

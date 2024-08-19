@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    catppuccin.url = "github:Stonks3141/ctp-nix";
+    catppuccin.url = "github:catppuccin/nix";
 
     envfs = {
       url = "github:Mic92/envfs";
@@ -54,6 +54,7 @@
         ./machines/Leviathan/modules/steam
         ./machines/Leviathan/modules/time_i18n
         ./machines/Leviathan/modules/variables
+
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
@@ -64,7 +65,10 @@
             useUserPackages = true;
             extraSpecialArgs = {inherit inputs system;};
             users."zombiefleischer" = {
-              imports = [./machines/Leviathan/home];
+              imports = [
+                ./machines/Leviathan/home
+                catppuccin.homeManagerModules.catppuccin
+              ];
             };
             backupFileExtension = "hm.bak";
           };
@@ -92,7 +96,10 @@
             useUserPackages = true;
             extraSpecialArgs = {inherit inputs system;};
             users."zombiefleischer" = {
-              imports = [./machines/Cthulhu/home];
+              imports = [
+                ./machines/Cthulhu/home
+                catppuccin.homeManagerModules.catppuccin
+              ];
             };
             backupFileExtension = "hm.bak";
           };

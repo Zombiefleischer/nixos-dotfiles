@@ -12,7 +12,7 @@
       mode = "no-cursor";
     };
 
-    theme = "Catppuccin-Macchiato";
+    theme = "Catppuccin-Mocha";
 
     settings = {
       # Cursor customization
