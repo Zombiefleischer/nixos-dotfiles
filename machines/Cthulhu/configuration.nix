@@ -89,6 +89,7 @@
     description = "Max Schönleben";
     extraGroups = ["networkmanager" "wheel" "docker" "plugdev"];
   };
+  users.users.root.openssh.authorizedKeys.keys = config.users.users.zombiefleischer.openssh.authorizedKeys.keys;
 
   # Enable passwordless sudo
   security.sudo.wheelNeedsPassword = false;

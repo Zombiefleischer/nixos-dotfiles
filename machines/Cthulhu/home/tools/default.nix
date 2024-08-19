@@ -15,6 +15,7 @@
     catppuccin-papirus-folders
     clinfo
     # delta
+    dig
     eza
     fastfetch
     ffmpeg-full
