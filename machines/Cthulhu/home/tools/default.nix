@@ -65,7 +65,9 @@
     lunarvim
     ncdu
     neovim
+    nh
     nix-output-monitor
+    nvd
     obsidian
     oh-my-zsh
     opentofu
