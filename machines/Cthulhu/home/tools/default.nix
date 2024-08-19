@@ -80,7 +80,7 @@
     slack
     smartmontools
     space-cadet-pinball
-    thunderbird
+    thunderbird-unwrapped
     tldr
     unar
     unzip
