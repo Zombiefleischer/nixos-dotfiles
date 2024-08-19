@@ -32,7 +32,7 @@
         commandLogSize = 15;
         showBottomLine = true;
       };
-      promptToReturnFromSubprocess = true; # false @ work
+      promptToReturnFromSubprocess = false;
       services = {
         "git.nextbike.net" = "gitlab:git.nextbike.net";
       };
