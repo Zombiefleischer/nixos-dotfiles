@@ -76,6 +76,7 @@
     plasma-browser-integration
     playerctl
     powertop
+    (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
     ripgrep
     scanmem
     slack
