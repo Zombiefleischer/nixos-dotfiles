@@ -49,6 +49,7 @@ _: {
       "org.librecad.librecad"
       "io.gitlab.librewolf-community"
       "io.edcd.EDMarketConnector"
+      "dev.vencord.Vesktop"
     ];
   };
 }
