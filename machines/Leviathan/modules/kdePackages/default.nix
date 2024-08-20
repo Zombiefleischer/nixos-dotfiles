@@ -15,6 +15,8 @@
     kolourpaint
     # kompare
     konquest
+    krdc
+    krfb
     kruler
     kspaceduel
     ksshaskpass

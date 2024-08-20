@@ -176,7 +176,7 @@
     catppuccin-papirus-folders
     clinfo
     # cudaPackages.cudatoolkit
-    #delta
+    delta
     eza
     ffmpeg-full
     fzf
