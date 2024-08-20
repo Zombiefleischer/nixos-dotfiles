@@ -35,6 +35,7 @@
         '';
     }))
     fzf
+    gimp
     git
     gh
     glxinfo
@@ -43,8 +44,8 @@
     helm-docs
     helmfile
     home-manager
-    imagemagick
     hyfetch
+    imagemagick
     input-leap
     junction
     jq

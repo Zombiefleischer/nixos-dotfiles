@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs.kdePackages; [
     discover
     dolphin-plugins
+    # karousel
     kbackup
     kcalc
     kde-gtk-config
@@ -15,6 +16,7 @@
     konquest
     krdc
     krfb
+    # krohnkite
     kruler
     kspaceduel
     ksshaskpass
@@ -22,7 +24,9 @@
     kwallet
     kwallet-pam
     kwalletmanager
+    kzones
     plasma-wayland-protocols
+    # polonium
     qtmultimedia
     qtstyleplugin-kvantum
     qtwebsockets
