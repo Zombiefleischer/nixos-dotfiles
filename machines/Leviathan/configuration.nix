@@ -38,8 +38,10 @@
   hardware.bluetooth.enable = true;
 
   # Set up ports
-  # barrier foundryvtt
-  networking.firewall.allowedTCPPorts = [24800];
+  networking.firewall.allowedTCPPorts = [
+    5900 # krfb-virtualmonitor
+    24800 # input-leap
+  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
