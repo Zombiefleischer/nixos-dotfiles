@@ -14,7 +14,7 @@
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
-    # delta
+    delta
     dig
     eza
     fastfetch

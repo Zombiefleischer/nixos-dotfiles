@@ -13,6 +13,8 @@
     kolf
     kolourpaint
     konquest
+    krdc
+    krfb
     kruler
     kspaceduel
     ksshaskpass
