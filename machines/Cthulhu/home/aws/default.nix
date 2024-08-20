@@ -25,7 +25,7 @@
         readOnly = false;
         noExitOnCtrlC = false;
         ui = {
-          enableMouse = true;
+          enableMouse = false;
           headless = false;
           logoless = false;
           crumbsless = false;
