@@ -14,6 +14,7 @@
         ro = "roles";
         rb = "rolebindings";
         np = "networkpolicies";
+        ns = "namespaces";
       };
     };
     settings = {
