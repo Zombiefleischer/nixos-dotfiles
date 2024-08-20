@@ -175,8 +175,12 @@
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;
 
-  # Open ports in the firewall. [ ssh barrier ]
-  networking.firewall.allowedTCPPorts = [22 24800];
+  # Open ports in the firewall.
+  networking.firewall.allowedTCPPorts = [
+    22 # ssh
+    5900 # krfb-virtualmonitor
+    24800 # input-leap
+  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
