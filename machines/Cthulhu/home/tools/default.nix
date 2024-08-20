@@ -78,7 +78,8 @@
     playerctl
     powertop
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
-    qemu
+    qemu_full
+    qtemu
     ripgrep
     scanmem
     slack
