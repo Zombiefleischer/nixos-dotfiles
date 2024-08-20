@@ -67,7 +67,7 @@
     lsof
     lunarvim
     ncdu
-    nemo
+    nemu
     neovim
     nix-output-monitor
     nvd
