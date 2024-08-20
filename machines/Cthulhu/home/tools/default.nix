@@ -67,7 +67,6 @@
     lsof
     lunarvim
     ncdu
-    nemu
     neovim
     nix-output-monitor
     nvd
@@ -79,7 +78,8 @@
     playerctl
     powertop
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
-    qemu
+    quickemu
+    quickgui
     ripgrep
     scanmem
     slack
