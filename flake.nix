@@ -11,6 +11,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.3.0";
 
     helix-master = {

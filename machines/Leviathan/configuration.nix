@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
+  inputs,
   pkgs,
   ...
 }: {
@@ -224,6 +225,7 @@
     xsel
     xwayland
     yank
+    inputs.zen-browser.packages."${system}".default
     zoxide
     zsh
   ];

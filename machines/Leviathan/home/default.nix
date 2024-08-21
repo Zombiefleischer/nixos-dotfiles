@@ -41,5 +41,5 @@ in {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
-  xdg.enable = true;
+  # xdg.enable = true;
 }
