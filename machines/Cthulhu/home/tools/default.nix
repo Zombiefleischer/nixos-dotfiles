@@ -79,7 +79,7 @@
     powertop
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
     # quickemu
-    quickgui
+    # quickgui
     ripgrep
     scanmem
     slack
