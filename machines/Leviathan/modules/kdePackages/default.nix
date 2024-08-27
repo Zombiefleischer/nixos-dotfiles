@@ -10,7 +10,7 @@
     kmines
     kmousetool
     kmouth
-    knotes
+    # knotes
     kolf
     kolourpaint
     # kompare

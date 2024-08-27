@@ -24,6 +24,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = {
@@ -31,6 +33,7 @@
     catppuccin,
     envfs,
     home-manager,
+    nix-alien,
     nix-flatpak,
     nixpkgs,
     ...
@@ -39,7 +42,7 @@
   in {
     # Leviathan
     nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
+      specialArgs = {inherit inputs self system;};
       modules = [
         ./machines/Leviathan/configuration.nix # plasma6/Wayland
         # ./drv/libx52.nix # not working atm
@@ -61,6 +64,16 @@
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
+        ({
+          self,
+          system,
+          ...
+        }: {
+          environment.systemPackages = with self.inputs.nix-alien.packages.${system}; [
+            nix-alien
+          ];
+          programs.nix-ld.enable = true;
+        })
         {
           home-manager = {
             # useGlobalPkgs = true;
