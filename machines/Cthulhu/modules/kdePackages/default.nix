@@ -16,7 +16,7 @@
     konquest
     krdc
     krfb
-    # krohnkite
+    krohnkite
     kruler
     kspaceduel
     ksshaskpass
