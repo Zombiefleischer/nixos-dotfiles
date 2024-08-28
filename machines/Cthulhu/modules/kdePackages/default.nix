@@ -16,7 +16,7 @@
     konquest
     krdc
     krfb
-    krohnkite
+    # krohnkite
     kruler
     kspaceduel
     ksshaskpass
@@ -26,7 +26,7 @@
     kwalletmanager
     kzones
     plasma-wayland-protocols
-    # polonium
+    polonium
     qtmultimedia
     qtstyleplugin-kvantum
     qtwebsockets
