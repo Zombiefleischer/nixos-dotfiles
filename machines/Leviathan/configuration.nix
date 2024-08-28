@@ -165,13 +165,6 @@
     )
     alejandra
     appimage-run
-    (
-      makeAutostartItem
-      {
-        name = "barrier";
-        package = barrier;
-      }
-    )
     bat
     btop
     catppuccin

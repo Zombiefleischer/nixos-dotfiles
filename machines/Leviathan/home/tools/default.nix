@@ -6,6 +6,7 @@
     # ansible-later
     ansible-lint
     audacity
+    barrier
     bitwarden
     bitwarden-cli
     cava
