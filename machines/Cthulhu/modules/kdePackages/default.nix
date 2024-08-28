@@ -26,7 +26,7 @@
     kwalletmanager
     kzones
     plasma-wayland-protocols
-    polonium
+    # polonium
     qtmultimedia
     qtstyleplugin-kvantum
     qtwebsockets
