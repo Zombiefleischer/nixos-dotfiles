@@ -5,7 +5,7 @@
     ansible-doctor
     # ansible-navigator
     appimage-run
-    # barrier
+    barrier
     bat
     bitwarden
     bitwarden-cli
@@ -78,7 +78,6 @@
     playerctl
     powertop
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
-    # quickemu
     quickgui
     ripgrep
     scanmem
