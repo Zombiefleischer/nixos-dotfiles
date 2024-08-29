@@ -85,6 +85,7 @@
     slack
     smartmontools
     space-cadet-pinball
+    spice
     thunderbird-unwrapped
     tldr
     unar
