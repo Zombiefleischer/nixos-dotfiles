@@ -38,6 +38,7 @@
     gimp
     git
     gh
+    glab
     glxinfo
     gnupg1
     gparted
