@@ -47,6 +47,7 @@
     krita-plugin-gmic
     kstars
     libreoffice
+    librewolf
     lunarvim
     lutris
     masterpdfeditor

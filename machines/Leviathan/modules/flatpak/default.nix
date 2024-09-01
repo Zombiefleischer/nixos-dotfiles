@@ -47,7 +47,7 @@ _: {
       "io.github.aandrew_me.ytdn"
       "xyz.ketok.Speedtest"
       "org.librecad.librecad"
-      "io.gitlab.librewolf-community"
+      # "io.gitlab.librewolf-community"
       "io.edcd.EDMarketConnector"
     ];
   };
