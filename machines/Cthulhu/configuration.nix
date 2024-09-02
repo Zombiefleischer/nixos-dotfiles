@@ -147,25 +147,6 @@
     fontconfig.defaultFonts.monospace = ["FiraCode Nerd Font"];
   };
 
-  systemd.timers."feh-background" = {
-    wantedBy = ["timers.target"];
-    timerConfig = {
-      OnBootSec = "15m";
-      OnUnitActiveSec = "15m";
-      Unit = "feh-background.service";
-    };
-  };
-  systemd.services."feh-background" = {
-    script = ''
-      set -eu
-      feh --bg-fill --randomize $HOME/Pictures/i3_wallpapers
-    '';
-    serviceConfig = {
-      Type = "oneshot";
-      User = "zombiefleischer";
-    };
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;

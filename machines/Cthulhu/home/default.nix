@@ -30,6 +30,7 @@ in {
     ./lsps
     ./neovim
     ./tools
+    ./wallpaper
   ];
 
   xdg.enable = true;
