@@ -38,6 +38,7 @@
     fzf
     gimp
     git
+    gitui
     gh
     glab
     glxinfo
@@ -69,7 +70,7 @@
     lsof
     lunarvim
     ncdu
-    neovim
+    # neovim
     nix-output-monitor
     nvd
     obsidian
