@@ -37,6 +37,7 @@
     fzf
     gimp
     git
+    gitui
     gh
     glab
     glxinfo
