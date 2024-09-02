@@ -77,7 +77,7 @@
     oh-my-zsh
     opentofu
     owofetch
-    picom-pijulius
+    # picom-pijulius
     plasma-browser-integration
     playerctl
     powertop

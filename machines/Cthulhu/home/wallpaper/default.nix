@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   services.random-background = {
     enable = true;
     display = "fill";
@@ -9,6 +9,7 @@
 
   services.picom = {
     enable = true;
+    package = pkgs.picom-pijulius;
     inactiveOpacity = 0.8;
     settings = {
       "frame-opacity" = 0.8;
