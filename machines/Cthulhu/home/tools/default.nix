@@ -18,6 +18,7 @@
     dig
     eza
     fastfetch
+    feh
     ffmpeg-full
     (floorp.overrideAttrs (old: {
       name = "floorp-cleaned";
@@ -37,7 +38,6 @@
     fzf
     gimp
     git
-    gitui
     gh
     glab
     glxinfo
@@ -76,6 +76,7 @@
     oh-my-zsh
     opentofu
     owofetch
+    picom-pijulius
     plasma-browser-integration
     playerctl
     powertop

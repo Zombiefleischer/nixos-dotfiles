@@ -28,6 +28,7 @@ in {
     ./kitty
     ./lazygit
     ./lsps
+    ./neovim
     ./tools
   ];
 

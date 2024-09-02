@@ -26,6 +26,11 @@
     };
 
     nix-alien.url = "github:thiagokokada/nix-alien";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +41,7 @@
     nix-alien,
     nix-flatpak,
     nixpkgs,
+    nixvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -114,6 +120,7 @@
               imports = [
                 ./machines/Cthulhu/home
                 catppuccin.homeManagerModules.catppuccin
+                nixvim.homeManagerModules.nixvim
               ];
             };
             backupFileExtension = "hm.bak";
