@@ -9,8 +9,13 @@
       }
     ];
 
-    # files."ftdetect/yaml.ansible.lua".autoCmd = [
-
-    # ]
+    files."ftdetect/yaml.ansible.lua".autoCmd = [
+      {
+        group = "filetypes";
+        event = ["BufRead" "BufNewFile"];
+        pattern = ["*.yml"];
+        command = "set ft=yaml.ansible";
+      }
+    ];
   };
 }
