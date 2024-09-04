@@ -1,5 +1,5 @@
 {
-  config = {
+  programs.nixvim.config = {
     extraConfigLuaPre =
       # lua
       ''
@@ -84,6 +84,27 @@
 
       # Hide command line unless needed
       cmdheight = 0;
+
+      # Incremental search: show match for partly typed search command
+      incsearch = true;
+
+      # Search and replace: preview changes in quickfix list
+      inccommand = "split";
+
+      # When the search query is lower-case, match both lower and upper-case
+      ignorecase = true;
+
+      # Override the 'ignorecase' option if the search pattern contains upper
+      smartcase = true;
+
+      # Wether to show the signcolumn
+      signcolumn = "yes";
+
+      # Columns to highlight
+      colorcolumn = "80,100,120,160";
+
+      # File-content encoding for the current buffer
+      fileencoding = "utf-8";
     };
   };
 }
