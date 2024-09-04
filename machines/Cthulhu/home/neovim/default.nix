@@ -1,4 +1,4 @@
-_: {
+{inputs, ...}: {
   programs.nixvim = {
     enable = true;
 
@@ -9,6 +9,8 @@ _: {
   };
 
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+
     # General Configuration
     ./settings.nix
     ./file_types.nix
