@@ -2,7 +2,7 @@
   services.random-background = {
     enable = true;
     display = "fill";
-    enableXinerama = false;
+    enableXinerama = true;
     imageDirectory = "/home/zombiefleischer/Pictures/i3_wallpapers";
     interval = "15m";
   };

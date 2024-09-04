@@ -1,26 +1,33 @@
-{self, ...}: {
-  imports = [];
-
+_: {
   programs.nixvim = {
     enable = true;
 
-    colorschemes.catppuccin = {
-      enable = true;
-      settings = {
-        flavour = "mocha";
-        integrations = {
-          cmp = true;
-          gitsigns = true;
-          nvimtree = true;
-          treesitter = true;
-          notify = true;
-          mini.enabled = true;
-        };
-        transparent_background = true;
-      };
-    };
-
-    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
     vimdiffAlias = true;
+    defaultEditor = true;
   };
+
+  imports = [
+    # General Configuration
+    ./settings.nix
+    ./file_types.nix
+
+    # Themes
+    ./plugins/themes/default.nix
+
+    # Completion
+
+    # Snippets
+
+    # Editor plugins and configurations
+
+    # UI plugins
+
+    # LSP and formatting
+
+    # Git
+
+    # Utils
+  ];
 }
