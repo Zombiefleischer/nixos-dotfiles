@@ -120,7 +120,6 @@
               imports = [
                 ./machines/Cthulhu/home
                 catppuccin.homeManagerModules.catppuccin
-                nixvim.homeManagerModules.nixvim
               ];
             };
             backupFileExtension = "hm.bak";
