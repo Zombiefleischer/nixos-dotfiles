@@ -1,8 +1,4 @@
 {
-  autoGroups = {
-    filetypes = {};
-  };
-
   files."ftdetect/terraformft.lua".autoCmd = [
     {
       group = "filetypes";
