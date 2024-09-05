@@ -67,7 +67,7 @@
   programs.xwayland.enable = true;
 
   # Enable Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland.enable = false;
 
   # Enable i3
   services.xserver.windowManager.i3 = {
