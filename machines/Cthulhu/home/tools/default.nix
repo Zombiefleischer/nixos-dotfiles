@@ -50,6 +50,7 @@
     hyfetch
     imagemagick
     input-leap
+    jira-cli-go
     junction
     jq
     kate
@@ -90,6 +91,7 @@
     smartmontools
     space-cadet-pinball
     spice
+    super-productivity
     thunderbird-unwrapped
     tldr
     unar

@@ -65,7 +65,7 @@
       swapfile = false;
 
       # Time in milliseconds to wait for a mapped sequence to complete
-      timeoutllen = 2000;
+      timeoutlen = 2000;
 
       # Enable 24-bit RGB color in the TUI
       termguicolors = true;
