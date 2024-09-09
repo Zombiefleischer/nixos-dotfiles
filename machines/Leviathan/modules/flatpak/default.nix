@@ -35,10 +35,15 @@ _: {
           ];
         };
       };
-      "dev.vencord.Vesktop".Context = {
-        filesystems = [
-          "home:ro"
-        ];
+      "dev.vencord.Vesktop" = {
+        Environment = {
+          XCURSOR_PATH = "/home/zombiefleischer/.icons";
+        };
+        Context = {
+          filesystems = [
+            "home:ro"
+          ];
+        };
       };
     };
 
