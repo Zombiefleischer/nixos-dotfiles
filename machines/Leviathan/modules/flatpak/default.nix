@@ -35,6 +35,11 @@ _: {
           ];
         };
       };
+      "dev.vencord.Vesktop".Context = {
+        filesystems = [
+          "home:ro"
+        ];
+      };
     };
 
     packages = [
@@ -49,6 +54,7 @@ _: {
       "org.librecad.librecad"
       # "io.gitlab.librewolf-community"
       "io.edcd.EDMarketConnector"
+      "dev.vencord.Vesktop"
     ];
   };
 }
