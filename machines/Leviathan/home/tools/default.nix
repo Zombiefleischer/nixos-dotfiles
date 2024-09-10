@@ -83,7 +83,7 @@
     unar
     usbutils
     uwuify
-    # vesktop
+    vesktop
     via
     vial
     (
