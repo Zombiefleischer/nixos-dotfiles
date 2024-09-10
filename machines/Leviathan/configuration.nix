@@ -233,8 +233,11 @@
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-kde];
-    # wlr.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-kde
+      pkgs.xdg-desktop-portal-wlr
+    ];
+    wlr.enable = true;
   };
 
   # Install fonts
