@@ -35,16 +35,16 @@ _: {
           ];
         };
       };
-      "dev.vencord.Vesktop" = {
-        Environment = {
-          XCURSOR_PATH = "/home/zombiefleischer/.icons";
-        };
-        Context = {
-          filesystems = [
-            "home:ro"
-          ];
-        };
-      };
+      # "dev.vencord.Vesktop" = {
+      # Environment = {
+      # XCURSOR_PATH = "/home/zombiefleischer/.icons";
+      # };
+      # Context = {
+      # filesystems = [
+      # "home:ro"
+      # ];
+      # };
+      # };
     };
 
     packages = [
@@ -59,7 +59,7 @@ _: {
       "org.librecad.librecad"
       # "io.gitlab.librewolf-community"
       "io.edcd.EDMarketConnector"
-      "dev.vencord.Vesktop"
+      # "dev.vencord.Vesktop"
     ];
   };
 }
