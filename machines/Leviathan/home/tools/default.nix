@@ -40,6 +40,7 @@
     inkscape-with-extensions
     input-leap
     kate
+    keymapp
     kile
     kittysay
     krename
@@ -59,7 +60,7 @@
     obsidian
     oh-my-zsh
     okteta
-    overlayed
+    # TODO: overlayed
     owofetch
     pipes
     pipes-rs
