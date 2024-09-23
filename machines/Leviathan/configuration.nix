@@ -223,8 +223,8 @@
     zsh
   ];
 
-  # Enable xone for Xbox Controller # TODO: Enable again after patch is upstreams
-  # hardware.xone.enable = true;
+  # Enable xone for Xbox Controller
+  hardware.xone.enable = true;
 
   # Enable QMK access
   hardware.keyboard.qmk.enable = true;

@@ -59,6 +59,7 @@
     obsidian
     oh-my-zsh
     okteta
+    overlayed
     owofetch
     pipes
     pipes-rs
@@ -102,5 +103,6 @@
     yazi
     zed-editor
     zrok
+    zsa-udev-rules
   ];
 }
