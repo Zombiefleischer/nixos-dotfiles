@@ -14,10 +14,13 @@
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
+    copier
+    dbeaver-bin
     delta
     dig
     eza
     fastfetch
+    fd
     feh
     ffmpeg-full
     (floorp.overrideAttrs (old: {
@@ -73,6 +76,7 @@
     ncdu
     # neovim
     nix-output-monitor
+    nss
     nvd
     obsidian
     oh-my-zsh

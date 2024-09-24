@@ -16,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use the latest Linux Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -120,6 +120,7 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
   ];
+  environment.pathsToLink = ["/share/zsh"];
 
   # Stuff for flatpak and wayland
   services.dbus.enable = true;
@@ -150,7 +151,7 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
-  programs.zsh.enable = true;
+  programs.zsh.enable = true; # TODO: Disable ZSH here
   programs.kdeconnect.enable = true;
   programs.neovim.defaultEditor = true;
   programs.light.enable = true;
