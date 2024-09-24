@@ -16,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use the latest Linux Kernel
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -79,6 +79,8 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  services.udev.packages = [pkgs.zsa-udev-rules];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
