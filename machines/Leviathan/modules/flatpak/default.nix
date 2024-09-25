@@ -60,6 +60,7 @@ _: {
       # "io.gitlab.librewolf-community"
       "io.edcd.EDMarketConnector"
       # "dev.vencord.Vesktop"
+      "me.iepure.devtoolbox"      
     ];
   };
 }
