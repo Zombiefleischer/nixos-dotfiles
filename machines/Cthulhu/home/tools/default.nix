@@ -58,6 +58,7 @@
     jq
     kate
     kdialog
+    keymapp
     kittysay
     krename
     kubectl
