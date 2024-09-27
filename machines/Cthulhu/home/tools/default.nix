@@ -18,6 +18,7 @@
     dbeaver-bin
     delta
     dig
+    docker-buildx
     eza
     fastfetch
     fd
