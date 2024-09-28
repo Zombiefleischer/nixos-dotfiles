@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs.kdePackages; [
     discover
     dolphin-plugins
+    filelight
     kbackup
     kcalc
     kde-gtk-config
