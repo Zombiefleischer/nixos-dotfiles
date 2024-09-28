@@ -31,6 +31,7 @@ in {
     ./lsps
     ./minecraft
     ./obs
+    ./omp
     ./tools
 
     ./desktop-files/edhm-ui.nix
