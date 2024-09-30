@@ -15,7 +15,7 @@
     catppuccin-papirus-folders
     clinfo
     copier
-    dbeaver-bin
+    # dbeaver-bin
     delta
     dig
     docker-buildx
