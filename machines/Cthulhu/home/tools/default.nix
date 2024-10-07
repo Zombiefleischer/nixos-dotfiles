@@ -53,6 +53,7 @@
     home-manager
     hyfetch
     imagemagick
+    inetutils
     input-leap
     jira-cli-go
     junction

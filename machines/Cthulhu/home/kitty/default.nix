@@ -12,7 +12,7 @@
       mode = "no-cursor";
     };
 
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
 
     settings = {
       # Cursor customization
