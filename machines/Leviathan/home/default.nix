@@ -31,8 +31,8 @@ in {
     ./lsps
     ./minecraft
     ./obs
-    ./omp
     ./tools
+    ./zsh
 
     ./desktop-files/edhm-ui.nix
     # ./desktop-files/veadotube.nix
