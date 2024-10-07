@@ -12,6 +12,7 @@
     cbonsai
     codevis
     davinci-resolve
+    dig
     fastfetch
     filezilla
     # floorp # Override - see https://github.com/nix-community/home-manager/issues/5132
