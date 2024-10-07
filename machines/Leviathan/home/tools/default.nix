@@ -37,6 +37,7 @@
     glaxnimate
     gomatrix
     hyfetch
+    inetutils
     inkscape-with-extensions
     input-leap
     kate
