@@ -163,7 +163,7 @@
   fi
 
   # Default background color.
-  typeset -g POWERLEVEL9K_BACKGROUND=234
+  typeset -g POWERLEVEL9K_BACKGROUND=0
 
   # Separator between same-color segments on the left.
   typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%242F\uE0B1'
@@ -186,9 +186,10 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#7dc4e4'
   # Custom icon.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' 🐱'
+  typeset -g POWERLEVEL9K_LINUX_NIXOS_ICON=' 🐱'
+  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' 🐱'
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
