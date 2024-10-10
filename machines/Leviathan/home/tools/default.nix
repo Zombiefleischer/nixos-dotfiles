@@ -73,10 +73,7 @@
     ripgrep
     rsibreak
     scanmem
-    (makeAutostartItem {
-      name = "signal-desktop";
-      package = signal-desktop;
-    })
+    signal-desktop
     smartmontools
     steamtinkerlaunch
     telegram-desktop
