@@ -73,6 +73,7 @@
     ripgrep
     rsibreak
     scanmem
+    signalcli
     signal-desktop
     smartmontools
     steamtinkerlaunch
