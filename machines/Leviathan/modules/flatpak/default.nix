@@ -61,6 +61,7 @@ _: {
       "io.edcd.EDMarketConnector"
       # "dev.vencord.Vesktop"
       "me.iepure.devtoolbox"
+      "com.vivaldi.Vivaldi"
     ];
   };
 }
