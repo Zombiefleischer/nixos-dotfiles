@@ -14,6 +14,7 @@
     davinci-resolve
     dig
     fastfetch
+    fd
     filezilla
     # floorp # Override - see https://github.com/nix-community/home-manager/issues/5132
     (floorp.overrideAttrs (old: {
