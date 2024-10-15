@@ -13,6 +13,7 @@
     codevis
     davinci-resolve
     dig
+    egl-wayland
     fastfetch
     fd
     filezilla
