@@ -62,7 +62,8 @@
     obsidian
     oh-my-zsh
     okteta
-    # TODO: overlayed
+    onefetch
+    overlayed
     owofetch
     pipes
     pipes-rs
