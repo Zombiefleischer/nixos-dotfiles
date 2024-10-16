@@ -229,6 +229,12 @@
   # Enable QMK access
   hardware.keyboard.qmk.enable = true;
 
+  # Enable Tablet Drivers
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
+
   # Stuff for flatpak and wayland
   services.dbus.enable = true;
   xdg.portal = {
