@@ -63,6 +63,7 @@
     oh-my-zsh
     okteta
     onefetch
+    opentabletdriver
     overlayed
     owofetch
     pipes
