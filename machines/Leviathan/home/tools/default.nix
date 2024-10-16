@@ -50,6 +50,7 @@
     kstars
     libreoffice
     librewolf
+    libwacom
     lunarvim
     lutris
     masterpdfeditor
@@ -82,6 +83,7 @@
     telegram-desktop
     thunderbird
     tidal-hifi
+    tuhi
     unar
     usbutils
     uwuify
@@ -101,6 +103,7 @@
     wacomtablet
     wineWowPackages.full
     winetricks
+    xf86_input_wacom
     yazi
     zed-editor
     zrok
