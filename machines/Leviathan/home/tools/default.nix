@@ -6,7 +6,6 @@
     # ansible-later
     ansible-lint
     audacity
-    bitwarden
     bitwarden-cli
     cava
     cbonsai
