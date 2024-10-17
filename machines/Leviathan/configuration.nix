@@ -231,8 +231,8 @@
 
   # Enable Tablet Drivers
   hardware.opentabletdriver = {
-    enable = false;
-    daemon.enable = false;
+    enable = true;
+    daemon.enable = true;
   };
 
   # Stuff for flatpak and wayland

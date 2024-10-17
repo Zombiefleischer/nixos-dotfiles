@@ -50,7 +50,7 @@
     kstars
     libreoffice
     librewolf
-    libwacom
+    # libwacom
     lunarvim
     lutris
     masterpdfeditor
@@ -100,10 +100,10 @@
     vivaldi-ffmpeg-codecs
     vlc
     vscodium
-    wacomtablet
+    # wacomtablet
     wineWowPackages.full
     winetricks
-    xf86_input_wacom
+    # xf86_input_wacom
     yazi
     zed-editor
     zrok

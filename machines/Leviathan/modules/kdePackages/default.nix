@@ -31,7 +31,7 @@
     qtmultimedia
     qtstyleplugin-kvantum
     qtwebsockets
-    wacomtablet
+    # wacomtablet
     wayland
     wayland-protocols
     xdg-desktop-portal-kde
