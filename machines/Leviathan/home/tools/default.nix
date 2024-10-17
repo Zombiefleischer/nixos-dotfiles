@@ -83,7 +83,6 @@
     telegram-desktop
     thunderbird
     tidal-hifi
-    tuhi
     unar
     usbutils
     uwuify
