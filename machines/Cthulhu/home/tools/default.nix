@@ -95,7 +95,7 @@
     scanmem
     slack
     smartmontools
-    space-cadet-pinball
+    # space-cadet-pinball
     spice
     super-productivity
     thunderbird-unwrapped
