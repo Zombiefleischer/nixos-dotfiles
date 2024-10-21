@@ -84,6 +84,7 @@
     thunderbird
     tidal-hifi
     unar
+    universal-android-debloater
     usbutils
     uwuify
     vesktop
