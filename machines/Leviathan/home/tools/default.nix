@@ -55,6 +55,7 @@
     lutris
     masterpdfeditor
     mc
+    mission-center
     ncdu
     nextcloud-client
     nh
@@ -73,6 +74,7 @@
     protonup-qt
     qmk
     rar
+    resources
     ripgrep
     rsibreak
     scanmem
