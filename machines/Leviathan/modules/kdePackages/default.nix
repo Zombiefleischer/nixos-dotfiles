@@ -34,7 +34,6 @@
     # wacomtablet
     wayland
     wayland-protocols
-    xdg-desktop-portal-kde
     xwaylandvideobridge
   ];
 }

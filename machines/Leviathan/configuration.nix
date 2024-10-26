@@ -216,7 +216,6 @@
     wl-clipboard
     xclip
     xsel
-    xwayland
     yank
     inputs.zen-browser.packages."${system}".specific
     zoxide
@@ -240,8 +239,9 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-kde
+      pkgs.kdePackages.xdg-desktop-portal-kde
       pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal
     ];
     wlr.enable = true;
   };

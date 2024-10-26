@@ -31,6 +31,5 @@
     qtwebsockets
     wayland
     wayland-protocols
-    xdg-desktop-portal-kde
   ];
 }

@@ -112,7 +112,6 @@
     wl-clipboard
     xclip
     xsel
-    xwayland
     yank
     yazi
     zed-editor
