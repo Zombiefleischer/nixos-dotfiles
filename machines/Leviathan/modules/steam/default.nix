@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = [
     pkgs.mangohud
-    pkgs.gamescope
   ];
 
   programs.steam = {
