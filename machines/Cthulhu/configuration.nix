@@ -143,7 +143,7 @@
       noto-fonts
       noto-fonts-emoji
       noto-fonts-color-emoji # default
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
     ];
     enableDefaultPackages = false;
     fontDir.enable = true;
