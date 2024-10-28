@@ -19,6 +19,7 @@
     delta
     dig
     docker-buildx
+    e1s
     eza
     fastfetch
     fd
