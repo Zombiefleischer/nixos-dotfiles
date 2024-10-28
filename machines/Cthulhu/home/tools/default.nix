@@ -55,7 +55,7 @@
     inetutils
     input-leap
     jira-cli-go
-    junction
+    # junction
     jq
     kate
     kdialog
