@@ -14,12 +14,12 @@
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
+    cloudlens
     copier
     # dbeaver-bin
     delta
     dig
     docker-buildx
-    e1s
     eza
     fastfetch
     fd
