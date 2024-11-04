@@ -112,8 +112,6 @@
     wget
     wl-clipboard
     xclip
-    xsel
-    yank
     yazi
     zed-editor
     zoxide

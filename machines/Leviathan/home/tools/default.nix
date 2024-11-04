@@ -141,7 +141,7 @@
     wget
     wineWowPackages.full
     winetricks
-    yank
+    wl-clipboard
     # yazi
     zed-editor
     zoxide
