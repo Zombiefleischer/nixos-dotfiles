@@ -118,6 +118,5 @@
     zed-editor
     zoxide
     zsa-udev-rules
-    zsh
   ];
 }

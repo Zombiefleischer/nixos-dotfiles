@@ -15,11 +15,6 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.3.0";
 
-    helix-master = {
-      url = "github:SoraTenshi/helix/new-daily-driver";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

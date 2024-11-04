@@ -156,70 +156,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (
-      makeAutostartItem
-      {
-        name = "goxlr-utility";
-        package = goxlr-utility;
-      }
-    )
-    alejandra
-    appimage-run
-    bat
-    btop
-    catppuccin
-    catppuccin-kvantum
-    catppuccin-papirus-folders
-    clinfo
-    # cudaPackages.cudatoolkit
-    delta
-    eza
-    ffmpeg-full
-    fzf
-    git
-    glxinfo
-    gnupg1
-    gparted
-    gpu-viewer
-    home-manager
-    imagemagick
-    junction
-    jq
-    kdialog
-    lazydocker
-    libnotify
-    libportal
-    libsForQt5.kdelibs4support
-    libunity
-    libva
-    lm_sensors
-    lsof
-    neovim
-    nix-output-monitor
-    nvidia-optical-flow-sdk
-    nvidia-system-monitor-qt
-    nvidia-texture-tools
-    nvidia-vaapi-driver
-    partition-manager
-    pavucontrol
-    pinentry
-    playerctl
-    qpwgraph
-    tldr
-    unzip
-    usbtop
-    vim
-    vulkan-tools
-    wayland
-    wayland-utils
-    wget
-    wl-clipboard
-    xclip
-    xsel
-    yank
     inputs.zen-browser.packages."${system}".specific
-    zoxide
-    zsh
   ];
 
   # Enable xone for Xbox Controller

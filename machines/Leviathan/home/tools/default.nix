@@ -1,20 +1,26 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    ansible
-    ansible-doctor
-    ansible-language-server
-    # ansible-later
-    ansible-lint
+    alejandra
+    appimage-run
     audacity
+    bat
     bitwarden-cli
+    btop
+    catppuccin
+    catppuccin-kvantum
+    catppuccin-papirus-folders
     cava
     cbonsai
+    clinfo
     codevis
     davinci-resolve
+    delta
     dig
     egl-wayland
+    eza
     fastfetch
     fd
+    ffmpeg-full
     filezilla
     # floorp # Override - see https://github.com/nix-community/home-manager/issues/5132
     (floorp.overrideAttrs (old: {
@@ -31,16 +37,27 @@
           rm -R $out/lib/mozilla
         '';
     }))
+    fzf
     gamemode
     gh
     gimp-with-plugins
+    git
     glaxnimate
+    glxinfo
+    gnupg1
     gomatrix
+    goxlr-utility
+    gparted
+    gpu-viewer
     hyfetch
+    imagemagick
     inetutils
     inkscape-with-extensions
     input-leap
+    jq
+    junction
     kate
+    kdialog
     keymapp
     kile
     kittysay
@@ -48,31 +65,45 @@
     krita
     krita-plugin-gmic
     kstars
+    lazydocker
+    libportal
     libreoffice
     librewolf
-    # libwacom
+    libva
+    lm_sensors
+    lsof
     lunarvim
     lutris
     masterpdfeditor
     mc
     mission-center
     ncdu
+    neovim
     nextcloud-client
     nh
+    nix-output-monitor
     nvd
+    nvidia-system-monitor-qt
+    nvidia-texture-tools
+    nvidia-vaapi-driver
     obsidian
     oh-my-zsh
     okteta
     onefetch
     overlayed
     owofetch
+    partition-manager
+    pavucontrol
+    pinentry
     pipes
     pipes-rs
+    playerctl
     plasma-browser-integration
     powertop
     protonmail-bridge
     protonup-qt
     qmk
+    qpwgraph
     rar
     resources
     ripgrep
@@ -85,8 +116,11 @@
     telegram-desktop
     thunderbird
     tidal-hifi
+    tldr
     unar
     universal-android-debloater
+    unzip
+    usbtop
     usbutils
     uwuify
     vesktop
@@ -102,12 +136,15 @@
     vivaldi-ffmpeg-codecs
     vlc
     vscodium
-    # wacomtablet
+    wayland
+    wayland-utils
+    wget
     wineWowPackages.full
     winetricks
-    # xf86_input_wacom
-    yazi
+    yank
+    # yazi
     zed-editor
+    zoxide
     zrok
     zsa-udev-rules
   ];

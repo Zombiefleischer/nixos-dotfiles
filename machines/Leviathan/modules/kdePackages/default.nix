@@ -8,24 +8,24 @@
     kde-gtk-config
     kdenlive
     kjournald
-    kmines
+    # kmines
     kmousetool
     kmouth
     # knotes
-    kolf
+    # kolf
     kolourpaint
     # kompare
-    konquest
+    # konquest
     krdc
     krfb
     kruler
-    kspaceduel
+    # kspaceduel
     ksshaskpass
     ksystemlog
     kwallet
     kwallet-pam
     kwalletmanager
-    palapeli
+    # palapeli
     plasma5support
     plasma-wayland-protocols
     qtmultimedia
