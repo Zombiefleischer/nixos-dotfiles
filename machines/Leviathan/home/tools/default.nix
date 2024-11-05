@@ -109,6 +109,7 @@
     ripgrep
     rsibreak
     scanmem
+    showmethekey
     signal-cli
     signal-desktop
     smartmontools
