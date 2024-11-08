@@ -40,6 +40,12 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+
+    systemSpecificOverlays = [
+      (final: prev: {
+        banana-cursor-dreams = prev.callPackage ./machines/Leviathan/drv/banana-cursor.nix {};
+      })
+    ];
   in {
     # Leviathan
     nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
@@ -48,7 +54,7 @@
         ./machines/Leviathan/configuration.nix # plasma6/Wayland
         # ./drv/libx52.nix # not working atm
         # ./machines/Leviathan/drv/klassy.nix
-        ./machines/Leviathan/drv/wallpaper-engine-kde.nix
+        # ./machines/Leviathan/drv/wallpaper-engine-kde.nix
         ./machines/Leviathan/modules/flatpak
         ./machines/Leviathan/modules/bindfs
         ./machines/Leviathan/modules/firefox-addons
@@ -75,6 +81,11 @@
           ];
           programs.nix-ld.enable = true;
         })
+
+        {
+          nixpkgs.overlays = systemSpecificOverlays;
+        }
+
         {
           home-manager = {
             # useGlobalPkgs = true;
