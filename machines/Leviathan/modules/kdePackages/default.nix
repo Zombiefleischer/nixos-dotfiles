@@ -8,18 +8,17 @@
     kde-gtk-config
     kdenlive
     kjournald
-    # kmines
+    kmines
     kmousetool
     kmouth
-    # knotes
-    # kolf
+    kolf
     kolourpaint
-    # kompare
-    # konquest
+    kompare
+    konquest
     krdc
     krfb
     kruler
-    # kspaceduel
+    kspaceduel
     ksshaskpass
     ksystemlog
     kwallet

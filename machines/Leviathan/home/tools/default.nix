@@ -9,7 +9,7 @@
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
-    cava
+    # cava
     cbonsai
     clinfo
     codevis
@@ -76,7 +76,7 @@
     lutris
     masterpdfeditor
     mc
-    mission-center
+    # mission-center
     ncdu
     neovim
     nextcloud-client
@@ -143,7 +143,7 @@
     wineWowPackages.full
     winetricks
     wl-clipboard
-    # yazi
+    yazi
     zed-editor
     zoxide
     zrok
