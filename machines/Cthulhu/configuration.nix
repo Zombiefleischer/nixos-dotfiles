@@ -11,21 +11,8 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use the latest Linux Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-    auto-optimise-store = true;
-    trusted-users = ["root" "@wheel"];
-  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -64,22 +51,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
   services.udev.packages = [pkgs.zsa-udev-rules];
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -91,7 +62,6 @@
     description = "Max Schönleben";
     extraGroups = ["networkmanager" "wheel" "docker" "plugdev"];
   };
-  users.users.root.openssh.authorizedKeys.keys = config.users.users.zombiefleischer.openssh.authorizedKeys.keys;
 
   # Enable passwordless sudo
   security.sudo.wheelNeedsPassword = false;
@@ -109,9 +79,6 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Enable docker virtualisation
   virtualisation.docker.enable = true;
@@ -156,24 +123,10 @@
   programs.zsh.enable = true; # TODO: Disable ZSH here
   programs.kdeconnect.enable = true;
   programs.neovim.defaultEditor = true;
-  programs.light.enable = true;
   programs.direnv.enable = true;
 
   # Enable zsh for all users
   users.defaultUserShell = pkgs.zsh;
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.settings.PermitRootLogin = "no";
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-      IdentityFile ~/.ssh/mschoenleben_nextbike.ed25519
-    '';
-  };
 
   # Enable KWallet
   security.pam.services.zombiefleischer.enableKwallet = true;

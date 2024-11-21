@@ -4,6 +4,7 @@
     accent = "sapphire";
     flavor = "mocha";
   };
+
   gtk = {
     catppuccin = {
       enable = true;
@@ -23,5 +24,13 @@
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
+  };
+
+  qt.enable = true;
+  qt.style.catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "sapphire";
+    apply = true;
   };
 }
