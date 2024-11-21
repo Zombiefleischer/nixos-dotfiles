@@ -37,6 +37,7 @@
           rm -R $out/lib/mozilla
         '';
     }))
+    freecad-wayland
     fzf
     gamemode
     gh
