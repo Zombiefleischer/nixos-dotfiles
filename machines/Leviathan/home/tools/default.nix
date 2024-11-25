@@ -114,6 +114,7 @@
     signal-cli
     signal-desktop
     smartmontools
+    starfetch
     steamtinkerlaunch
     telegram-desktop
     thunderbird
