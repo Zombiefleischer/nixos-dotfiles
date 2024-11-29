@@ -62,6 +62,7 @@ _: {
       # "dev.vencord.Vesktop"
       "me.iepure.devtoolbox"
       "com.vivaldi.Vivaldi"
+      "com.github.vikdevelop.photopea_app"
     ];
   };
 }
