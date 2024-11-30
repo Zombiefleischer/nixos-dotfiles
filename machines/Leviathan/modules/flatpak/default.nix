@@ -63,6 +63,7 @@ _: {
       "me.iepure.devtoolbox"
       "com.vivaldi.Vivaldi"
       "com.github.vikdevelop.photopea_app"
+      "org.gnome.Brasero"
     ];
   };
 }
