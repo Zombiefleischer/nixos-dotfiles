@@ -122,7 +122,7 @@
   users.users.zombiefleischer = {
     isNormalUser = true;
     description = "Zombiefleischer";
-    extraGroups = ["networkmanager" "wheel" "docker" "plugdev"];
+    extraGroups = ["networkmanager" "wheel" "docker" "plugdev" "cdrom"];
   };
 
   # Enable passwordless sudo
