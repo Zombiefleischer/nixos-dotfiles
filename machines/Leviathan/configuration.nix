@@ -161,6 +161,7 @@
 
   # Enable xone for Xbox Controller
   hardware.xone.enable = true;
+  hardware.xpadneo.enable = true;
 
   # Enable QMK access
   hardware.keyboard.qmk.enable = true;
