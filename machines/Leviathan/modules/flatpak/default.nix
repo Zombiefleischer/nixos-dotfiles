@@ -65,6 +65,7 @@ _: {
       "com.github.vikdevelop.photopea_app"
       "org.gnome.Brasero"
       "com.warlordsoftwares.formatlab"
+      "fr.handbrake.ghb"
     ];
   };
 }
