@@ -126,7 +126,7 @@
     usbtop
     usbutils
     uwuify
-    vesktop
+    # vesktop
     via
     vial
     # (
