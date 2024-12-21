@@ -187,7 +187,8 @@
   # Install fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Hack" "FiraCode"];})
+      nerd-fonts.hack
+      nerd-fonts.fira-code
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default
