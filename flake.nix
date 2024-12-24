@@ -11,9 +11,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.3.0";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     home-manager = {
       url = "github:nix-community/home-manager";
