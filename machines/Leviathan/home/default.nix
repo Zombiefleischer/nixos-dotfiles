@@ -15,6 +15,7 @@
     ./cursor
     ./droidcam
     ./firefox
+    ./ghostty
     ./git
     ./go
     ./hyprland
