@@ -62,7 +62,7 @@
       modules = [
         ./machines/Leviathan/configuration.nix # plasma6/Wayland
         # ./drv/libx52.nix # not working atm
-        ./machines/Leviathan/drv/k3b.nix
+        # ./machines/Leviathan/drv/k3b.nix # Burn CDs
         # ./machines/Leviathan/drv/klassy.nix
         # ./machines/Leviathan/drv/wallpaper-engine-kde.nix
         ./machines/Leviathan/modules/flatpak

@@ -41,7 +41,7 @@
     fzf
     gamemode
     gh
-    gimp-with-plugins
+    # gimp-with-plugins
     git
     glaxnimate
     glxinfo
