@@ -5,7 +5,7 @@
 }: {
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty-package.${system}.default;
+    package = inputs.ghostty-package.packages.${system}.default;
     shellIntegration = {
       enable = true;
       enableZshIntegration = true;
