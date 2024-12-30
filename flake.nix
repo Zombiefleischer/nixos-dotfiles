@@ -29,17 +29,23 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ghostty-package.url = "github:ghostty-org/ghostty";
+    ghostty.url = "github:clo4/ghostty-hm-module";
   };
 
   outputs = {
     self,
     catppuccin,
     envfs,
+    ghostty,
+    ghostty-package,
     home-manager,
     nix-alien,
     nix-flatpak,
     nixpkgs,
     nixvim,
+    zen-browser,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -99,6 +105,7 @@
               imports = [
                 ./machines/Leviathan/home
                 catppuccin.homeManagerModules.catppuccin
+                ghostty.homeModules.default
               ];
             };
             backupFileExtension = "hm.bak";
