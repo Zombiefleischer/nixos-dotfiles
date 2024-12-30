@@ -20,8 +20,8 @@
 
       theme = "catppuccin-macchiato";
 
-      window-theme = "dark";
-      window-decoration = false;
+      window-theme = "ghostty";
+      window-decoration = true;
     };
   };
 }
