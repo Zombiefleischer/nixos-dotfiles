@@ -21,7 +21,9 @@
       theme = "catppuccin-macchiato";
 
       window-theme = "ghostty";
-      window-decoration = true;
+      # window-decoration = true;
+
+      gtk-titlebar = false;
     };
   };
 }
