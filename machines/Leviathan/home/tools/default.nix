@@ -106,6 +106,7 @@
     qmk
     qpwgraph
     rar
+    reaper
     resources
     ripgrep
     rsibreak
