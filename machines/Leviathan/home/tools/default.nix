@@ -39,6 +39,7 @@
     }))
     freecad-wayland
     fzf
+    gale
     gamemode
     gh
     # gimp-with-plugins
