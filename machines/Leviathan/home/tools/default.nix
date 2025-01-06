@@ -106,6 +106,7 @@
     protonup-qt
     qmk
     qpwgraph
+    r2modman
     rar
     reaper
     resources
