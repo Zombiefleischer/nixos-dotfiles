@@ -1,15 +1,10 @@
-{
-  inputs,
-  system,
-  ...
-}: {
+{...}: {
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty-package.packages.${system}.default;
-    shellIntegration = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    enableZshIntegration = true;
+
+    installBatSyntax = true;
+    installVimSyntax = true;
 
     settings = {
       background-opacity = 0.75;
