@@ -37,6 +37,11 @@
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Experimental = true;
+    };
+  };
 
   # Set up ports
   networking.firewall.allowedTCPPorts = [

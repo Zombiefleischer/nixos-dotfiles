@@ -32,6 +32,9 @@
     # ./desktop-files/veadotube.nix
   ];
 
+  # Activate Bluetooth Media Controls
+  services.mpris-proxy.enable = true;
+
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
