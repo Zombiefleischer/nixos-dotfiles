@@ -111,6 +111,7 @@
     resources
     ripgrep
     rsibreak
+    sc-im
     scanmem
     showmethekey
     signal-cli
