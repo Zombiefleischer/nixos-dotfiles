@@ -36,7 +36,7 @@
   networking.nameservers = ["192.168.178.34"];
 
   # Enable Bluetooth
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = false;
   hardware.bluetooth.settings = {
     General = {
       Experimental = true;
