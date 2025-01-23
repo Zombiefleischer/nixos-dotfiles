@@ -28,6 +28,7 @@
     plasma-wayland-protocols
     qtmultimedia
     qtstyleplugin-kvantum
+    qtwayland
     qtwebsockets
     wayland
     wayland-protocols

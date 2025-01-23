@@ -5,6 +5,7 @@
     ansible-doctor
     # ansible-navigator
     appimage-run
+    at-spi2-atk
     bitwarden
     bitwarden-cli
     brightnessctl
@@ -12,8 +13,7 @@
     clinfo
     cloudlens
     copier
-    # dbeaver-bin
-    delta
+    dbeaver-bin
     dig
     docker-buildx
     eza
@@ -38,7 +38,6 @@
     gimp
     git
     gitui
-    gh
     glab
     glxinfo
     gnupg1
@@ -48,11 +47,13 @@
     helmfile
     home-manager
     hyfetch
+    hyprpicker
+    hyprcursor
+    hypridle
     imagemagick
     inetutils
     input-leap
     jira-cli-go
-    # junction
     jq
     kate
     kdialog
@@ -75,6 +76,8 @@
     ncdu
     # neovim
     nix-output-monitor
+    nmap
+    nmap-formatter
     nss
     nvd
     obsidian
@@ -86,7 +89,11 @@
     # picom-pijulius
     plasma-browser-integration
     playerctl
+    poweralertd
     powertop
+    psi-notify
+    psmisc
+    pyprland
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
     # quickemu
     # quickgui
@@ -94,11 +101,12 @@
     scanmem
     slack
     smartmontools
-    # space-cadet-pinball
+    space-cadet-pinball
+    speedtest-rs
     spice
     super-productivity
+    swww
     thunderbird-unwrapped
-    tldr
     unar
     unzip
     usbtop
@@ -109,6 +117,9 @@
     vscode-fhs
     wget
     wl-clipboard
+    wlrctl
+    wlr-randr
+    wtype
     xclip
     yazi
     yubikey-manager
