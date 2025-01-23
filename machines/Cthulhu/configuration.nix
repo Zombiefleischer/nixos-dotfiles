@@ -25,18 +25,6 @@
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-  programs.xwayland.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Enable Hyprland
-  programs.hyprland.enable = true;
-
   # Enable i3
   services.xserver.windowManager.i3 = {
     enable = true;
@@ -79,9 +67,6 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # Enable docker virtualisation
-  virtualisation.docker.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -139,7 +124,7 @@
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

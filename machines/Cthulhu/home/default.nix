@@ -16,6 +16,7 @@
     ./aws
     ./catppuccin
     ./firefox
+    ./ghostty
     ./git
     ./go
     ./kitty
