@@ -5,10 +5,14 @@
     ansible-doctor
     # ansible-navigator
     appimage-run
+    barrier
+    bat
     bitwarden
     bitwarden-cli
-    brightnessctl
+    btop
+    catppuccin
     catppuccin-kvantum
+    catppuccin-papirus-folders
     clinfo
     cloudlens
     copier
@@ -35,6 +39,7 @@
           rm -R $out/lib/mozilla
         '';
     }))
+    fzf
     gimp
     git
     gitui
@@ -43,7 +48,6 @@
     glxinfo
     gnupg1
     gparted
-    greetd.tuigreet
     helm-docs
     helmfile
     home-manager
@@ -81,8 +85,6 @@
     oh-my-zsh
     opentofu
     owofetch
-    pamixer
-    pavucontrol
     # picom-pijulius
     plasma-browser-integration
     playerctl
@@ -111,7 +113,6 @@
     wl-clipboard
     xclip
     yazi
-    yubikey-manager
     zed-editor
     zoxide
     zsa-udev-rules

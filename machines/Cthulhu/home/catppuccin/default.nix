@@ -27,6 +27,7 @@
   };
 
   qt.enable = true;
+  qt.style.name = "kvantum";
   qt.style.catppuccin = {
     enable = true;
     flavor = "mocha";
