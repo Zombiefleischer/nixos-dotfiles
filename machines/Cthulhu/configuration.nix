@@ -65,7 +65,7 @@
   # services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -134,7 +134,8 @@
   # Install fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Hack" "FiraCode"];})
+      nerd-fonts.hack
+      nerd-fonts.fira-code
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default

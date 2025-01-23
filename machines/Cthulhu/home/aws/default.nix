@@ -70,10 +70,10 @@
         };
       };
     };
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      transparent = true;
-    };
+  };
+  catppuccin.k9s = {
+    enable = true;
+    flavor = "mocha";
+    transparent = true;
   };
 }

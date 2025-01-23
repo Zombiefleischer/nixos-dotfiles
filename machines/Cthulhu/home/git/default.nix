@@ -9,10 +9,10 @@
         line-numbers = true;
         side-by-side = true;
       };
-      catppuccin = {
-        enable = true;
-        flavor = "mocha";
-      };
     };
+  };
+  catppuccin.delta = {
+    enable = true;
+    flavor = "mocha";
   };
 }

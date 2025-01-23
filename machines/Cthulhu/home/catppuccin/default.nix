@@ -6,18 +6,6 @@
   };
 
   gtk = {
-    catppuccin = {
-      enable = true;
-      accent = "sapphire";
-      flavor = "mocha";
-      icon = {
-        enable = true;
-        accent = "sapphire";
-        flavor = "mocha";
-      };
-      size = "standard";
-      tweaks = ["black" "rimless"];
-    };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
@@ -25,11 +13,23 @@
       gtk-application-prefer-dark-theme = true;
     };
   };
+  catppuccin.gtk = {
+    enable = true;
+    accent = "sapphire";
+    flavor = "mocha";
+    icon = {
+      enable = true;
+      accent = "sapphire";
+      flavor = "mocha";
+    };
+    size = "standard";
+    tweaks = ["black" "rimless"];
+  };
 
   qt.enable = true;
   qt.style.name = "kvantum";
   qt.platformTheme.name = "kvantum";
-  qt.style.catppuccin = {
+  catppuccin.kvantum = {
     enable = true;
     flavor = "mocha";
     accent = "sapphire";
