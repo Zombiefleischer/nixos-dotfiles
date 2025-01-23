@@ -112,9 +112,12 @@
     wget
     wl-clipboard
     xclip
+    xsel
+    yank
     yazi
     zed-editor
     zoxide
     zsa-udev-rules
+    zsh
   ];
 }
