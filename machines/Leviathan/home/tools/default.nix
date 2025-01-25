@@ -54,7 +54,6 @@
     imagemagick
     inetutils
     inkscape-with-extensions
-    inotify-tools
     input-leap
     jq
     junction
@@ -79,9 +78,6 @@
     masterpdfeditor
     mc
     # mission-center
-    mpc
-    mpd
-    mpd-mpris
     ncdu
     ncmpcpp
     neovim
@@ -128,7 +124,6 @@
     telegram-desktop
     thunderbird
     tidal-hifi
-    timg
     tldr
     unar
     universal-android-debloater
