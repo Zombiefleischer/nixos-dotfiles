@@ -79,7 +79,6 @@
     mc
     # mission-center
     ncdu
-    ncmpcpp
     neovim
     nextcloud-client
     nh
@@ -111,7 +110,6 @@
     reaper
     resources
     ripgrep
-    rmpc
     rsibreak
     sc-im
     scanmem
