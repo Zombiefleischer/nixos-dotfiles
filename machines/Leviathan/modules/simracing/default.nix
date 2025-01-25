@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  fanatecff = config.boot.kernelPackages.callPackage ./hid-fanatecff {};
+  fanatecff = config.boot.kernelPackages.callPackage ../../drv/hid-fanatecff {};
   all-users = builtins.attrNames config.users.users;
   normal-users = builtins.filter (user: config.users.users.${user}.isNormalUser == true) all-users;
 in {
