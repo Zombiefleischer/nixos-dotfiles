@@ -56,6 +56,7 @@
     inkscape-with-extensions
     input-leap
     jq
+    jstest-gtk
     junction
     kate
     kdialog
@@ -92,6 +93,7 @@
     okteta
     onefetch
     overlayed
+    oversteer
     owofetch
     partition-manager
     pavucontrol

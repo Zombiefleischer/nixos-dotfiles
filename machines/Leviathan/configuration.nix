@@ -169,6 +169,9 @@
   hardware.xone.enable = true;
   hardware.xpadneo.enable = true;
 
+  # Enable custom fanatec drivers
+  hardware.fanatec.enable = true;
+
   # Enable QMK access
   hardware.keyboard.qmk.enable = true;
 
