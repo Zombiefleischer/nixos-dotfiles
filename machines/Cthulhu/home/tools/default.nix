@@ -2,9 +2,9 @@
   home.packages = with pkgs; [
     alejandra
     ansible
-    ansible-doctor
+    # ansible-doctor
     # ansible-navigator
-    appimage-run
+    # appimage-run
     barrier
     bat
     bitwarden
