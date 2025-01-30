@@ -2,14 +2,17 @@
   home.packages = with pkgs; [
     alejandra
     ansible
-    ansible-doctor
+    # ansible-doctor
     # ansible-navigator
     appimage-run
     at-spi2-atk
     bitwarden
     bitwarden-cli
     brightnessctl
+    btop
+    catppuccin
     catppuccin-kvantum
+    catppuccin-papirus-folders
     clinfo
     cloudlens
     copier
@@ -35,6 +38,7 @@
           rm -R $out/lib/mozilla
         '';
     }))
+    fzf
     gimp
     git
     gitui
@@ -126,5 +130,6 @@
     zed-editor
     zoxide
     zsa-udev-rules
+    zsh
   ];
 }

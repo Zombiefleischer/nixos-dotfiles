@@ -75,6 +75,7 @@
         ./machines/Leviathan/modules/keychron
         ./machines/Leviathan/modules/nh
         ./machines/Leviathan/modules/openrgb
+        ./machines/Leviathan/modules/simracing
         ./machines/Leviathan/modules/steam
         ./machines/Leviathan/modules/time_i18n
         ./machines/Leviathan/modules/variables
