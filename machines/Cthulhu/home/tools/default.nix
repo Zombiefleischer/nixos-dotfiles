@@ -16,6 +16,7 @@
     clinfo
     cloudlens
     copier
+    corefonts
     # dbeaver-bin
     delta
     dig
