@@ -121,6 +121,72 @@ function fetch_music_player_data() {
     playerctl -a metadata --format "{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"<i><span color='#a6da95'>{{playerName}}</span></i>: <b><span color='#f5a97f'>{{artist}}</span> - <span color='#c6a0f6'>{{markup_escape(title)}}</span></b>\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}" -F
 }
 
+function file_preview() {
+    local file="$1"
+    bat --color=always --style=numbers,header-filesize,grid --line-range=:15 --wrap=auto "$file"
+}
+
+function image_preview() {
+    local image="$1"
+
+    # Retrieve the current terminal dimensions and reduce them slightly to avoid boundary issues
+    local term_width=$(( $(tput cols) - 1 ))
+    local term_height=$(( $(tput lines) - 1 ))
+
+    chafa "$image" --size="${term_width}x${term_height}"
+}
+
+function record_screen_gif() {
+    local target_process="wl-screenrec"
+
+    if pgrep "$target_process" >/dev/null; then
+        killall -s SIGINT "$target_process"
+    else
+        local geometry=$(slurp)
+        if [ -n "$geometry" ]; then
+            local record_name="recrod-$(date +"%Y-%m-%d--%H:%M:%S")"
+            dunstify -i ~/.config/zsh/icons/camera_gif_icon.png -r $(cd ~/Pictures/Records/ && ls -1 | wc -l) "Recording Started  (GIF)" -t 2000
+            wl-screenrec -g "$geometry" -f "$HOME/Pictures/Records/$record_name.mp4" --encode-resolution 1920x1080
+            ffmpeg -i "$HOME/Pictures/Records/$record_name.mp4" "$HOME/Pictures/Records/$record_name.gif"
+            rm "$HOME/Pictures/Records/$record_name.mp4"
+            wl-copy -t text/uri-list "file://$HOME/Pictures/Records/$record_name.gif"
+            dunstify -i ~/.config/zsh/icons/camera_gif_icon.png -r $(cd ~/Pictures/Records/ && ls -1 | wc -l) "Recording Stopped 󰙧 (GIF)" -t 2000
+        fi
+    fi
+}
+
+function record_screen_mp4() {
+    local target_process="wl-screenrec"
+
+    if pgrep "$target_process" >/dev/null; then
+        killall -s SIGINT "$target_process"
+    else
+        local geometry=$(slurp)
+        if [ -n "$geometry" ]; then
+            local record_name="recrod-$(date +"%Y-%m-%d--%H:%M:%S")"
+            dunstify -i ~/.config/zsh/icons/camera_mp4_icon.png -r $(cd ~/Videos/Records/ && ls -1 | wc -l) "Recording Started  (MP4)" -t 2000
+            wl-screenrec -g "$geometry" -f "$HOME/Videos/Records/$record_name.mp4"
+            wl-copy -t text/uri-list "file://$HOME/Videos/Records/$record_name.mp4"
+            dunstify -i ~/.config/zsh/icons/camera_mp4_icon.png -r $(cd ~/Videos/Records/ && ls -1 | wc -l) "Recording Stopped 󰙧 (MP4)" -t 2000
+        fi
+    fi
+}
+
+function screenshot_edit() {
+    swappy -f ~/Pictures/Screenshots/$(cd ~/Pictures/Screenshots && ls -tA | head -n1 | awk '{print $NF}')
+}
+
+function screenshot_to_clipboard() {
+    local screenshot_filename="$HOME/Pictures/Screenshots/screenshot-$(date +"%Y-%m-%d--%H:%M:%S").png"
+    grim -g "$(slurp)" "$screenshot_filename"
+
+    if [ -e "$screenshot_filename" ]; then
+        cat "$screenshot_filename" | wl-copy --type image/png
+        dunstify -i "$screenshot_filename" -r $(cd ~/Pictures/Screenshots/ && ls -1 | wc -l) "Screenshots" "Screenshot was taken" -t 2000
+    fi
+}
+
+
 function wifi_toggle() {
     local wifi_status=$(rfkill list wifi | grep -i -o "Soft blocked: yes")
     local backup_file=~/.cache/airplane_backup

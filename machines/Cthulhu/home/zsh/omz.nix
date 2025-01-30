@@ -50,6 +50,10 @@
       };
     }
     {
+      name = "nix-zsh-completions";
+      file = "${pkgs.nix-zsh-completions}/share/zsh/plugins/nix";
+    }
+    {
       name = "you-should-use";
       src = pkgs.fetchFromGitHub {
         owner = "MichaelAquilina";
@@ -64,7 +68,7 @@
         owner = "fdellwing";
         repo = "zsh-bat";
         rev = "467337613c1c220c0d01d69b19d2892935f43e9f";
-        sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc"
+        sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
       };
     }
   ];
