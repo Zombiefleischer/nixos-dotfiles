@@ -2,9 +2,6 @@
   programs.zsh = {
     # Extra local variables defined at the top of .zshrc.
     localVariables = {
-      # Path to your oh-my-zsh installation.
-      ZSH = "$HOME/.oh-my-zsh";
-
       # Set name of the theme to load
       ZSH_THEME = "powerlevel10k/powerlevel10k";
 
@@ -42,6 +39,10 @@
       # or set a custom format using the strftime function format specifications,
       # see 'man strftime' for details.
       HIST_STAMPS = "yyyy-mm-dd";
+
+      # Update settings
+      ZSH_CUSTOM_AUTOUPDATE_QUIET=true;
+      ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8;
     };
 
     # Commands that should be added to top of .zshrc.
@@ -64,8 +65,11 @@
     '';
 
     # Commands that should be added to .zshrc.
-    initExtra = ''
-
+    initExtra = 
+    /* bash */
+    ''
+      source ~/.zsh/functions.zsh
+      source ~/.zsh/jira.zsh
     '';
   };
 }

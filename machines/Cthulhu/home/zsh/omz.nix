@@ -3,7 +3,7 @@
   programs.zsh.oh-my-zsh = {
     enable = true;
 
-    theme = "";
+    theme = "powerlevel10k/powerlevel10k";
 
     plugins = [
       "aliases"

@@ -207,3 +207,18 @@ function wlogout_uniqe() {
     fi
 }
 
+function aws-login() {
+  aws sso login --sso-session nextbike
+}
+
+function nextbike-staging() {
+  eval "$(aws configure export-credentials --profile nextbike-staging --format env)"
+}
+
+function nextbike-production() {
+  eval "$(aws configure export-credentials --profile nextbike-production --format env)"
+}
+
+function dvmsc-staging() {
+  eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
+}

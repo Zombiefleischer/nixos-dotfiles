@@ -3,6 +3,11 @@
     enable = true;
     accent = "sapphire";
     flavor = "mocha";
+
+    glamour = {
+      enable = true;
+      flavor = "mocha";
+    };
   };
 
   gtk = {

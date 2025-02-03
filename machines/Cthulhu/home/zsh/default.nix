@@ -24,4 +24,19 @@ _: {
     source = "./icons";
     recursive = true;
   };
+
+  home.language = {
+    base = "en_GB.UTF-8";
+    address = "de_DE.UTF-8";
+    collate = "de_DE.UTF-8";
+    ctype = "de_DE.UTF-8";
+    measurement = "de_DE.UTF-8";
+    messages = "en_GB.UTF-8";
+    monetary = "de_DE.UTF-8";
+    name = "de_DE.UTF-8";
+    numeric = "en_GB.UTF-8";
+    paper = "de_DE.UTF-8";
+    telephone = "de_DE.UTF-8";
+    time = "en_SE.UTF-8";
+  };
 }
