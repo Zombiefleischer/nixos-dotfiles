@@ -23,7 +23,7 @@
 
     # Auto update omz
     UPDATE_ZSH_DAYS = 30;
-    
+
     # AWS
     AWS_DEFAULT_REGION = "eu-central-1";
 
@@ -31,8 +31,8 @@
     TF_CLI_CONFIG_FILE = "~/tofu.tfrc";
 
     # Setting Battery Thresholds
-    START_CHARGE_THRESH_BAT0=70;
-    STOP_CHARGE_THRESH_BAT0=80;
+    START_CHARGE_THRESH_BAT0 = 70;
+    STOP_CHARGE_THRESH_BAT0 = 80;
 
     # Autoquoter
     ZAQ_PREFIXES = "('git commit( [^ ]##)# -[^ -]#m' 'ssh( [^ ]##)# [^ -][^ ]#')";
@@ -43,6 +43,6 @@
     # Change ansible output
     ANSIBLE_STDOUT_CALLBACK = "yaml";
 
-    # 
+    #
   };
 }

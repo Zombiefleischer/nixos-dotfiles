@@ -102,6 +102,7 @@
     # quickemu
     # quickgui
     ripgrep
+    rsclock
     scanmem
     slack
     smartmontools

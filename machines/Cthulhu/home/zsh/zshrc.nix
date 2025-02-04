@@ -61,7 +61,6 @@
 
     # Commands that should be added to .zshrc before compinit.
     initExtraBeforeCompInit = ''
-
     '';
 
     # Commands that should be added to .zshrc.

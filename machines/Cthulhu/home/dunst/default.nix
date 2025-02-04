@@ -1,8 +1,7 @@
-{...}:{
-
+{...}: {
   services.dunst = {
     enable = true;
-    
+
     catppuccin = {
       enable = true;
       flavor = "mocha";
@@ -22,6 +21,5 @@
         height = 100;
       };
     };
-
   };
 }

@@ -1,4 +1,4 @@
-{config,...}:{
+{config, ...}: {
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
@@ -8,7 +8,7 @@
       AllowUsers = ["zombiefleischer"];
     };
   };
-  
+
   programs.ssh = {
     startAgent = true;
     extraConfig = ''

@@ -1,5 +1,4 @@
-{pkgs, ...}:{
-  
+{pkgs, ...}: {
   programs.zsh.oh-my-zsh = {
     enable = true;
 
@@ -36,7 +35,6 @@
       zstyle :omz:plugins:ssh-agent quiet yes
       zstyle :omz:plugins:ssh-agent lazy yes
     '';
-
   };
 
   programs.zsh.plugins = [

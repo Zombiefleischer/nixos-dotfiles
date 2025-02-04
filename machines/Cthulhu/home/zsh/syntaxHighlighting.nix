@@ -1,5 +1,4 @@
-{...}:{
-
+{...}: {
   programs.zsh.syntaxHighlighting = {
     enable = true;
     highlighters = ["brackets"];

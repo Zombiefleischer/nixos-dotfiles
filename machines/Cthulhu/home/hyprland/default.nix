@@ -1,5 +1,8 @@
-{inputs, pkgs, ...}:{
-
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -19,7 +22,7 @@
     };
 
     plugins = [];
-    
+
     settings = {
       # Please note not all available settings / options are set here.
       # For a full list, see the wiki https://wiki.hyprland.org/
@@ -31,9 +34,8 @@
         "eDP-1, disable"
       ];
 
-
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-      
+
       # Execute your favorite apps at launch
       exec-once = [
         "${pkgs.swww}/bin/swww-daemon"
@@ -64,7 +66,7 @@
       };
 
       general = {
-        gaps_in = 5;  
+        gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
 
@@ -95,7 +97,7 @@
 
       animations = {
         enabled = "yes";
-        
+
         # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
@@ -141,7 +143,7 @@
 
       # Windowrule v1
       windowrule = [
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+        # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
         "opaque, firefox"
         "opaque, floorp"
         "opaque, title:(Slack)"
@@ -201,7 +203,7 @@
       binde=,j,resizeactive,0 10
 
       # use reset to go back to the global submap
-      bind=,escape,submap,reset 
+      bind=,escape,submap,reset
 
       # will reset the submap, meaning end the current one and return to the global one
       submap=reset
@@ -219,7 +221,7 @@
       bind=,j,movewindow,d
 
       # use reset to go back to the global submap
-      bind=,escape,submap,reset 
+      bind=,escape,submap,reset
 
       # will reset the submap, meaning end the current one and return to the global one
       submap=reset
@@ -310,14 +312,28 @@
       bind = $mainMod SHIFT, C, exec, ${pkgs.pyprland}/bin/pypr menu "Color picker"
       bind = $mainMod, T, exec, ${pkgs.rofi-wayland}/bin/rofi -show calc -modi calc -no-show-match -no-sort
       bind = $mainMod SHIFT, Q, killactive
-      bind = $mainMod SHIFT, F, togglefloating, 
+      bind = $mainMod SHIFT, F, togglefloating,
       bind = $mainMod CTRL, F, fullscreen, 0
       bind = $mainMod SHIFT, P, pseudo, # dwindle
       bind = $mainMod SHIFT, O, togglesplit, # dwindle
       bind = $mainMod ALT, M, exit,
       bind = $mainMod, G, togglegroup
 
+      # ZSH Functions
+      bind = $mainMod, ESCAPE, exec, zsh -c wlogout_uniqe
+      bind = $mainMod SHIFT, S, exec, fish -c screenshot_to_clipboard
+      bind = $mainMod, E, exec, fish -c screenshot_edit
+      bind = $mainMod SHIFT, R, exec, fish -c record_screen_gif
+      bind = $mainMod, R, exec, fish -c record_screen_mp4
+      bind = $mainMod, V, exec, fish -c clipboard_to_type
+      bind = $mainMod SHIFT, V, exec, fish -c clipboard_to_wlcopy
+      bind = $mainMod, X, exec, fish -c clipboard_delete_item
+      bind = $mainMod SHIFT, X, exec, fish -c clipboard_clear
+
+      bind = $mainMod SHIFT, A, exec, fish -c airplane_mode_toggle
       bind = $mainMod SHIFT, N, exec, dunstctl set-paused toggle
+      bind = $mainMod SHIFT, Y, exec, fish -c bluetooth_toggle
+      bind = $mainMod SHIFT, W, exec, fish -c wifi_toggle
     '';
   };
 }

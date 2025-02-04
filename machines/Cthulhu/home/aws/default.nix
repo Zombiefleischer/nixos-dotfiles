@@ -36,7 +36,7 @@
         skipLatestRevCheck = true;
         disablePodCounting = false;
         shellPod = {
-          image = "busybox:1.35.0";
+          image = "nicolaka/netshoot:latest";
           namespace = "default";
           limits = {
             cpu = "100m";

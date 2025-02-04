@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, ...}: {
   environment.variables.HYPRCURSOR_THEME = "Posy_Cursor_Black";
   environment.variables.HYPRCURSOR_SIZE = "64";
 
@@ -11,9 +11,9 @@
   qt = {
     enable = true;
     style = "kvantum";
-    platformTheme = "kde"; 
+    platformTheme = "kde";
   };
-  
+
   console = {
     earlySetup = true;
     catppuccin = {
@@ -21,10 +21,13 @@
       flavor = "sapphire";
     };
   };
-  
+
   # Override packages
   nixpkgs.config.packageOverrides = pkgs: {
-    catppuccin-papirus-folders = pkgs.catppuccin-papirus-folders.override { flavor = "mocha"; accent = "sapphire"; };
+    catppuccin-papirus-folders = pkgs.catppuccin-papirus-folders.override {
+      flavor = "mocha";
+      accent = "sapphire";
+    };
   };
 
   environment.systemPackages = with pkgs; [

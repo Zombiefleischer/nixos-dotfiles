@@ -1,3 +1,3 @@
-{...}:{
+{...}: {
   programs.light.enable = true;
 }

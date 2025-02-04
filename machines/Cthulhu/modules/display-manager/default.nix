@@ -1,4 +1,4 @@
-{pgks, ...}:{
+{pgks, ...}: {
   # Enable Display Manager
   services.greetd = {
     enable = true;

@@ -1,5 +1,4 @@
-{...}:{
-
+{...}: {
   programs.waybar = {
     enable = true;
 
@@ -22,9 +21,9 @@
         position = "top"; # Waybar position (top|bottom|left|right)
         height = 36; # Waybar height (to be removed for auto height)
         spacing = 4; # Gaps between modules (4px)
-        modules-left = [ "hyprland/workspaces" "hyprland/submap" ];
-        modules-center = [ "clock#time" "custom/separator" "clock#week" "custom/separator_dot" "clock#month" "custom/separator" "clock#calendar" ];
-        modules-right = [ "bluetooth" "network" "group/misc" "custom/logout_menu" ];
+        modules-left = ["hyprland/workspaces" "hyprland/submap"];
+        modules-center = ["clock#time" "custom/separator" "clock#week" "custom/separator_dot" "clock#month" "custom/separator" "clock#calendar"];
+        modules-right = ["bluetooth" "network" "group/misc" "custom/logout_menu"];
 
         # Modules Config
         "hyprland/workspaces" = {
@@ -116,7 +115,8 @@
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t({device_battery_percentage}%)";
           max-length = 35;
-          on-click = "fish -c bluetooth_toggle"; # TODO Change Command, implement zsh functions
+          on-click = "zsh -c 'bluetooth_toggle'";
+          # Maybe need `on-click = "zsh -c 'source ~/.zsh/functions.zsh && bluetooth_toggle'"` if the command doesn't work
           on-click-right = "overskride";
         };
       }

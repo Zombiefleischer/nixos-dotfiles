@@ -1,12 +1,11 @@
-{pkgs, ...}:{
-
+{pkgs, ...}: {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
     font = "FiraCode Nerd Font Ret 12";
     location = "center";
     terminal = "${pkgs.kitty}/bin/kitty";
-    plugins = [ 
+    plugins = [
       pkgs.rofi-calc
     ];
     extraConfig = {

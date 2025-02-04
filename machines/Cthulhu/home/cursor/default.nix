@@ -1,4 +1,4 @@
-{pkgs,...}:{
+{pkgs, ...}: {
   home.pointerCursor = {
     name = "Posy_Cursor_Black";
     package = pkgs.posy-cursors;

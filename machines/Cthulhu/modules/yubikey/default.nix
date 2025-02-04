@@ -1,11 +1,9 @@
-{pkgs, ...}:
-
-{
-  services.udev.packages = [ pkgs.yubikey-personalization ];
+{pkgs, ...}: {
+  services.udev.packages = [pkgs.yubikey-personalization];
 
   programs.ssh.startAgent = true;
 
-  security.pam = {  
+  security.pam = {
     u2f = {
       enable = true;
       settings.cue = true;

@@ -1,4 +1,4 @@
-{...}:{ 
+{...}: {
   wayland.windowManager.hyprland.enable = true;
 
   # Configure Hyprlock
@@ -31,30 +31,31 @@
 
       # TIME
       label = [
-      {
-        monitor = "";
-        text = "cmd[update:30000] echo \"$(date +\"%H:%M\")\"";
-        # color = "$text";
-        font_size = 90;
-        font_family = "$font";
-        position = "-130, -100";
-        halign = "right";
-        valign = "top";
-        shadow_passes = 2;
-      }
+        {
+          monitor = "";
+          text = "cmd[update:30000] echo \"$(date +\"%H:%M\")\"";
+          # color = "$text";
+          font_size = 90;
+          font_family = "$font";
+          position = "-130, -100";
+          halign = "right";
+          valign = "top";
+          shadow_passes = 2;
+        }
 
-      # DATE
-      {
-        monitor = "";
-        text = "cmd[update:43200000] echo \"$(date +\"%A, %d %B 1%Y\")";
-        color = "$text";
-        font_size = 25;
-        font_family = "$font";
-        position = "-130, -250";
-        halign = "right";
-        valign = "top";
-        shadow_passes = 2;
-      }];
+        # DATE
+        {
+          monitor = "";
+          text = "cmd[update:43200000] echo \"$(date +\"%A, %d %B 1%Y\")";
+          color = "$text";
+          font_size = 25;
+          font_family = "$font";
+          position = "-130, -250";
+          halign = "right";
+          valign = "top";
+          shadow_passes = 2;
+        }
+      ];
 
       # USER AVATAR
       image = {
@@ -78,7 +79,7 @@
         dots_spacing = 0.2;
         dots_center = true;
         outer_color = "$accent";
-        inner_color = "$surface0";  
+        inner_color = "$surface0";
         font_color = "$text";
         fade_on_empty = false;
         placeholder_text = "<span foreground=\"##$textAlpha\"><i>󰌾 Logged in as </i><span foreground=\"##$accentAlpha\">$USER</span></span>";

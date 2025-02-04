@@ -1,5 +1,4 @@
-{...}:{
-  
+{...}: {
   programs.btop = {
     enable = true;
 
@@ -61,99 +60,99 @@
 
       #* Reverse sorting order, True or False.
       proc_reversed = false;
-      
+
       #* Show processes as a tree.
       proc_tree = false;
-      
+
       #* Use the cpu graph colors in the process list.
       proc_colors = true;
-      
+
       #* Use a darkening gradient in the process list.
       proc_gradient = true;
-      
+
       #* If process cpu usage should be of the core it's running on or usage of the total available cpu power.
       proc_per_core = false;
-      
+
       #* Show process memory as bytes instead of percent.
       proc_mem_bytes = true;
-      
+
       #* Show cpu graph for each process.
       proc_cpu_graphs = true;
-      
+
       #* Use /proc/[pid]/smaps for memory information in the process info box (very slow but more accurate)
       proc_info_smaps = false;
-      
+
       #* Show proc box on left side of screen instead of right.
       proc_left = false;
-      
+
       #* (Linux) Filter processes tied to the Linux kernel(similar behavior to htop).
       proc_filter_kernel = false;
-      
+
       #* In tree-view, always accumulate child process resources in the parent process.
       proc_aggregate = false;
-      
+
       #* Sets the CPU stat shown in upper half of the CPU graph, "total" is always available.
       #* Select from a list of detected attributes from the options menu.
       cpu_graph_upper = "total";
-      
+
       #* Sets the CPU stat shown in lower half of the CPU graph, "total" is always available.
       #* Select from a list of detected attributes from the options menu.
       cpu_graph_lower = "total";
-      
+
       #* If gpu info should be shown in the cpu box. Available values = "Auto", "On" and "Off".
       show_gpu_info = "Auto";
 
       #* Example: "/mnt/media:100 /:20 /boot:1".
       io_graph_speeds = "";
-      
+
       #* Set fixed values for network graphs in Mebibits. Is only used if net_auto is also set to False.
       net_download = 100;
-      
+
       net_upload = 100;
-      
+
       #* Use network graphs auto rescaling mode, ignores any values set above and rescales down to 10 Kibibytes at the lowest.
       net_auto = true;
-      
+
       #* Sync the auto scaling for download and upload to whichever currently has the highest scale.
       net_sync = true;
-      
+
       #* Starts with the Network Interface specified here.
       net_iface = "";
-      
+
       #* Show battery stats in top right if battery is present.
       show_battery = true;
-      
+
       #* Which battery to use if multiple are present. "Auto" for auto detection.
       selected_battery = "Auto";
-      
+
       #* Show power stats of battery next to charge indicator.
       show_battery_watts = true;
-      
+
       #* Set loglevel for "~/.config/btop/btop.log" levels are: "ERROR" "WARNING" "INFO" "DEBUG".
       #* The level set includes all lower levels, i.e. "DEBUG" will show all logging info.
       log_level = "WARNING";
-      
+
       #* Measure PCIe throughput on NVIDIA cards, may impact performance on certain cards.
       nvml_measure_pcie_speeds = true;
-      
+
       #* Horizontally mirror the GPU graph.
       gpu_mirror_graph = true;
-      
+
       #* Custom gpu0 model name, empty string to disable.
       custom_gpu_name0 = "";
-      
+
       #* Custom gpu1 model name, empty string to disable.
       custom_gpu_name1 = "";
-      
+
       #* Custom gpu2 model name, empty string to disable.
       custom_gpu_name2 = "";
-      
+
       #* Custom gpu3 model name, empty string to disable.
       custom_gpu_name3 = "";
-      
+
       #* Custom gpu4 model name, empty string to disable.
       custom_gpu_name4 = "";
-      
+
       #* Custom gpu5 model name, empty string to disable.
       custom_gpu_name5 = "";
     };

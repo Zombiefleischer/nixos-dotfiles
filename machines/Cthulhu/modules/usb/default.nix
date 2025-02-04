@@ -1,5 +1,4 @@
-{...}:{
-
+{...}: {
   # USB Automounting
   services.gvfs.enable = true;
 
