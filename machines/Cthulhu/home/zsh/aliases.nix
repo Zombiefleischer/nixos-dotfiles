@@ -10,6 +10,7 @@
       terraform = "tofu";
       lzg = "lazygit";
       lzd = "lazydocker";
+      kctx = "kubectx";
 
       ## Common ansible playbooks
       # Tofu definiton
