@@ -70,7 +70,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland = {
-      enable = false;
+      enable = true;
       compositor = "kwin";
     };
     autoNumlock = true;
@@ -84,7 +84,7 @@
 
   # Enable i3
   services.xserver.windowManager.i3 = {
-    enable = true;
+    enable = false;
     extraPackages = with pkgs; [
       dmenu
       i3status
