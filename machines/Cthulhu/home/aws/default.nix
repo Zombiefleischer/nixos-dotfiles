@@ -36,12 +36,15 @@
         skipLatestRevCheck = true;
         disablePodCounting = false;
         shellPod = {
-          image = "busybox:1.35.0";
+          image = "nicolata/netshoot:latest";
           namespace = "default";
           limits = {
             cpu = "100m";
             memory = "100Mi";
           };
+        };
+        featureGates = {
+          nodeShell = true;
         };
         imageScans = {
           enable = false;
