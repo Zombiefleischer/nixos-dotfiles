@@ -41,6 +41,37 @@ function bluetooth_toggle() {
     fi
 }
 
+function bookmark_add() {
+    # Get the current clipboard content
+    local content
+    content="$(wl-paste)"
+
+    if [ -z "$content" ]; then
+        dunstify "Bookmarks" "Can't add empty space" -u critical -t 2000
+    elif grep -q "^${content}$" ~/.bookmarks; then
+        dunstify "Bookmarks" "Bookmark '${content}' already exists" -u critical -t 2000
+    else
+        echo "$content" >> ~/.bookmarks
+        dunstify "Bookmarks" "Bookmark '${content}' was added" -t 2000
+    fi
+}
+
+function bookmark_delete() {
+    # Use rofi to select a bookmark from the list
+    local bookmark
+    bookmark="$(cat ~/.bookmarks | rofi -dmenu -p 'delete bookmark')"
+
+    # Check if a bookmark was selected (non-empty string)
+    if [ -n "$bookmark" ]; then
+        sed -i -e "/${bookmark}/d" ~/.bookmarks
+        dunstify "Bookmarks" "Bookmark '${bookmark}' was deleted" -t 2000
+    fi
+}
+
+function bookmark_to_type() {
+    rofi -dmenu -p "bookmarks" < ~/.bookmarks | tr -d '\n' | wtype -
+}
+
 function check_airplane_mode() {
     local backup_file=~/.cache/airplane_backup
 

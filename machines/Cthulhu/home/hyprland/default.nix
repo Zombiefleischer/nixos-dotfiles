@@ -329,7 +329,9 @@
       bind = $mainMod SHIFT, V, exec, fish -c clipboard_to_wlcopy
       bind = $mainMod, X, exec, fish -c clipboard_delete_item
       bind = $mainMod SHIFT, X, exec, fish -c clipboard_clear
-
+      bind = $mainMod, U, exec, fish -c bookmark_to_type
+      bind = $mainMod SHIFT, U, exec, fish -c bookmark_add
+      bind = $mainMod CTRL, U, exec, fish -c bookmark_delete
       bind = $mainMod SHIFT, A, exec, fish -c airplane_mode_toggle
       bind = $mainMod SHIFT, N, exec, dunstctl set-paused toggle
       bind = $mainMod SHIFT, Y, exec, fish -c bluetooth_toggle

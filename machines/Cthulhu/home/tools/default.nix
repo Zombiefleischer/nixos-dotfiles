@@ -80,6 +80,7 @@
     ncdu
     # neovim
     nix-output-monitor
+    networkmanagerapplet
     nmap
     nmap-formatter
     nss
@@ -87,6 +88,7 @@
     obsidian
     oh-my-zsh
     opentofu
+    overskride
     owofetch
     pamixer
     pavucontrol
@@ -119,16 +121,13 @@
     uwuify
     vim
     vlc
-    vscode-fhs
     wget
     wl-clipboard
     wlrctl
     wlr-randr
     wtype
-    xclip
     yazi
     yubikey-manager
-    zed-editor
     zoxide
     zsa-udev-rules
     zsh
