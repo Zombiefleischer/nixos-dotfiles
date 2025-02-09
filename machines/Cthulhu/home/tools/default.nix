@@ -7,7 +7,7 @@
     appimage-run
     at-spi2-atk
     bitwarden
-    bitwarden-cli
+    # bitwarden-cli
     brightnessctl
     btop
     catppuccin

@@ -9,6 +9,7 @@
 
     xwayland.enable = true;
 
+    # TODO: Refactor catppuccin
     catppuccin = {
       enable = true;
       accent = "sapphire";
