@@ -8,7 +8,7 @@
   boot.consoleLogLevel = 3;
   boot.plymouth = {
     enable = true;
-    font = "${pkgs.fira-code}/share/fonts/truetype/FiraCode-Regular.ttf";
+    font = "${pkgs.fira-code}/share/fonts/truetype/FiraCode-VF.ttf";
     catppuccin = {
       enable = true;
       flavor = "mocha";

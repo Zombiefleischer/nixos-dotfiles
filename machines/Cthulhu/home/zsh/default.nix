@@ -20,8 +20,8 @@ _: {
   home.file.".p10k.zsh".text = builtins.readFile ./p10k.zsh;
   home.file.".zsh/functions.zsh".text = builtins.readFile ./functions.zsh;
 
-  home.file.".config/zsh/icons" = {
-    source = "./icons";
+  home.file.".config/zsh/icons/" = {
+    source = ./icons;
     recursive = true;
   };
 

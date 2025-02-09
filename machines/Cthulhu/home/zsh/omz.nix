@@ -50,6 +50,7 @@
     {
       name = "nix-zsh-completions";
       file = "${pkgs.nix-zsh-completions}/share/zsh/plugins/nix";
+      src = "${pkgs.nix-zsh-completions}/share/zsh/plugins";
     }
     {
       name = "you-should-use";
