@@ -23,8 +23,8 @@
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
-        "DP-3-3, 3440x1440@100, 0x560, 1"
-        "DP-3-1, 1440x2560@70, 3440x0, 1, transform, 3"
+        "DP-7, 3440x1440@100, 0x560, 1"
+        "DP-5, 1440x2560@70, 3440x0, 1, transform, 3"
         "eDP-1, disable"
       ];
 
@@ -113,6 +113,10 @@
         pseudotile = "yes"; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = "yes"; # you probably want this
         smart_split = true;
+      };
+
+      gesture = {
+        workspace_swipe = true;
       };
 
       misc = {
