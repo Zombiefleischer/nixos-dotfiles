@@ -3,6 +3,7 @@
     p10k-theme = pkgs.fetchFromGitHub {
       owner = "romkatv";
       repo = "powerlevel10k";
+      rev = "master";
       sha256 = "";
     };
     customDir = pkgs.stdenv.mkDerivation {
