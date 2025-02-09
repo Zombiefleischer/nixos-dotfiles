@@ -4,7 +4,7 @@
       owner = "romkatv";
       repo = "powerlevel10k";
       rev = "master";
-      sha256 = "";
+      sha256 = "sha256-isxgLWpbBuNoETXCOlJ4nwGSxMwCjoVF5D0dMZWtM5s=";
     };
     customDir = pkgs.stdenv.mkDerivation {
       name = "oh-my-zsh-custom-dir";

@@ -22,6 +22,7 @@
     ./dir
     ./dunst
     ./firefox
+    ./fonts
     ./fzf
     ./ghostty
     ./git

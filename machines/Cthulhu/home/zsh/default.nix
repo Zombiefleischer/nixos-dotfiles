@@ -37,6 +37,6 @@ _: {
     numeric = "en_GB.UTF-8";
     paper = "de_DE.UTF-8";
     telephone = "de_DE.UTF-8";
-    time = "en_SE.UTF-8";
+    time = "de_DE.UTF-8";
   };
 }
