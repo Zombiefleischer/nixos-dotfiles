@@ -1,6 +1,22 @@
 {pkgs, ...}: {
-  programs.zsh.oh-my-zsh = {
+  programs.zsh.oh-my-zsh = let
+    p10k-theme = pkgs.fetchFromGitHub {
+      owner = "romkatv";
+      repo = "powerlevel10k";
+      sha256 = "";
+    };
+    customDir = pkgs.stdenv.mkDerivation {
+      name = "oh-my-zsh-custom-dir";
+      phases = ["buildPhase"];
+      buildPhase = ''
+        mkdir -p $out/themes/powerlevel10k
+        cp -r ${p10k-theme}/. $out/themes/powerlevel10k/
+      '';
+    };
+  in {
     enable = true;
+
+    custom = "${customDir}";
 
     theme = "powerlevel10k/powerlevel10k";
 
@@ -69,6 +85,11 @@
         rev = "467337613c1c220c0d01d69b19d2892935f43e9f";
         sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
       };
+    }
+    {
+      name = "vi-mode";
+      src = pkgs.zsh-vi-mode;
+      file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
     }
   ];
 }

@@ -65,7 +65,7 @@
     ''
       source ~/.zsh/functions.zsh
       source ~/.zsh/jira.zsh
-      [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
+      zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.sh')
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
   };
