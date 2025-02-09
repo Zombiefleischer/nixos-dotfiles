@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.random-background = {
-    enable = true;
+    enable = false;
     display = "fill";
     enableXinerama = true;
     imageDirectory = "/home/zombiefleischer/Pictures/i3_wallpapers";

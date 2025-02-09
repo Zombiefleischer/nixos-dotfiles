@@ -25,7 +25,6 @@
         pkgs.gh-notify
         pkgs.gh-screensaver
         pkgs.gh-contribs
-        pkgs.gh-branch
       ];
 
       settings = {

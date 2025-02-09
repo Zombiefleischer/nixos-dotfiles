@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, ...}: {
   programs.wlogout = {
     enable = true;
 
@@ -51,17 +51,17 @@
     accent = "sapphire";
     iconStyle = "wleave";
     extraStyle = ''
-button {
-  margin: 8px;
-  border-style: solid;
-  border-width: 2px;
-}
+      button {
+        margin: 8px;
+        border-style: solid;
+        border-width: 2px;
+      }
 
-button:active,
-button:focus,
-button:hover {
-  color: #74c7ec;
-}
+      button:active,
+      button:focus,
+      button:hover {
+        color: #74c7ec;
+      }
     '';
   };
 }
