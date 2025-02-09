@@ -46,6 +46,10 @@
         "${pkgs.obsidian}/bin/obsidian"
         "${pkgs.libreoffice}/bin/libreoffice --calc '~/Documents/Zeiterfassung_MS_2025.xlsx'"
         "${pkgs.poweralertd}/bin/poweralertd"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
+        "wl-clip-persist --clipboard regular"
+        "systemctl --user start psi-notify"
       ];
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/

@@ -7,18 +7,5 @@
     interval = "15m";
   };
 
-  services.picom = {
-    enable = true;
-    package = pkgs.picom-pijulius;
-    inactiveOpacity = 0.8;
-    settings = {
-      "frame-opacity" = 0.8;
-    };
-    opacityRules = [
-      "99:class_g = 'obsidian' && name *= 'Obsidian Vault'"
-      "99:class_g = 'Slack'"
-    ];
-  };
-
-  # TODO: swww
+  home.file."scripts/swww_randomize_multi.sh".text = builtins.readFile ./swww_randomize_multi.sh;
 }

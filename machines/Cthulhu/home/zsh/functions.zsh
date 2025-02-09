@@ -233,8 +233,8 @@ function wifi_toggle() {
 }
 
 function wlogout_uniqe() {
-    if [ -z "$(pidof wlogout)" ]; then
-        wlogout
+    if [ -z "$(pidof wleave)" ]; then
+        wleave --layout ~/.config/wlogout/layout --css ~/.config/wlogout/style.css
     fi
 }
 

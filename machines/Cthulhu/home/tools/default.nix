@@ -14,6 +14,7 @@
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
+    cliphist
     cloudlens
     copier
     dbeaver-bin
@@ -47,6 +48,7 @@
     gnupg1
     gparted
     greetd.tuigreet
+    grim
     helm-docs
     helmfile
     home-manager
@@ -107,6 +109,7 @@
     rsclock
     scanmem
     slack
+    slurp
     smartmontools
     space-cadet-pinball
     speedtest-rs
@@ -123,6 +126,7 @@
     vlc
     wget
     wl-clipboard
+    wl-clip-persist
     wlrctl
     wlr-randr
     wtype
