@@ -24,7 +24,7 @@
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
         "DP-7, 3440x1440@100, 0x560, 1"
-        "DP-5, 1440x2560@70, 3440x0, 1, transform, 3"
+        "DP-5, 2560x1440@70, 3440x0, 1, transform, 3"
         "eDP-1, disable"
       ];
 
@@ -38,7 +38,7 @@
         "${pkgs.input-leap}/bin/input-leap"
         "${pkgs.thunderbird}/bin/thunderbird"
         "${pkgs.obsidian}/bin/obsidian"
-        "${pkgs.libreoffice}/bin/libreoffice --calc '~/Documents/Zeiterfassung_MS_2025.xlsx'"
+        "${pkgs.libreoffice}/bin/libreoffice --calc '/home/zombiefleischer/Documents/Zeiterfassung_MS_2025.xlsx'"
         "${pkgs.poweralertd}/bin/poweralertd"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
@@ -49,9 +49,10 @@
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
         kb_layout = "us";
-        kb_variant = "intl";
-        kb_model = "pc104";
-        kb_options = "terminate:ctrl_alt_bksp";
+        kb_variant = "alt-intl";
+        kb_model = "";
+        kb_options = "caps:escape_shifted_capslock";
+        numlock_by_default = true;
 
         follow_mouse = 1;
 
@@ -67,6 +68,8 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
+        "col.active_border" = "$sapphire";
+        "col.inactive_border" = "$surface1";
 
         resize_on_border = true;
 
@@ -86,6 +89,8 @@
           range = 15;
           render_power = 3;
           offset = "0, 0";
+          color = "$sapphire";
+          color_inactive = "0xff$baseAlpha";
         };
 
         active_opacity = 0.7;
@@ -115,14 +120,10 @@
         smart_split = true;
       };
 
-      gesture = {
-        workspace_swipe = true;
-      };
-
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        background_color = "0x24273a";
+        background_color = "$base";
       };
 
       binds = {
@@ -131,12 +132,12 @@
 
       # Workspaces
       workspace = [
-        "1, defaultName:Terminal, monitor:DP-3-3, default:true"
-        "2, defaultName:Firefox, monitor:DP-3-3"
-        "3, defaultName:Obsidian, monitor:DP-3-3"
-        "4, defaultName:Thunderbird, monitor:DP-3-3"
-        "9, defaultName:Zeiterfassung, monitor:DP-3-3"
-        "10, defaultName:Slack, monitor:DP-3-1, default:true"
+        "1, monitor:DP-7, default:true"
+        "2, monitor:DP-7"
+        "3, monitor:DP-7"
+        "4, monitor:DP-7"
+        "9, monitor:DP-7"
+        "10, monitor:DP-5, default:true"
       ];
 
       # Windowrule v1
@@ -155,12 +156,12 @@
 
       # Windowrule v2
       windowrulev2 = [
-        "workspace name:Terminal, class:(com.mitchellh.ghostty)"
-        "workspace name:Firefox, class:(firefox)"
-        "workspace name:Obsidian, class:(obsidian)"
-        "workspace name:Thunderbird, class:(thunderbird)"
-        "workspace name:Zeiterfassung, class:(soffice.bin)"
-        "workspace name:Slack, title:(Slack)"
+        "workspace 1, class:(com.mitchellh.ghostty)"
+        "workspace 2, class:(firefox)"
+        "workspace 3, class:(obsidian)"
+        "workspace 4, class:(thunderbird)"
+        "workspace 9, class:(soffice.bin)"
+        "workspace 10, title:(Slack)"
       ];
 
       "$mainMod" = "SUPER";
@@ -300,16 +301,16 @@
       bindm = $mainMod, mouse:273, resizewindow
 
       # Programs
-      bind = $mainMod, B, exec, ${pkgs.firefox}/bin/firefox
-      bind = $mainMod SHIFT, B, exec, ${pkgs.floorp}/bin/floorp
+      bind = $mainMod, B, exec, firefox
+      bind = $mainMod SHIFT, B, exec, floorp
       bind = $mainMod, Enter, exec, ghostty
       bind = ALT CTRL, T, exec, ghostty
       bind = $mainMod, F, exec, dolphin
-      bind = $mainMod, D, exec, ${pkgs.rofi-wayland}/bin/rofi -show combi -combi-modi "window#drun#run"
-      bind = , code:225, exec, ${pkgs.rofi-wayland}/bin/rofi -show combi -combi-modi "window#drun#run"
+      bind = $mainMod, D, exec, rofi -show combi -combi-modi "window#drun#run"
+      bind = , code:225, exec, rofi -show combi -combi-modi "window#drun#run"
       bind = $mainMod, C, exec, hyprpicker -a
-      bind = $mainMod SHIFT, C, exec, ${pkgs.pyprland}/bin/pypr menu "Color picker"
-      bind = $mainMod, T, exec, ${pkgs.rofi-wayland}/bin/rofi -show calc -modi calc -no-show-match -no-sort
+      bind = $mainMod SHIFT, C, exec, pypr menu "Color picker"
+      bind = $mainMod, T, exec, rofi -show calc -modi calc -no-show-match -no-sort
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, F, togglefloating,
       bind = $mainMod CTRL, F, fullscreen, 0
@@ -320,21 +321,21 @@
 
       # ZSH Functions
       bind = $mainMod, ESCAPE, exec, zsh -c wlogout_uniqe
-      bind = $mainMod SHIFT, S, exec, fish -c screenshot_to_clipboard
-      bind = $mainMod, E, exec, fish -c screenshot_edit
-      bind = $mainMod SHIFT, R, exec, fish -c record_screen_gif
-      bind = $mainMod, R, exec, fish -c record_screen_mp4
-      bind = $mainMod, V, exec, fish -c clipboard_to_type
-      bind = $mainMod SHIFT, V, exec, fish -c clipboard_to_wlcopy
-      bind = $mainMod, X, exec, fish -c clipboard_delete_item
-      bind = $mainMod SHIFT, X, exec, fish -c clipboard_clear
-      bind = $mainMod, U, exec, fish -c bookmark_to_type
-      bind = $mainMod SHIFT, U, exec, fish -c bookmark_add
-      bind = $mainMod CTRL, U, exec, fish -c bookmark_delete
-      bind = $mainMod SHIFT, A, exec, fish -c airplane_mode_toggle
+      bind = $mainMod SHIFT, S, exec, zsh -c screenshot_to_clipboard
+      bind = $mainMod, E, exec, zsh -c screenshot_edit
+      bind = $mainMod SHIFT, R, exec, zsh -c record_screen_gif
+      bind = $mainMod, R, exec, zsh -c record_screen_mp4
+      bind = $mainMod, V, exec, zsh -c clipboard_to_type
+      bind = $mainMod SHIFT, V, exec, zsh -c clipboard_to_wlcopy
+      bind = $mainMod, X, exec, zsh -c clipboard_delete_item
+      bind = $mainMod SHIFT, X, exec, zsh -c clipboard_clear
+      bind = $mainMod, U, exec, zsh -c bookmark_to_type
+      bind = $mainMod SHIFT, U, exec, zsh -c bookmark_add
+      bind = $mainMod CTRL, U, exec, zsh -c bookmark_delete
+      bind = $mainMod SHIFT, A, exec, zsh -c airplane_mode_toggle
       bind = $mainMod SHIFT, N, exec, dunstctl set-paused toggle
-      bind = $mainMod SHIFT, Y, exec, fish -c bluetooth_toggle
-      bind = $mainMod SHIFT, W, exec, fish -c wifi_toggle
+      bind = $mainMod SHIFT, Y, exec, zsh -c bluetooth_toggle
+      bind = $mainMod SHIFT, W, exec, zsh -c wifi_toggle
     '';
   };
 

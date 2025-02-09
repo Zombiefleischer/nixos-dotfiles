@@ -117,6 +117,7 @@
     speedtest-rs
     spice
     super-productivity
+    swappy
     swww
     thunderbird-unwrapped
     unar

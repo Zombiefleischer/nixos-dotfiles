@@ -119,8 +119,7 @@
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t({device_battery_percentage}%)";
           max-length = 35;
-          on-click = "zsh -c 'bluetooth_toggle'";
-          # Maybe need `on-click = "zsh -c 'source ~/.zsh/functions.zsh && bluetooth_toggle'"` if the command doesn't work
+          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c 'bluetooth_toggle'";
           on-click-right = "overskride";
         };
 
@@ -136,7 +135,7 @@
           format-linked = "󰈀  {ifname} (No IP)";
           tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
           max-length = 35;
-          on-click = "zsh -c 'wifi_toggle'";
+          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c 'wifi_toggle'";
           on-click-right = "nm-connection-editor";
         };
 
@@ -163,7 +162,7 @@
 
         "custom/webcam" = {
           interval = 1;
-          exec = "zsh -c check_webcam";
+          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_webcam";
           return-type = "json";
         };
 
@@ -184,20 +183,20 @@
         "custom/recording" = {
           interval = 1;
           exec-if = "pgrep wl-screenrec";
-          exec = "zsh -c check_recording";
+          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_recording";
           return-type = "json";
         };
 
         "custom/airplane_mode" = {
           interval = 1;
-          exec = "zsh -c check_airplane_mode";
-          on-click = "zsh -c airplane_mode_toggle";
+          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_airplane_mode";
+          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c airplane_mode_toggle";
           return-type = "json";
         };
 
         "custom/dunst" = {
-          exec = "zsh -c dunst_pause";
-          on-click = "dunstctl set-paused toggle";
+          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c dunst_pause";
+          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && dunstctl set-paused toggle";
           restart-interval = 1;
           return-type = "json";
         };
@@ -205,8 +204,8 @@
         "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
-            activated = "󰛐";
-            deactivated = "󰛑";
+            activated = "󰛐 ";
+            deactivated = "󰛑 ";
           };
           tooltip-format-activated = "idle-inhibitor <span color='#a6da95'>on</span>";
           tooltip-format-deactivated = "idle-inhibitor <span color='#ee99a0'>off</span>";
@@ -217,7 +216,7 @@
           return-type = "json";
           exec = "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'";
           interval = "once";
-          on-click = "zsh -c wlogout_unique";
+          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c wlogout_unique";
         };
       }
 
@@ -422,7 +421,7 @@
     ''
       * {
         border: none;
-        font-family: Fira Code Nerd Font, sans-serif;
+        /* font-family: Fira Code Nerd Font, sans-serif; */
       }
 
       window.bottom_bar#waybar {

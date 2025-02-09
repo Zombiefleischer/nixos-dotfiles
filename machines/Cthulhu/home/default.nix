@@ -30,12 +30,14 @@
     ./hypridle
     ./hyprland
     ./hyprlock
+    ./keyboard
     ./kitty
     ./lazygit
     ./lsps
     ./neovim
     ./pyprland
     ./rofi
+    ./swappy
     ./tealdeer
     ./tools
     ./wallpaper

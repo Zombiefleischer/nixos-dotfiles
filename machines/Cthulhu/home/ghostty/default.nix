@@ -19,6 +19,7 @@
       # window-decoration = true;
 
       gtk-titlebar = false;
+      gtk-tabs-location = "bottom";
     };
   };
 }
