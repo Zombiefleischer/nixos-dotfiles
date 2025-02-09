@@ -14,7 +14,7 @@ _: {
     enable = true;
     enableCompletion = true;
     enableVteIntegration = true;
-    defaultKeymap = "vicmd";
+    defaultKeymap = "viins";
   };
 
   home.file.".p10k.zsh".text = builtins.readFile ./p10k.zsh;

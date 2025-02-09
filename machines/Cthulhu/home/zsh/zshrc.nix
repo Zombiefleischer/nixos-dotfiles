@@ -2,9 +2,6 @@
   programs.zsh = {
     # Extra local variables defined at the top of .zshrc.
     localVariables = {
-      # Set name of the theme to load
-      ZSH_THEME = "powerlevel10k/powerlevel10k";
-
       # Uncomment the following line to use case-sensitive completion.
       # CASE_SENSITIVE = true;
 
@@ -60,8 +57,7 @@
     '';
 
     # Commands that should be added to .zshrc before compinit.
-    initExtraBeforeCompInit = ''
-    '';
+    initExtraBeforeCompInit = '''';
 
     # Commands that should be added to .zshrc.
     initExtra = 
