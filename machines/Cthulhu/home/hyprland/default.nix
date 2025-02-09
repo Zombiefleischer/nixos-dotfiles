@@ -115,10 +115,6 @@
         smart_split = true;
       };
 
-      gesture = {
-        workspace_swipe = "on";
-      };
-
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
@@ -306,6 +302,7 @@
       bind = ALT CTRL, T, exec, ghostty
       bind = $mainMod, F, exec, dolphin
       bind = $mainMod, D, exec, ${pkgs.rofi-wayland}/bin/rofi -show combi -combi-modi "window#drun#run"
+      bind = , code:225, exec, ${pkgs.rofi-wayland}/bin/rofi -show combi -combi-modi "window#drun#run"
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod SHIFT, C, exec, ${pkgs.pyprland}/bin/pypr menu "Color picker"
       bind = $mainMod, T, exec, ${pkgs.rofi-wayland}/bin/rofi -show calc -modi calc -no-show-match -no-sort
