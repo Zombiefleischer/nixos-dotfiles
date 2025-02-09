@@ -69,6 +69,8 @@
     ''
       source ~/.zsh/functions.zsh
       source ~/.zsh/jira.zsh
+      [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
   };
 }

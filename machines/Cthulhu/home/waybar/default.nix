@@ -24,21 +24,21 @@
           on-click = "activate";
           format = "{icon}";
           format-icons = {
-            "1" = "󰲠";
-            "2" = "󰲢";
-            "3" = "󰲤";
-            "4" = "󰲦";
-            "5" = "󰲨";
-            "6" = "󰲪";
-            "7" = "󰲬";
-            "8" = "󰲮";
-            "9" = "󰲰";
-            "10" = "󰿬";
-            "special" = "";
+            "1" = "󰲠 ";
+            "2" = "󰲢 ";
+            "3" = "󰲤 ";
+            "4" = "󰲦 ";
+            "5" = "󰲨 ";
+            "6" = "󰲪 ";
+            "7" = "󰲬 ";
+            "8" = "󰲮 ";
+            "9" = "󰲰 ";
+            "10" = "󰿬 ";
+            "special" = " ";
 
-            # "active" = "",
-            # "default" = "",
-            # "empty" = ""
+            # "active" = " ",
+            # "default" = " ",
+            # "empty" = " "
           };
 
           show-special = true;
@@ -99,12 +99,12 @@
         };
 
         "custom/media" = {
-          format = "{icon}󰎈";
+          format = "{icon}󰎈 ";
           restart-interval = 2;
           return-type = "json";
           format-icons = {
-            Playing = "";
-            Paused = "";
+            Playing = " ";
+            Paused = " ";
           };
         };
 
@@ -125,15 +125,15 @@
         };
 
         "network" = {
-          format = "󰤭";
+          format = "󰤭 ";
           format-wifi = "{icon}({signalStrength}%){essid}";
-          format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
-          format-disconnected = "󰪎 Disconnected";
+          format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤥 " "󰤨 "];
+          format-disconnected = "󰪎  Disconnected";
           tooltip-format = "wifi <span color='#ee99a0'>off</span>";
           tooltip-format-wifi = "SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
           tooltip-format-disconnected = "<span color='#ed8796'>disconnected</span>";
-          format-ethernet = "󰈀 {ipaddr}/{cidr}";
-          format-linked = "󰈀 {ifname} (No IP)";
+          format-ethernet = "󰈀  {ipaddr}/{cidr}";
+          format-linked = "󰈀  {ifname} (No IP)";
           tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
           max-length = 35;
           on-click = "zsh -c 'wifi_toggle'";
@@ -141,7 +141,7 @@
         };
 
         "custom/vpn" = {
-          format = "VPN ";
+          format = "VPN  ";
           exec = "echo '{\"class\": \"connected\"}'";
           exec-if = "test -d /proc/sys/net/ipv4/conf/tun0";
           return-type = "json";
@@ -244,8 +244,8 @@
           numlock = true;
           format = "{name} {icon}";
           format-icons = {
-            locked = "";
-            unlocked = "";
+            locked = " ";
+            unlocked = " ";
           };
         };
 
@@ -286,7 +286,7 @@
         };
 
         "cpu" = {
-          format = "󰻠{usage}%";
+          format = "󰻠 {usage}%";
           states = {
             high = 90;
             upper-medium = 70;
@@ -298,7 +298,7 @@
         };
 
         "memory" = {
-          format = "{percentage}%";
+          format = " {percentage}%";
           tooltip-format = "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB";
           states = {
             high = 90;
@@ -311,7 +311,7 @@
         };
 
         "disk" = {
-          format = "󰋊{percentage_used}%";
+          format = "󰋊 {percentage_used}%";
           tooltip-format = "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)";
           states = {
             high = 90;
@@ -327,9 +327,9 @@
           tooltip = false;
           thermal-zone = 6;
           critical-threshold = 80;
-          format = "{icon}{temperatureC}󰔄";
-          format-critical = "🔥{icon}{temperatureC}󰔄";
-          format-icons = ["" "" "" "" ""];
+          format = "{icon}{temperatureC}󰔄 ";
+          format-critical = "🔥 {icon}{temperatureC}󰔄 ";
+          format-icons = [" " " " " " " " " "];
         };
 
         "battery" = {
@@ -344,24 +344,24 @@
           format-charging = "󱐋{icon}{capacity}%";
           format-plugged = "󰚥{icon}{capacity}%";
           format-time = "{H} h {M} min";
-          format-icons = ["󱃍" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format-icons = ["󱃍 " "󰁺 " "󰁻 " "󰁼 " "󰁽 " "󰁾 " "󰁿 " "󰂀 " "󰂁 " "󰂂 " "󰁹 "];
           tooltip-format = "{timeTo}";
         };
 
         "backlight" = {
           format = "{icon}{percent}%";
           format-icons = [
-            "󰌶"
-            "󱩎"
-            "󱩏"
-            "󱩐"
-            "󱩑"
-            "󱩒"
-            "󱩓"
-            "󱩔"
-            "󱩕"
-            "󱩖"
-            "󰛨"
+            "󰌶 "
+            "󱩎 "
+            "󱩏 "
+            "󱩐 "
+            "󱩑 "
+            "󱩒 "
+            "󱩓 "
+            "󱩔 "
+            "󱩕 "
+            "󱩖 "
+            "󰛨 "
           ];
           tooltip = false;
           states = {
@@ -385,25 +385,25 @@
           };
           tooltip-format = "{desc}";
           format = "{icon}{volume}%\n{format_source}";
-          format-bluetooth = "󰂱{icon}{volume}%\n{format_source}";
-          format-bluetooth-muted = "󰂱󰝟{volume}%\n{format_source}";
-          format-muted = "󰝟{volume}%\n{format_source}";
-          format-source = "󰍬{volume}%";
-          format-source-muted = "󰍭{volume}%";
+          format-bluetooth = "󰂱 {icon}{volume}%\n{format_source}";
+          format-bluetooth-muted = "󰂱 󰝟 {volume}%\n{format_source}";
+          format-muted = "󰝟 {volume}%\n{format_source}";
+          format-source = "󰍬 {volume}%";
+          format-source-muted = "󰍭 {volume}%";
           format-icons = {
-            "headphone" = "󰋋";
-            "hands-free" = "";
-            "headset" = "󰋎";
-            "phone" = "󰄜";
-            "portable" = "󰦧";
-            "car" = "󰄋";
-            "speaker" = "󰓃";
-            "hdmi" = "󰡁";
-            "hifi" = "󰋌";
+            "headphone" = "󰋋 ";
+            "hands-free" = " ";
+            "headset" = "󰋎 ";
+            "phone" = "󰄜 ";
+            "portable" = "󰦧 ";
+            "car" = "󰄋 ";
+            "speaker" = "󰓃 ";
+            "hdmi" = "󰡁 ";
+            "hifi" = "󰋌 ";
             "default" = [
-              "󰕿"
-              "󰖀"
-              "󰕾"
+              "󰕿 "
+              "󰖀 "
+              "󰕾 "
             ];
           };
           reverse-scrolling = true;
