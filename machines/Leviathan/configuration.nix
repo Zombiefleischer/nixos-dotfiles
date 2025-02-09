@@ -20,7 +20,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use the latest Linux Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages;
 
   networking.hostName = "Leviathan"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -66,8 +67,14 @@
   boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
+    autoNumlock = true;
+  };
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
   programs.xwayland.enable = true;
@@ -77,7 +84,7 @@
 
   # Enable i3
   services.xserver.windowManager.i3 = {
-    enable = true;
+    enable = false;
     extraPackages = with pkgs; [
       dmenu
       i3status

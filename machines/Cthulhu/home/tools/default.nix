@@ -17,8 +17,10 @@
     cliphist
     cloudlens
     copier
-    dbeaver-bin
+    corefonts
+    # dbeaver-bin
     dig
+    dive
     docker-buildx
     eza
     fastfetch

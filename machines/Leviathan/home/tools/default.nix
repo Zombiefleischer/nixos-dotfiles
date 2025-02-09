@@ -13,6 +13,7 @@
     cbonsai
     clinfo
     codevis
+    corefonts
     davinci-resolve
     delta
     dig

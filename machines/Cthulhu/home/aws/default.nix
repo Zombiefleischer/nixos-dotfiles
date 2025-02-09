@@ -43,6 +43,9 @@
             memory = "100Mi";
           };
         };
+        featureGates = {
+          nodeShell = true;
+        };
         imageScans = {
           enable = false;
           exclusions = {
