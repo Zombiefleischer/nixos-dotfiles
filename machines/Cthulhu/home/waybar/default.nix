@@ -2,12 +2,6 @@
   programs.waybar = {
     enable = true;
 
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      mode = "prependImport";
-    };
-
     systemd.enable = true;
 
     settings = [
@@ -423,9 +417,12 @@
       }
     ];
 
-    style = ''
+    style = 
+    /* css */
+    ''
       * {
         border: none;
+        font-family: Fira Code Nerd Font, sans-serif;
       }
 
       window.bottom_bar#waybar {
@@ -866,5 +863,11 @@
         color: @red;
       }
     '';
+  };
+
+  catppuccin.waybar = {
+    enable = true;
+    flavor = "mocha";
+    mode = "prependImport";
   };
 }

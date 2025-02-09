@@ -2,11 +2,11 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+  };
 
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      accent = "sapphire";
-    };
+  catppuccin.fzf = {
+    enable = true;
+    flavor = "mocha";
+    accent = "sapphire";
   };
 }

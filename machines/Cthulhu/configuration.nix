@@ -124,6 +124,7 @@
       noto-fonts-emoji
       noto-fonts-color-emoji # default
       noto-fonts-cjk-sans
+      corefonts
     ];
     enableDefaultPackages = false;
     fontDir.enable = true;
@@ -133,7 +134,7 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
-  programs.zsh.enable = true; # TODO: Disable ZSH here
+  programs.zsh.enable = false;
   programs.kdeconnect.enable = true;
   programs.neovim.defaultEditor = true;
   programs.light.enable = true;

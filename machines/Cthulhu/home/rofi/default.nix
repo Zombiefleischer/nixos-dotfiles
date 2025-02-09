@@ -24,10 +24,10 @@
       sidebar-mode = true;
       sorting-method = "fzf";
     };
+  };
 
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
+  catppuccin.rofi = {
+    enable = true;
+    flavor = "mocha";
   };
 }

@@ -38,17 +38,17 @@
     gh-dash = {
       enable = true;
 
-      catppuccin = {
-        enable = true;
-        accent = "sapphire";
-        flavor = "mocha";
-      };
-
       settings = {
         pager = {
           diff = "delta";
         };
       };
     };
+  };
+
+  catppuccin.gh-dash = {
+    enable = true;
+    accent = "sapphire";
+    flavor = "mocha";
   };
 }

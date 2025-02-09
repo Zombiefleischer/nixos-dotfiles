@@ -5,11 +5,6 @@
   programs.hyprlock = {
     enable = true;
 
-    catppuccin = {
-      enable = true;
-      accent = "sapphire";
-      flavor = "mocha";
-    };
 
     settings = {
       "$font" = "FiraCode Nerd Font Ret";
@@ -94,5 +89,11 @@
         shadow_passes = 2;
       };
     };
+  };
+
+  catppuccin.hyprlock = {
+    enable = true;
+    accent = "sapphire";
+    flavor = "mocha";
   };
 }

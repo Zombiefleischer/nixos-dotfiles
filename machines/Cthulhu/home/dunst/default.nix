@@ -2,11 +2,6 @@
   services.dunst = {
     enable = true;
 
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
-
     settings = {
       global = {
         separator_color = "frame";
@@ -21,5 +16,10 @@
         height = 100;
       };
     };
+  };
+
+  catppuccin.dunst = {
+    enable = true;
+    flavor = "mocha";
   };
 }

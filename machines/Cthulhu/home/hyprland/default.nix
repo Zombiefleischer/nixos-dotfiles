@@ -9,13 +9,6 @@
 
     xwayland.enable = true;
 
-    # TODO: Refactor catppuccin
-    catppuccin = {
-      enable = true;
-      accent = "sapphire";
-      flavor = "mocha";
-    };
-
     systemd = {
       enable = true;
       enableXdgAutostart = true;
@@ -342,5 +335,11 @@
       bind = $mainMod SHIFT, Y, exec, fish -c bluetooth_toggle
       bind = $mainMod SHIFT, W, exec, fish -c wifi_toggle
     '';
+  };
+
+  catppuccin.hyprland = {
+    enable = true;
+    accent = "sapphire";
+    flavor = "mocha";
   };
 }

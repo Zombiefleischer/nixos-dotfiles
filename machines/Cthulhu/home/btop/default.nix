@@ -156,10 +156,10 @@
       #* Custom gpu5 model name, empty string to disable.
       custom_gpu_name5 = "";
     };
+  };
 
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
+  catppuccin.btop = {
+    enable = true;
+    flavor = "mocha";
   };
 }
