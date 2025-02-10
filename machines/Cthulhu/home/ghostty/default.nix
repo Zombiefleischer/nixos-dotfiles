@@ -8,7 +8,7 @@
 
     settings = {
       background-opacity = 0.75;
-      background-blur-radius = 0;
+      background-blur = false;
 
       font-family = "FiraCode Nerd Font Ret";
       font-size = 14;

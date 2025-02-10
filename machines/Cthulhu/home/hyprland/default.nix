@@ -45,12 +45,13 @@
         "wl-clip-persist --clipboard regular"
         "systemctl --user start psi-notify"
         "lan-mouse -d"
+        "/home/zombiefleischer/scripts/swww_randomize_multi.sh /home/zombiefleischer/Pictures/i3_wallpapers"
       ];
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
         kb_layout = "us";
-        kb_variant = "altgr-intl";
+        kb_variant = "intl";
         kb_model = "pc104";
         kb_options = "terminate:ctrl_alt_bksp";
         numlock_by_default = true;
