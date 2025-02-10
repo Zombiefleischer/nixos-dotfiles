@@ -63,7 +63,6 @@
     initExtra = 
     /* bash */
     ''
-      source ~/.zsh/functions.zsh
       source ~/.zsh/jira.zsh
       [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -83,6 +82,12 @@
       function dvmsc-staging() {
         eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
       }
+    '';
+
+    envExtra = 
+    /* bash */
+    ''
+      source ~/.zsh/functions.zsh
     '';
   };
 }

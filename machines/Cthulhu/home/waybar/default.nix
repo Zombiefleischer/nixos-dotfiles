@@ -24,17 +24,17 @@
           on-click = "activate";
           format = "{icon}";
           format-icons = {
-            "1" = " 󰲠 ";
-            "2" = " 󰲢 ";
-            "3" = " 󰲤 ";
-            "4" = " 󰲦 ";
-            "5" = " 󰲨 ";
-            "6" = " 󰲪 ";
-            "7" = " 󰲬 ";
-            "8" = " 󰲮 ";
-            "9" = " 󰲰 ";
-            "10" = " 󰿬 ";
-            "special" = "  ";
+            "1" = "󰲠";
+            "2" = "󰲢";
+            "3" = "󰲤";
+            "4" = "󰲦";
+            "5" = "󰲨";
+            "6" = "󰲪";
+            "7" = "󰲬";
+            "8" = "󰲮";
+            "9" = "󰲰";
+            "10" = "󰿬";
+            "special" = "";
 
             # "active" = " ",
             # "default" = " ",
@@ -44,6 +44,11 @@
           show-special = true;
           persistent-workspaces = {
             "*" = 10;
+            "10" = [
+              "DP-5"
+            ];
+            "DP-7" = [1 2 3 4 5 6 7 8 9 10];
+            "DP-5" = [10];
           };
         };
 
@@ -53,7 +58,7 @@
         };
 
         "clock#time" = {
-          format = "{:%H:%M %Z %Ez}";
+          format = "{:%H:%M:%S %Z %Ez}";
           # locale = "en_US.UTF-8"
           # timezones = [ "Europe/Berlin" ]
         };
@@ -119,7 +124,7 @@
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t({device_battery_percentage}%)";
           max-length = 35;
-          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c 'bluetooth_toggle'";
+          on-click = "zsh -c bluetooth_toggle";
           on-click-right = "overskride";
         };
 
@@ -135,7 +140,7 @@
           format-linked = "󰈀  {ifname} (No IP)";
           tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
           max-length = 35;
-          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c 'wifi_toggle'";
+          on-click = "zsh -c wifi_toggle";
           on-click-right = "nm-connection-editor";
         };
 
@@ -162,7 +167,7 @@
 
         "custom/webcam" = {
           interval = 1;
-          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_webcam";
+          exec = "zsh -c check_webcam";
           return-type = "json";
         };
 
@@ -183,20 +188,20 @@
         "custom/recording" = {
           interval = 1;
           exec-if = "pgrep wl-screenrec";
-          exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_recording";
+          exec = "zsh -c check_recording";
           return-type = "json";
         };
 
         "custom/airplane_mode" = {
           interval = 1;
           exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_airplane_mode";
-          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c airplane_mode_toggle";
+          on-click = "zsh -c airplane_mode_toggle";
           return-type = "json";
         };
 
         "custom/dunst" = {
           exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c dunst_pause";
-          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && dunstctl set-paused toggle";
+          on-click = "dunstctl set-paused toggle";
           restart-interval = 1;
           return-type = "json";
         };
@@ -214,9 +219,9 @@
 
         "custom/logout_menu" = {
           return-type = "json";
-          exec = "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'";
+          exec = "echo '{ \"text\":\"󰐥 \", \"tooltip\": \"logout menu\" }'";
           interval = "once";
-          on-click = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c wlogout_unique";
+          on-click = "zsh -c wlogout_unique";
         };
       }
 
@@ -234,7 +239,7 @@
 
         # Modules Config
         "hyprland/window" = {
-          format = "👼 {title} 😈";
+          format = " {title} 󰭟 ";
           max-length = 50;
         };
 
@@ -249,7 +254,7 @@
         };
 
         "user" = {
-          format = "🐱 <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)";
+          format = "󰄛 <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)";
           icon = true;
         };
       }
@@ -285,7 +290,7 @@
         };
 
         "cpu" = {
-          format = "󰻠 {usage}%";
+          format = "󰻠  {usage}%";
           states = {
             high = 90;
             upper-medium = 70;
@@ -297,7 +302,7 @@
         };
 
         "memory" = {
-          format = " {percentage}%";
+          format = "  {percentage}%";
           tooltip-format = "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB";
           states = {
             high = 90;
@@ -310,7 +315,7 @@
         };
 
         "disk" = {
-          format = "󰋊 {percentage_used}%";
+          format = "󰋊  {percentage_used}%";
           tooltip-format = "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)";
           states = {
             high = 90;
@@ -327,7 +332,7 @@
           thermal-zone = 6;
           critical-threshold = 80;
           format = "{icon}{temperatureC}󰔄 ";
-          format-critical = "🔥 {icon}{temperatureC}󰔄 ";
+          format-critical = "󱗗{icon}{temperatureC}󰔄 ";
           format-icons = [" " " " " " " " " "];
         };
 
@@ -421,7 +426,7 @@
     ''
       * {
         border: none;
-        /* font-family: Fira Code Nerd Font, sans-serif; */
+        /* font-family: "Fira Code Nerd Font", "Noto Color Emoji", sans-serif; */
       }
 
       window.bottom_bar#waybar {

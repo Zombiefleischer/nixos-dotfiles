@@ -119,6 +119,7 @@
     super-productivity
     swappy
     swww
+    xfce.thunar
     thunderbird-unwrapped
     unar
     unzip

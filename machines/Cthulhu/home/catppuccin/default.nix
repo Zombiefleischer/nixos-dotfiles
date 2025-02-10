@@ -1,4 +1,4 @@
-{...}: {
+{pkgs,...}: {
   catppuccin = {
     enable = true;
     accent = "sapphire";
@@ -16,6 +16,11 @@
     };
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
+    };
+    font = {
+      name = "Fira Code Nerd Font";
+      pkgs = pkgs.nerd-fonts.fira-code;
+      size = 14;
     };
   };
   catppuccin.gtk = {

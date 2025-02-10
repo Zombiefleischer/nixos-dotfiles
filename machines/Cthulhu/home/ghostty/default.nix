@@ -20,8 +20,11 @@
 
       gtk-titlebar = false;
       gtk-tabs-location = "bottom";
+      gtk-wide-tabs = false;
 
       copy-on-select = "clipboard";
+
+      cursor-style = "block";
     };
   };
 }

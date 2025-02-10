@@ -232,7 +232,7 @@ function wifi_toggle() {
     fi
 }
 
-function wlogout_uniqe() {
+function wlogout_unique() {
     if [ -z "$(pidof wleave)" ]; then
         wleave --layout ~/.config/wlogout/layout --css ~/.config/wlogout/style.css
     fi
