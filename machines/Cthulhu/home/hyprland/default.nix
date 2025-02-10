@@ -26,7 +26,7 @@
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
         "DP-7, 3440x1440@100, 0x560, 1"
-        "DP-5, 2560x1440@70, 3440x0, 1, transform, 3"
+        "DP-5, 2560x1440@60, 3440x0, 1, transform, 3"
         "eDP-1, disable"
       ];
 
@@ -128,6 +128,20 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         background_color = "$base";
+      };
+
+      plugin = {
+        hyprbars = {
+          # example config
+          bar_height = 20;
+
+          # example buttons (R -> L)
+          # hyprbars-button = color, size, on-click
+          hyprbars-button = [ 
+            "rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive"
+            "rgb(eeee11), 10, , hyprctl dispatch fullscreen 1"
+          ];
+        };
       };
 
       binds = {
