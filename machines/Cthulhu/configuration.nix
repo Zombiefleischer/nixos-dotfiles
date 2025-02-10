@@ -165,7 +165,9 @@
     5900 # krfb-virtualmonitor
     24800 # input-leap
   ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedUDPPorts = [ 
+    4242 # lan-mouse
+  ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
 
