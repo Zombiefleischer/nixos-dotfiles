@@ -9,7 +9,10 @@
   boot.plymouth = {
     enable = true;
     font = "${pkgs.fira-code}/share/fonts/truetype/FiraCode-VF.ttf";
-    themePackages = [ pkgs.catppuccin-plymouth ];
     theme = "catppuccin-mocha";
+  };
+  catppuccin.plymouth = {
+    enable = true;
+    flavor = "mocha";
   };
 }
