@@ -18,6 +18,7 @@
     krfb
     # krohnkite
     kruler
+    kservice
     kspaceduel
     ksshaskpass
     ksystemlog

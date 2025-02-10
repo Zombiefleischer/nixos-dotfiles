@@ -76,9 +76,9 @@ function check_airplane_mode() {
     local backup_file=~/.cache/airplane_backup
 
     if [ -e "$backup_file" ]; then
-        echo "{ \"text\":\"󰀝\", \"tooltip\": \"airplane-mode <span color='#a6da95'>on</span>\", \"class\": \"on\" }"
+        echo "{ \"text\":\"󰀝 \", \"tooltip\": \"airplane-mode <span color='#a6da95'>on</span>\", \"class\": \"on\" }"
     else
-        echo "{ \"text\":\"󰀞\", \"tooltip\": \"airplane-mode <span color='#ee99a0'>off</span>\", \"class\": \"off\" }"
+        echo "{ \"text\":\"󰀞 \", \"tooltip\": \"airplane-mode <span color='#ee99a0'>off</span>\", \"class\": \"off\" }"
     fi
 }
 
@@ -86,7 +86,7 @@ function check_recording() {
     local target_process="wl-screenrec"
 
     if pgrep "$target_process" >/dev/null; then
-        echo "{\"text\":\"\", \"tooltip\":\"Recording\", \"alt\":\"Recording\"}"
+        echo "{\"text\":\" \", \"tooltip\":\"Recording\", \"alt\":\"Recording\"}"
     fi
 }
 
@@ -98,7 +98,7 @@ function check_webcam() {
             local process_name=$(ps -q "$process_pid" -o comm=)
             processes="$processes\n<span color='#eed49f'>$process_name($process_pid)</span>"
         done
-        echo "{\"text\":\"󰖠\", \"tooltip\":\"webcam is used by: $processes\", \"alt\":\"Webcam\"}"
+        echo "{\"text\":\"󰖠 \", \"tooltip\":\"webcam is used by: $processes\", \"alt\":\"Webcam\"}"
     fi
 }
 
@@ -130,15 +130,15 @@ function clipboard_to_wlcopy() {
 function dunst_pause() {
     local COUNT_WAITING=$(dunstctl count waiting)
     local COUNT_DISPLAYED=$(dunstctl count displayed)
-    local ENABLED="{ \"text\": \"󰂜\", \"tooltip\": \"notifications <span color='#a6da95'>on</span>\", \"class\": \"on\" }"
-    local DISABLED="{ \"text\": \"󰪑\", \"tooltip\": \"notifications <span color='#ee99a0'>off</span>\", \"class\": \"off\" }"
+    local ENABLED="{ \"text\": \"󰂜 \", \"tooltip\": \"notifications <span color='#a6da95'>on</span>\", \"class\": \"on\" }"
+    local DISABLED="{ \"text\": \"󰪑 \", \"tooltip\": \"notifications <span color='#ee99a0'>off</span>\", \"class\": \"off\" }"
     
     if [ "$COUNT_DISPLAYED" != "0" ]; then
-        ENABLED="{ \"text\": \"󰂚$COUNT_DISPLAYED\", \"tooltip\": \"$COUNT_DISPLAYED notifications\", \"class\": \"on\" }"
+        ENABLED="{ \"text\": \"󰂚 $COUNT_DISPLAYED\", \"tooltip\": \"$COUNT_DISPLAYED notifications\", \"class\": \"on\" }"
     fi
 
     if [ "$COUNT_WAITING" != "0" ]; then
-        DISABLED="{ \"text\": \"󰂛$COUNT_WAITING\", \"tooltip\": \"(silent) $COUNT_WAITING notifications\", \"class\": \"off\" }"
+        DISABLED="{ \"text\": \"󰂛 $COUNT_WAITING\", \"tooltip\": \"(silent) $COUNT_WAITING notifications\", \"class\": \"off\" }"
     fi
 
     if dunstctl is-paused | grep -q "false"; then
@@ -238,18 +238,3 @@ function wlogout_uniqe() {
     fi
 }
 
-function aws-login() {
-  aws sso login --sso-session nextbike
-}
-
-function nextbike-staging() {
-  eval "$(aws configure export-credentials --profile nextbike-staging --format env)"
-}
-
-function nextbike-production() {
-  eval "$(aws configure export-credentials --profile nextbike-production --format env)"
-}
-
-function dvmsc-staging() {
-  eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
-}

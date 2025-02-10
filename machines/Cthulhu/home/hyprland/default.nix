@@ -47,7 +47,7 @@
         "wl-clip-persist --clipboard regular"
         "systemctl --user start psi-notify"
         "lan-mouse -d"
-        "/home/zombiefleischer/scripts/swww_randomize_multi.sh /home/zombiefleischer/Pictures/i3_wallpapers"
+        # "/home/zombiefleischer/scripts/swww_randomize_multi.sh /home/zombiefleischer/Pictures/i3_wallpapers"
       ];
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
@@ -339,22 +339,22 @@
       bind = $mainMod, G, togglegroup
 
       # ZSH Functions
-      bind = $mainMod, ESCAPE, exec, zsh -c wlogout_uniqe
-      bind = $mainMod SHIFT, S, exec, zsh -c screenshot_to_clipboard
-      bind = $mainMod, E, exec, zsh -c screenshot_edit
-      bind = $mainMod SHIFT, R, exec, zsh -c record_screen_gif
-      bind = $mainMod, R, exec, zsh -c record_screen_mp4
-      bind = $mainMod, V, exec, zsh -c clipboard_to_type
-      bind = $mainMod SHIFT, V, exec, zsh -c clipboard_to_wlcopy
-      bind = $mainMod, X, exec, zsh -c clipboard_delete_item
-      bind = $mainMod SHIFT, X, exec, zsh -c clipboard_clear
-      bind = $mainMod, U, exec, zsh -c bookmark_to_type
-      bind = $mainMod SHIFT, U, exec, zsh -c bookmark_add
-      bind = $mainMod CTRL, U, exec, zsh -c bookmark_delete
-      bind = $mainMod SHIFT, A, exec, zsh -c airplane_mode_toggle
+      bind = $mainMod, ESCAPE, exec, wlogout_uniqe
+      bind = $mainMod SHIFT, S, exec, screenshot_to_clipboard
+      bind = $mainMod, E, exec, screenshot_edit
+      bind = $mainMod SHIFT, R, exec, record_screen_gif
+      bind = $mainMod, R, exec, record_screen_mp4
+      bind = $mainMod, V, exec, clipboard_to_type
+      bind = $mainMod SHIFT, V, exec, clipboard_to_wlcopy
+      bind = $mainMod, X, exec, clipboard_delete_item
+      bind = $mainMod SHIFT, X, exec, clipboard_clear
+      bind = $mainMod, U, exec, bookmark_to_type
+      bind = $mainMod SHIFT, U, exec, bookmark_add
+      bind = $mainMod CTRL, U, exec, bookmark_delete
+      bind = $mainMod SHIFT, A, exec, airplane_mode_toggle
       bind = $mainMod SHIFT, N, exec, dunstctl set-paused toggle
-      bind = $mainMod SHIFT, Y, exec, zsh -c bluetooth_toggle
-      bind = $mainMod SHIFT, W, exec, zsh -c wifi_toggle
+      bind = $mainMod SHIFT, Y, exec, bluetooth_toggle
+      bind = $mainMod SHIFT, W, exec, wifi_toggle
     '';
   };
 
