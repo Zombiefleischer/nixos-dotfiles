@@ -36,6 +36,8 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    lan-mouse.url = "github:feschber/lan-mouse";
   };
 
   outputs = {

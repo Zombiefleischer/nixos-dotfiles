@@ -60,7 +60,7 @@
     hypridle
     imagemagick
     inetutils
-    input-leap
+    # input-leap
     jira-cli-go
     jq
     kate

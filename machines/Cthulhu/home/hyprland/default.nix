@@ -35,7 +35,7 @@
         "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.slack}/bin/slack"
         "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
-        "${pkgs.input-leap}/bin/input-leap"
+        # "${pkgs.input-leap}/bin/input-leap"
         "${pkgs.thunderbird}/bin/thunderbird"
         "${pkgs.obsidian}/bin/obsidian"
         "${pkgs.libreoffice}/bin/libreoffice --calc '/home/zombiefleischer/Documents/Zeiterfassung_MS_2025.xlsx'"
@@ -49,9 +49,9 @@
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
         kb_layout = "us";
-        kb_variant = "alt-intl";
-        kb_model = "";
-        kb_options = "caps:escape_shifted_capslock";
+        kb_variant = "intl";
+        kb_model = "pc104";
+        kb_options = "terminate:ctrl_alt_bksp";
         numlock_by_default = true;
 
         follow_mouse = 1;
@@ -306,8 +306,8 @@
       bind = $mainMod, Enter, exec, ghostty
       bind = ALT CTRL, T, exec, ghostty
       bind = $mainMod, F, exec, dolphin
-      bind = $mainMod, D, exec, rofi -show combi -combi-modi "window#drun#run"
-      bind = , code:225, exec, rofi -show combi -combi-modi "window#drun#run"
+      bind = $mainMod, D, exec, rofi -show combi 
+      bind = , code:225, exec, rofi -show combi 
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod SHIFT, C, exec, pypr menu "Color picker"
       bind = $mainMod, T, exec, rofi -show calc -modi calc -no-show-match -no-sort

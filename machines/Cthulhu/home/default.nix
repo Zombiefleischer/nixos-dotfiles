@@ -32,6 +32,7 @@
     ./hyprlock
     ./keyboard
     ./kitty
+    ./lan-mouse
     ./lazygit
     ./lsps
     ./neovim
