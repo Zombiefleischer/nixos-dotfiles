@@ -6,7 +6,12 @@
     systemd = true;
 
     settings = {
-      
+      port = 4242;
+
+      left = {
+        hostname = "Leviathan";
+        activate_on_startup = true;
+      };
     };
   };
 }
