@@ -164,6 +164,7 @@
         "workspace 4, class:(thunderbird)"
         "workspace 9, class:(soffice.bin)"
         "workspace 10, title:(Slack)"
+        "noblur, class:(com.mitchellh.ghostty)"
       ];
 
       "$mainMod" = "SUPER";
