@@ -44,6 +44,7 @@
         "wl-paste --type image --watch cliphist store"
         "wl-clip-persist --clipboard regular"
         "systemctl --user start psi-notify"
+        "lan-mouse -d"
       ];
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/

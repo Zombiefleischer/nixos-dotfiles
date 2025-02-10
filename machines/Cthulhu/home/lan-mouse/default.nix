@@ -3,7 +3,7 @@
 
   programs.lan-mouse = {
     enable = true;
-    systemd = true;
+    systemd = false;
 
     settings = {
       port = 4242;
