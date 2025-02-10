@@ -38,6 +38,13 @@
     };
 
     lan-mouse.url = "github:feschber/lan-mouse";
+
+    hy3 = {
+      url = "github:outfoxxed/hy3"; # where {version} is the hyprland release version
+      # or "github:outfoxxed/hy3" to follow the development branch.
+      # (you may encounter issues if you dont do the same for hyprland)
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = {
@@ -45,6 +52,10 @@
     catppuccin,
     envfs,
     home-manager,
+    hy3,
+    hyprland,
+    hyprland-plugins,
+    lan-mouse,
     nix-alien,
     nix-flatpak,
     nixpkgs,

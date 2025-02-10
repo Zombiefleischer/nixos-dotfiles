@@ -17,6 +17,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+      inputs.hy3.packages.x86_64-linux.hy3
     ];
 
     settings = {
@@ -127,7 +128,7 @@
 
       misc = {
         disable_hyprland_logo = true;
-        disable_splash_rendering = true;
+        disable_splash_rendering = false;
         background_color = "$base";
       };
 
@@ -136,12 +137,45 @@
           # example config
           bar_height = 20;
 
+          bar_color = "$sapphire";
+          bar_text_font = "Fira Code Nerd Font";
+          "col.text" = "$base";
+
+
           # example buttons (R -> L)
           # hyprbars-button = color, size, on-click
           hyprbars-button = [ 
-            "rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive"
-            "rgb(eeee11), 10, , hyprctl dispatch fullscreen 1"
+            "$red, 10, 󰖭, hyprctl dispatch killactive"
+            "$yellow, 10, , hyprctl dispatch fullscreen 1"
           ];
+        };
+
+        hy3 = {
+          tabs = {
+            border_width = 2;
+            opacity = 0.7;
+
+            "col.active" = "$sapphire";
+            "col.active.border" = "$lavender";
+            "col.active.text" = "$base";
+
+            "col.focused" = "$base";
+            "col.focused.border" = "$sapphire";
+            "col.focused.text" = "$text";
+
+            "col.inactive" = "$base";
+            "col.inactive.border" = "$overlay0";
+            "col.inactive.text" = "$text";
+
+            "col.urgent" = "$base";
+            "col.urgent.border" = "$peach";
+            "col.urgent.text" = "$peach";
+          };
+
+          autotile = {
+            enable = true;
+            workspaces = "not:10";
+          };
         };
       };
 
@@ -234,10 +268,10 @@
       submap=move
 
       # sets repeatable binds for moving the active window
-      bind=,l,movewindow,r
-      bind=,h,movewindow,l
-      bind=,k,movewindow,u
-      bind=,j,movewindow,d
+      bind=,l,hy3:movewindow,r
+      bind=,h,hy3:movewindow,l
+      bind=,k,hy3:movewindow,u
+      bind=,j,hy3:movewindow,d
 
       # use reset to go back to the global submap
       bind=,escape,submap,reset
@@ -261,10 +295,10 @@
       bind = $mainMod SHIFT, L, exec, hyprlock
 
       # Move focus with mainMod + arrow keys
-      bind = $mainMod, h, movefocus, l
-      bind = $mainMod, l, movefocus, r
-      bind = $mainMod, k, movefocus, u
-      bind = $mainMod, j, movefocus, d
+      bind = $mainMod, h, hy3:movefocus, l
+      bind = $mainMod, l, hy3:movefocus, r
+      bind = $mainMod, k, hy3:movefocus, u
+      bind = $mainMod, j, hy3:movefocus, d
       bind = $mainMod, Tab, cyclenext,
       bind = $mainMod, Tab, bringactivetotop,
 
@@ -317,7 +351,7 @@
       bind = $mainMod, mouse_up, workspace, e-1
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = $mainMod, mouse:272, movewindow
+      bindm = $mainMod, mouse:272, hy3:movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
       # Programs

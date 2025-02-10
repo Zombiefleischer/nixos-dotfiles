@@ -44,9 +44,6 @@
           show-special = true;
           persistent-workspaces = {
             "*" = 10;
-            "10" = [
-              "DP-5"
-            ];
             "DP-7" = [1 2 3 4 5 6 7 8 9 10];
             "DP-5" = [10];
           };
@@ -239,7 +236,7 @@
 
         # Modules Config
         "hyprland/window" = {
-          format = " {title} 󰭟 ";
+          format = "  {title} 󰭟 ";
           max-length = 50;
         };
 
@@ -254,7 +251,7 @@
         };
 
         "user" = {
-          format = "󰄛 <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)";
+          format = " 󰄛  <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)";
           icon = true;
         };
       }
