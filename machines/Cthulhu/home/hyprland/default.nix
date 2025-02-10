@@ -50,7 +50,7 @@
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
         kb_layout = "us";
-        kb_variant = "intl";
+        kb_variant = "altgr-intl";
         kb_model = "pc104";
         kb_options = "terminate:ctrl_alt_bksp";
         numlock_by_default = true;

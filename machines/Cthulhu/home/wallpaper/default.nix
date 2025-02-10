@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   services.random-background = {
     enable = false;
     display = "fill";
@@ -7,5 +7,8 @@
     interval = "15m";
   };
 
-  home.file."scripts/swww_randomize_multi.sh".text = builtins.readFile ./swww_randomize_multi.sh;
+  home.file."scripts/swww_randomize_multi.sh" = {
+    text = builtins.readFile ./swww_randomize_multi.sh;
+    executable = true;
+  };
 }
