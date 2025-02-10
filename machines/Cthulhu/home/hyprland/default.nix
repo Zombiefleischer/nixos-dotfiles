@@ -15,7 +15,9 @@
       variables = ["--all"];
     };
 
-    plugins = [];
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+    ];
 
     settings = {
       # Please note not all available settings / options are set here.
@@ -147,7 +149,7 @@
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
         "opaque, firefox"
         "opaque, floorp"
-        "opaque, title:(Slack)"
+        "opaque, Slack"
         "float, imv"
         "opaque, imv"
         "float, mpv"
