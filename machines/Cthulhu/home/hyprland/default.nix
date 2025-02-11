@@ -25,7 +25,7 @@
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
-        "DP-7, 3440x1440@100, 0x560, 1"
+        "DP-7, 3440x1440@100, 0x380, 1"
         "DP-5, 2560x1440@60, 3440x0, 1, transform, 3"
         "eDP-1, disable"
       ];
@@ -62,7 +62,7 @@
         follow_mouse = 1;
 
         touchpad = {
-          natural_scroll = "yes";
+          natural_scroll = true;
           tap-and-drag = true;
         };
 
@@ -133,7 +133,7 @@
 
         groupbar = {
           enabled = true;
-          font_size = 10;
+          font_size = 12;
           text_color = "$sapphire";
           "col.active" = "$sapphire";
           "col.inactive" = "$base";
@@ -145,11 +145,11 @@
         disable_splash_rendering = false;
         background_color = "$base";
         font_family = "Fira Code Nerd Font";
+        vfr = true;
       };
 
       plugin = {
         hyprbars = {
-          # example config
           bar_height = 20;
 
           bar_color = "$sapphire";
@@ -157,13 +157,17 @@
           "col.text" = "$base";
 
 
-          # example buttons (R -> L)
+          # buttons (R -> L)
           # hyprbars-button = color, size, on-click
           hyprbars-button = [ 
             "$red, 12, 󰖭, hyprctl dispatch killactive"
             "$yellow, 12, , hyprctl dispatch fullscreen 1"
           ];
         };
+      };
+
+      debug = {
+        disable_logs = true;
       };
 
       binds = {
@@ -203,17 +207,17 @@
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
         "opaque, class:(com.mitchellh.ghostty)"
-        "plugin:hyprbars:bar_color $base, focus:0"
-        "plugin:hyprbars:title_color $sapphire, focus:0"
+        # "plugin:hyprbars:bar_color, focus:1"
+        # "plugin:hyprbars:title_color, focus:1"
       ];
 
       "$mainMod" = "SUPER";
 
       bindl = [
         # media controls
-        ", XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-        ", XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous"
-        ", XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next"
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioPrev, exec, playerctl previous"
+        ", XF86AudioNext, exec, playerctl next"
 
         # volume
         ", XF86AudioMute, exec, volumectl toggle-mute"
@@ -271,15 +275,15 @@
       # keybinds further down will be global again...
 
       # Scratchpads (dropdowns & togglable poppups)
-      bind = $mainMod CTRL, T, exec, ${pkgs.pyprland}/bin/pypr toggle volume
+      bind = $mainMod CTRL, T, exec, pypr toggle volume
       $volume_sidemenu = ^(pavucontrol)$
       windowrule = float, $volume_sidemenu
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod CTRL, M, togglespecialworkspace, minimized
-      bind = $mainMod, M, exec, ${pkgs.pyprland}/bin/pypr toggle_special minimized
-      bind = $mainMod CTRL, E, exec, ${pkgs.pyprland}/bin/pypr expose
-      bind = $mainMod, Z, exec, ${pkgs.pyprland}/bin/pypr zoom
+      bind = $mainMod, M, exec, pypr toggle_special minimized
+      bind = $mainMod CTRL, E, exec, pypr expose
+      bind = $mainMod, Z, exec, pypr zoom
 
       bind = $mainMod SHIFT, L, exec, hyprlock
 
@@ -290,12 +294,6 @@
       bind = $mainMod, j, movefocus, d
       bind = $mainMod, Tab, cyclenext,
       bind = $mainMod, Tab, bringactivetotop,
-
-      # Move windows with mainMod + Shift + arrow keys
-      bind = $mainMod SHIFT, h, movewindow, l
-      bind = $mainMod SHIFT, l, movewindow, r
-      bind = $mainMod SHIFT, k, movewindow, u
-      bind = $mainMod SHIFT, j, movewindow, d
 
       # Switch workspaces with mainMod + [0-9]
       bind = $mainMod, 1, workspace, 1
