@@ -151,6 +151,7 @@
       plugin = {
         hyprbars = {
           bar_height = 20;
+          bar_part_of_window = true;
 
           bar_color = "$sapphire";
           bar_text_font = "Fira Code Nerd Font";
@@ -207,8 +208,8 @@
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
         "opaque, class:(com.mitchellh.ghostty)"
-        # "plugin:hyprbars:bar_color, focus:1"
-        # "plugin:hyprbars:title_color, focus:1"
+        "plugin:hyprbars:bar_color $base, focus:0"
+        "plugin:hyprbars:title_color $sapphire, focus:0"
       ];
 
       "$mainMod" = "SUPER";
