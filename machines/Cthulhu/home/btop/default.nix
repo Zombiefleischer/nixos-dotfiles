@@ -56,7 +56,7 @@
 
       #* Processes sorting, "pid" "program" "arguments" "threads" "user" "memory" "cpu lazy" "cpu direct",
       #* "cpu lazy" sorts top process over time (easier to follow), "cpu direct" updates top processdirectly.
-      proc_sorting = "memory";
+      proc_sorting = "cpu lazy";
 
       #* Reverse sorting order, True or False.
       proc_reversed = false;
@@ -86,7 +86,7 @@
       proc_left = false;
 
       #* (Linux) Filter processes tied to the Linux kernel(similar behavior to htop).
-      proc_filter_kernel = false;
+      proc_filter_kernel = true;
 
       #* In tree-view, always accumulate child process resources in the parent process.
       proc_aggregate = false;
@@ -139,7 +139,7 @@
       gpu_mirror_graph = true;
 
       #* Custom gpu0 model name, empty string to disable.
-      custom_gpu_name0 = "";
+      custom_gpu_name0 = "Integrated Graphics";
 
       #* Custom gpu1 model name, empty string to disable.
       custom_gpu_name1 = "";

@@ -45,7 +45,6 @@
     catppuccin,
     envfs,
     home-manager,
-    hy3,
     hyprland,
     hyprland-plugins,
     lan-mouse,
