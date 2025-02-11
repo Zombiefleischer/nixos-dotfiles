@@ -17,7 +17,6 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-      inputs.hy3.packages.x86_64-linux.hy3
     ];
 
     settings = {
@@ -105,7 +104,7 @@
       };
 
       animations = {
-        enabled = "yes";
+        enabled = true;
 
         # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
@@ -121,15 +120,31 @@
 
       dwindle = {
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-        pseudotile = "yes"; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = "yes"; # you probably want this
+        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        preserve_split = true; # you probably want this
         smart_split = true;
+      };
+
+      group = {
+        auto_group = true;
+        insert_after_current = true;
+        "col.border_active" = "$sapphire";
+        "col.border_inactive" = "$surface1";
+
+        groupbar = {
+          enabled = true;
+          font_size = 10;
+          text_color = "$sapphire";
+          "col.active" = "$sapphire";
+          "col.inactive" = "$base";
+        };
       };
 
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = false;
         background_color = "$base";
+        font_family = "Fira Code Nerd Font";
       };
 
       plugin = {
@@ -145,37 +160,9 @@
           # example buttons (R -> L)
           # hyprbars-button = color, size, on-click
           hyprbars-button = [ 
-            "$red, 10, 󰖭, hyprctl dispatch killactive"
-            "$yellow, 10, , hyprctl dispatch fullscreen 1"
+            "$red, 12, 󰖭, hyprctl dispatch killactive"
+            "$yellow, 12, , hyprctl dispatch fullscreen 1"
           ];
-        };
-
-        hy3 = {
-          tabs = {
-            border_width = 2;
-            opacity = 0.7;
-
-            "col.active" = "$sapphire";
-            "col.active.border" = "$lavender";
-            "col.active.text" = "$base";
-
-            "col.focused" = "$base";
-            "col.focused.border" = "$sapphire";
-            "col.focused.text" = "$text";
-
-            "col.inactive" = "$base";
-            "col.inactive.border" = "$overlay0";
-            "col.inactive.text" = "$text";
-
-            "col.urgent" = "$base";
-            "col.urgent.border" = "$peach";
-            "col.urgent.text" = "$peach";
-          };
-
-          autotile = {
-            enable = true;
-            workspaces = "not:10";
-          };
         };
       };
 
@@ -203,8 +190,7 @@
         "opaque, imv"
         "float, mpv"
         "opaque, mpv"
-        "float, krunner"
-        "float, Klipper"
+        "opaque, thunderbird"
       ];
 
       # Windowrule v2
@@ -216,6 +202,9 @@
         "workspace 9, class:(soffice.bin)"
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
+        "opaque, class:(com.mitchellh.ghostty)"
+        "plugin:hyprbars:bar_color $base, focus:0"
+        "plugin:hyprbars:title_color $sapphire, focus:0"
       ];
 
       "$mainMod" = "SUPER";
@@ -268,10 +257,10 @@
       submap=move
 
       # sets repeatable binds for moving the active window
-      bind=,l,hy3:movewindow,r
-      bind=,h,hy3:movewindow,l
-      bind=,k,hy3:movewindow,u
-      bind=,j,hy3:movewindow,d
+      bind=,l,movewindow,r
+      bind=,h,movewindow,l
+      bind=,k,movewindow,u
+      bind=,j,movewindow,d
 
       # use reset to go back to the global submap
       bind=,escape,submap,reset
@@ -295,12 +284,18 @@
       bind = $mainMod SHIFT, L, exec, hyprlock
 
       # Move focus with mainMod + arrow keys
-      bind = $mainMod, h, hy3:movefocus, l
-      bind = $mainMod, l, hy3:movefocus, r
-      bind = $mainMod, k, hy3:movefocus, u
-      bind = $mainMod, j, hy3:movefocus, d
+      bind = $mainMod, h, movefocus, l
+      bind = $mainMod, l, movefocus, r
+      bind = $mainMod, k, movefocus, u
+      bind = $mainMod, j, movefocus, d
       bind = $mainMod, Tab, cyclenext,
       bind = $mainMod, Tab, bringactivetotop,
+
+      # Move windows with mainMod + Shift + arrow keys
+      bind = $mainMod SHIFT, h, movewindow, l
+      bind = $mainMod SHIFT, l, movewindow, r
+      bind = $mainMod SHIFT, k, movewindow, u
+      bind = $mainMod SHIFT, j, movewindow, d
 
       # Switch workspaces with mainMod + [0-9]
       bind = $mainMod, 1, workspace, 1
@@ -351,7 +346,7 @@
       bind = $mainMod, mouse_up, workspace, e-1
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = $mainMod, mouse:272, hy3:movewindow
+      bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
       # Programs

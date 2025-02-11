@@ -146,7 +146,7 @@
           exec = "echo '{\"class\": \"connected\"}'";
           exec-if = "test -d /proc/sys/net/ipv4/conf/tun0";
           return-type = "json";
-          interval = 5;
+          interval = 10;
         };
 
         "group/misc" = {
@@ -163,7 +163,7 @@
         };
 
         "custom/webcam" = {
-          interval = 1;
+          interval = 20;
           exec = "zsh -c check_webcam";
           return-type = "json";
         };
@@ -183,14 +183,14 @@
         };
 
         "custom/recording" = {
-          interval = 1;
+          interval = 10;
           exec-if = "pgrep wl-screenrec";
           exec = "zsh -c check_recording";
           return-type = "json";
         };
 
         "custom/airplane_mode" = {
-          interval = 1;
+          interval = 10;
           exec = "zsh -c 'source ~/.zsh/functions.zsh' && zsh -c check_airplane_mode";
           on-click = "zsh -c airplane_mode_toggle";
           return-type = "json";
@@ -481,7 +481,7 @@
       }
 
       #keyboard-state label.locked {
-        color: @yellow;
+        color: @sapphire;
       }
 
       #keyboard-state label {
@@ -502,7 +502,7 @@
       }
 
       #workspaces button.active {
-        color: @peach;
+        color: @sapphire;
       }
 
       #submap {
