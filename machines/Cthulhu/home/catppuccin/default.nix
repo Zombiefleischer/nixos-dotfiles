@@ -36,9 +36,11 @@
     tweaks = ["black" "rimless"];
   };
 
-  qt.enable = true;
-  qt.style.name = "kvantum";
-  qt.platformTheme.name = "kvantum";
+  qt = {
+    enable = true;
+    style.name = "kvantum";
+    platformTheme.name = "kvantum";
+  };
   catppuccin.kvantum = {
     enable = true;
     flavor = "mocha";

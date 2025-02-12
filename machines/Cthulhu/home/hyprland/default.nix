@@ -204,7 +204,7 @@
         "workspace 2, class:(firefox)"
         "workspace 3, class:(obsidian)"
         "workspace 4, class:(thunderbird)"
-        "workspace 9, class:(soffice.bin)"
+        "workspace 9, class:(libreoffice-calc), title:(Zeiterfassung_MS_2025.xlsx — LibreOffice Calc)"
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
         "opaque, class:(com.mitchellh.ghostty)"
@@ -276,7 +276,7 @@
       # keybinds further down will be global again...
 
       # Scratchpads (dropdowns & togglable poppups)
-      bind = $mainMod CTRL, T, exec, pypr toggle volume
+      bind = $mainMod CTRL, V, exec, pypr toggle volume
       $volume_sidemenu = ^(pavucontrol)$
       windowrule = float, $volume_sidemenu
 
