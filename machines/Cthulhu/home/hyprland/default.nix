@@ -49,6 +49,7 @@
         "systemctl --user start psi-notify"
         "lan-mouse -d"
         # "/home/zombiefleischer/scripts/swww_randomize_multi.sh /home/zombiefleischer/Pictures/i3_wallpapers"
+        "hyprctl setcursor Posy_Cursor_Black_HC 64"
       ];
 
       env = [
@@ -218,6 +219,7 @@
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
         "opaque, class:(com.mitchellh.ghostty)"
+        "opaque, class:(obsidian), focus:1"
         "plugin:hyprbars:bar_color $base, focus:0"
         "plugin:hyprbars:title_color $sapphire, focus:0"
       ];
