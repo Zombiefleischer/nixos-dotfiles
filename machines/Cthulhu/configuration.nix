@@ -15,9 +15,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use the latest Linux Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "Cthulhu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -37,18 +34,6 @@
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
-
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-  programs.xwayland.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Enable Hyprland
-  programs.hyprland.enable = true;
 
   # Enable i3
   services.xserver.windowManager.i3 = {
@@ -110,25 +95,19 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Enable docker virtualisation
-  virtualisation.docker.enable = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  # environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
-  ];
+  # ];
   environment.pathsToLink = ["/share/zsh"];
 
   # Stuff for flatpak and wayland
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde];
+    extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde pkgs.xdg-desktop-portal];
   };
 
   # Install fonts
@@ -145,6 +124,7 @@
       noto-fonts-emoji
       noto-fonts-color-emoji # default
       noto-fonts-cjk-sans
+      corefonts
     ];
     enableDefaultPackages = false;
     fontDir.enable = true;
@@ -154,7 +134,7 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
-  programs.zsh.enable = true; # TODO: Disable ZSH here
+  programs.zsh.enable = true;
   programs.kdeconnect.enable = true;
   programs.neovim.defaultEditor = true;
   programs.light.enable = true;
@@ -185,9 +165,11 @@
     5900 # krfb-virtualmonitor
     24800 # input-leap
   ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedUDPPorts = [ 
+    4242 # lan-mouse
+  ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

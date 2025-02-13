@@ -1,22 +1,14 @@
-{pkgs, ...}: {
+{...}: {
   services.random-background = {
-    enable = true;
+    enable = false;
     display = "fill";
     enableXinerama = true;
     imageDirectory = "/home/zombiefleischer/Pictures/i3_wallpapers";
     interval = "15m";
   };
 
-  services.picom = {
-    enable = true;
-    package = pkgs.picom-pijulius;
-    inactiveOpacity = 0.8;
-    settings = {
-      "frame-opacity" = 0.8;
-    };
-    opacityRules = [
-      "99:class_g = 'obsidian' && name *= 'Obsidian Vault'"
-      "99:class_g = 'Slack'"
-    ];
+  home.file."scripts/swww_randomize_multi.sh" = {
+    text = builtins.readFile ./swww_randomize_multi.sh;
+    executable = true;
   };
 }

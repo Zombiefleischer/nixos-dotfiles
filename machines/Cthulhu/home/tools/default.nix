@@ -4,21 +4,21 @@
     ansible
     # ansible-doctor
     # ansible-navigator
-    # appimage-run
-    barrier
-    bat
+    appimage-run
+    at-spi2-atk
     bitwarden
-    bitwarden-cli
+    # bitwarden-cli
+    brightnessctl
     btop
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
     clinfo
+    cliphist
     cloudlens
     copier
     corefonts
     # dbeaver-bin
-    delta
     dig
     dive
     docker-buildx
@@ -45,20 +45,23 @@
     gimp
     git
     gitui
-    gh
     glab
     glxinfo
     gnupg1
     gparted
+    greetd.tuigreet
+    grim
     helm-docs
     helmfile
     home-manager
     hyfetch
+    hyprpicker
+    hyprcursor
+    hypridle
     imagemagick
     inetutils
-    input-leap
+    # input-leap
     jira-cli-go
-    # junction
     jq
     kate
     kdialog
@@ -81,28 +84,43 @@
     ncdu
     # neovim
     nix-output-monitor
+    networkmanagerapplet
+    nmap
+    nmap-formatter
     nss
     nvd
     obsidian
     oh-my-zsh
     opentofu
+    overskride
     owofetch
+    pamixer
+    pavucontrol
     # picom-pijulius
     plasma-browser-integration
     playerctl
+    poweralertd
     powertop
+    psi-notify
+    psmisc
+    pyprland
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
     # quickemu
     # quickgui
     ripgrep
+    rsclock
     scanmem
     slack
+    slurp
     smartmontools
-    # space-cadet-pinball
+    space-cadet-pinball
+    speedtest-rs
     spice
     super-productivity
+    swappy
+    swww
+    xfce.thunar
     thunderbird-unwrapped
-    tldr
     unar
     unzip
     usbtop
@@ -110,14 +128,14 @@
     uwuify
     vim
     vlc
-    vscode-fhs
     wget
     wl-clipboard
-    xclip
-    xsel
-    yank
+    wl-clip-persist
+    wlrctl
+    wlr-randr
+    wtype
     yazi
-    zed-editor
+    yubikey-manager
     zoxide
     zsa-udev-rules
     zsh

@@ -1,8 +1,13 @@
-{...}: {
+{pkgs,...}: {
   catppuccin = {
     enable = true;
     accent = "sapphire";
     flavor = "mocha";
+
+    glamour = {
+      enable = true;
+      flavor = "mocha";
+    };
   };
 
   gtk = {
@@ -11,6 +16,11 @@
     };
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
+    };
+    font = {
+      name = "Fira Code Nerd Font";
+      pkgs = pkgs.nerd-fonts.fira-code;
+      size = 14;
     };
   };
   catppuccin.gtk = {
@@ -26,9 +36,11 @@
     tweaks = ["black" "rimless"];
   };
 
-  qt.enable = true;
-  qt.style.name = "kvantum";
-  qt.platformTheme.name = "kvantum";
+  qt = {
+    enable = true;
+    style.name = "kvantum";
+    platformTheme.name = "kvantum";
+  };
   catppuccin.kvantum = {
     enable = true;
     flavor = "mocha";

@@ -30,6 +30,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "github:hyprwm/Hyprland";
+    
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     lan-mouse.url = "github:feschber/lan-mouse";
   };
 
@@ -38,6 +45,9 @@
     catppuccin,
     envfs,
     home-manager,
+    hyprland,
+    hyprland-plugins,
+    lan-mouse,
     nix-alien,
     nix-flatpak,
     nixpkgs,
@@ -117,10 +127,23 @@
       modules = [
         ./machines/Cthulhu/configuration.nix
         ./machines/Cthulhu/modules/bindfs
+        ./machines/Cthulhu/modules/bootloader
+        ./machines/Cthulhu/modules/display-manager
         ./machines/Cthulhu/modules/flatpak
+        ./machines/Cthulhu/modules/hyprland
+        ./machines/Cthulhu/modules/kde-plasma
         ./machines/Cthulhu/modules/kdePackages
+        ./machines/Cthulhu/modules/linux-kernel
         ./machines/Cthulhu/modules/nh
+        ./machines/Cthulhu/modules/nix-settings
+        ./machines/Cthulhu/modules/nixpkgs
+        ./machines/Cthulhu/modules/screen
+        ./machines/Cthulhu/modules/sound
+        ./machines/Cthulhu/modules/ssh
         ./machines/Cthulhu/modules/time_i18n
+        ./machines/Cthulhu/modules/usb
+        ./machines/Cthulhu/modules/virtualisation
+        ./machines/Cthulhu/modules/yubikey
 
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
