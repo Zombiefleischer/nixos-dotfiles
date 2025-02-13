@@ -21,6 +21,7 @@
     ./hyprland
     ./i3
     ./kitty
+    ./lan-mouse
     ./lazygit
     ./lsps
     ./minecraft

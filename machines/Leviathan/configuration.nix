@@ -49,6 +49,9 @@
     5900 # krfb-virtualmonitor
     24800 # input-leap
   ];
+  networking.firewall.allowedUDPPorts = [
+    4242 # lan-mouse
+  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
