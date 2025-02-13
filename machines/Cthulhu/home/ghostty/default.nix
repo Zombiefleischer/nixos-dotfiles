@@ -25,6 +25,8 @@
       copy-on-select = "clipboard";
 
       cursor-style = "block";
+
+      shell-integration-features = "cursor,sudo,title";
     };
   };
 }

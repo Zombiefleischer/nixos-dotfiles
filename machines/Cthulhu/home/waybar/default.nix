@@ -87,15 +87,15 @@
           calendar = {
             mode = "month";
             mode-mon-col = 3;
-            weeks-pos = "right";
+            weeks-pos = "left";
             on-scroll = 1;
             on-click-right = "mode";
             format = {
-              months = "<span color='#f4dbd6'><b>{}</b></span>";
-              days = "<span color='#cad3f5'><b>{}</b></span>";
-              weeks = "<span color='#c6a0f6'><b>W{}</b></span>";
-              weekdays = "<span color='#a6da95'><b>{}</b></span>";
-              today = "<span color='#8bd5ca'><b><u>{}</u></b></span>";
+              months = "<span color='#f5e0dc'><b>{}</b></span>";
+              days = "<span color='#cdd6f4'><b>{}</b></span>";
+              weeks = "<span color='#cba6f7'><b>W{}</b></span>";
+              weekdays = "<span color='#a6e3a1'><b>{}</b></span>";
+              today = "<span color='#74c7ec'><b><u>{}</u></b></span>";
             };
           };
         };
@@ -130,12 +130,12 @@
           format-wifi = "{icon}({signalStrength}%){essid}";
           format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤥 " "󰤨 "];
           format-disconnected = "󰪎  Disconnected";
-          tooltip-format = "wifi <span color='#ee99a0'>off</span>";
-          tooltip-format-wifi = "SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
-          tooltip-format-disconnected = "<span color='#ed8796'>disconnected</span>";
+          tooltip-format = "wifi <span color='#eba0ac'>off</span>";
+          tooltip-format-wifi = "SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6e3a1'>{bandwidthUpBits}</span>\t<span color='#eba0ac'>{bandwidthDownBits}</span>\t<span color='#cba6f7'>󰹹{bandwidthTotalBits}</span>";
+          tooltip-format-disconnected = "<span color='#f38ba8'>disconnected</span>";
           format-ethernet = "󰈀  {ipaddr}/{cidr}";
           format-linked = "󰈀  {ifname} (No IP)";
-          tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>";
+          tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6e3a1'>{bandwidthUpBits}</span>\t<span color='#eba0ac'>{bandwidthDownBits}</span>\t<span color='#cba6f7'>󰹹{bandwidthTotalBits}</span>";
           max-length = 35;
           on-click = "zsh -c wifi_toggle";
           on-click-right = "nm-connection-editor";
@@ -209,9 +209,9 @@
             activated = "󰛐 ";
             deactivated = "󰛑 ";
           };
-          tooltip-format-activated = "idle-inhibitor <span color='#a6da95'>on</span>";
-          tooltip-format-deactivated = "idle-inhibitor <span color='#ee99a0'>off</span>";
-          start-activated = true;
+          tooltip-format-activated = "idle-inhibitor <span color='#a6e3a1'>on</span>";
+          tooltip-format-deactivated = "idle-inhibitor <span color='#eba0ac'>off</span>";
+          start-activated = false;
         };
 
         "custom/logout_menu" = {
@@ -251,7 +251,7 @@
         };
 
         "user" = {
-          format = " 󰄛  <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)";
+          format = "<span color='#11111b'> 󰄛  </span><span color='#94e2d5'>{user}</span> (up <span color='#f5c2e7'>{work_d} d</span> <span color='#89b4fa'>{work_H} h</span> <span color='#f9e2af'>{work_M} min</span> <span color='#a6e3a1'>↑</span>)";
           icon = true;
         };
       }
@@ -536,7 +536,7 @@
       }
 
       #clock.time {
-        color: @flamingo;
+        color: @teal;
       }
 
       #clock.week {
