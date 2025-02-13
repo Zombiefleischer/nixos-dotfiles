@@ -4,7 +4,7 @@
     appimage-run
     audacity
     bat
-    bitwarden-cli
+    # bitwarden-cli
     btop
     catppuccin
     catppuccin-kvantum
@@ -67,7 +67,7 @@
     krename
     krita
     krita-plugin-gmic
-    kstars
+    # kstars
     lazydocker
     libportal
     libreoffice

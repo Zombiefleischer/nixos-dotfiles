@@ -168,10 +168,9 @@
           bar_text_font = "Fira Code Nerd Font";
           "col.text" = "$base";
 
-
           # buttons (R -> L)
           # hyprbars-button = color, size, on-click
-          hyprbars-button = [ 
+          hyprbars-button = [
             "$red, 12, 󰖭, hyprctl dispatch killactive"
             "$yellow, 12, , hyprctl dispatch fullscreen 1"
           ];
@@ -366,8 +365,8 @@
       bind = $mainMod, Enter, exec, ghostty
       bind = ALT CTRL, T, exec, ghostty
       bind = $mainMod, F, exec, thunar
-      bind = $mainMod, D, exec, rofi -show combi 
-      bind = , code:225, exec, rofi -show combi 
+      bind = $mainMod, D, exec, rofi -show combi
+      bind = , code:225, exec, rofi -show combi
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod SHIFT, C, exec, pypr menu "Color picker"
       bind = $mainMod, T, exec, rofi -show calc -modi calc -no-show-match -no-sort

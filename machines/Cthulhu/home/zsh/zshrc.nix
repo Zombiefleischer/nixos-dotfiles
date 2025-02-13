@@ -28,7 +28,7 @@
       # under VCS as dirty. This makes repository status check for large repositories
       # much, much faster.
       # DISABLE_UNTRACKED_FILES_DIRTY = true;
-      
+
       # Uncomment the following line if you want to change the command execution time
       # stamp shown in the history command output.
       # You can set one of the optional three formats:
@@ -38,56 +38,62 @@
       HIST_STAMPS = "yyyy-mm-dd";
 
       # Update settings
-      ZSH_CUSTOM_AUTOUPDATE_QUIET=true;
-      ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8;
+      ZSH_CUSTOM_AUTOUPDATE_QUIET = true;
+      ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS = 8;
     };
 
     # Commands that should be added to top of .zshrc.
-    initExtraFirst = 
-    /* bash */
-    ''
-      # Enable Powerlevel 10k instant prompt. Should stay close to the top of ~/.zshrc.
-      # Initialization code that may require console input (password prompts, [y/n]
-      # confirmations, etc.) must go above this block; everything else may go below.
-      if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-      fi
+    initExtraFirst =
+      /*
+      bash
+      */
+      ''
+        # Enable Powerlevel 10k instant prompt. Should stay close to the top of ~/.zshrc.
+        # Initialization code that may require console input (password prompts, [y/n]
+        # confirmations, etc.) must go above this block; everything else may go below.
+        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+        fi
 
-      use_color=true
-    '';
+        use_color=true
+      '';
 
     # Commands that should be added to .zshrc before compinit.
     initExtraBeforeCompInit = '''';
 
     # Commands that should be added to .zshrc.
-    initExtra = 
-    /* bash */
-    ''
-      source ~/.zsh/jira.zsh
-      [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    initExtra =
+      /*
+      bash
+      */
+      ''
+        source ~/.zsh/jira.zsh
+        [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-      function aws-login() {
-        aws sso login --sso-session nextbike
-      }
+        function aws-login() {
+          aws sso login --sso-session nextbike
+        }
 
-      function nextbike-staging() {
-        eval "$(aws configure export-credentials --profile nextbike-staging --format env)"
-      }
+        function nextbike-staging() {
+          eval "$(aws configure export-credentials --profile nextbike-staging --format env)"
+        }
 
-      function nextbike-production() {
-        eval "$(aws configure export-credentials --profile nextbike-production --format env)"
-      }
+        function nextbike-production() {
+          eval "$(aws configure export-credentials --profile nextbike-production --format env)"
+        }
 
-      function dvmsc-staging() {
-        eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
-      }
-    '';
+        function dvmsc-staging() {
+          eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
+        }
+      '';
 
-    envExtra = 
-    /* bash */
-    ''
-      source ~/.zsh/functions.zsh
-    '';
+    envExtra =
+      /*
+      bash
+      */
+      ''
+        source ~/.zsh/functions.zsh
+      '';
   };
 }

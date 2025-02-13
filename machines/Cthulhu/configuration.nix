@@ -98,8 +98,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
   # ];
   environment.pathsToLink = ["/share/zsh"];
 
@@ -165,7 +165,7 @@
     5900 # krfb-virtualmonitor
     24800 # input-leap
   ];
-  networking.firewall.allowedUDPPorts = [ 
+  networking.firewall.allowedUDPPorts = [
     4242 # lan-mouse
   ];
   # Or disable the firewall altogether.

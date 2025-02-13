@@ -5,7 +5,6 @@
   programs.hyprlock = {
     enable = true;
 
-
     settings = {
       "$font" = "FiraCode Nerd Font Ret";
 

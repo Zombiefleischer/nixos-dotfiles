@@ -1,4 +1,4 @@
-{inputs,...}:{
+{inputs, ...}: {
   imports = [inputs.lan-mouse.homeManagerModules.default];
 
   programs.lan-mouse = {

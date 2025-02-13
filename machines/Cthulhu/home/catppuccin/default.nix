@@ -1,4 +1,4 @@
-{pkgs,...}: {
+{pkgs, ...}: {
   catppuccin = {
     enable = true;
     accent = "sapphire";
