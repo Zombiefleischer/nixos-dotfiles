@@ -19,7 +19,7 @@
       # BACKGROUND
       background = {
         monitor = "";
-        path = "$HOME/Pictures/i3_wallpapers/ign_evening.png";
+        path = "$HOME/.config/background.png";
         blur_passes = 2;
         # color = "$base";
       };
@@ -41,7 +41,7 @@
         # DATE
         {
           monitor = "";
-          text = "cmd[update:43200000] echo \"$(date +\"%A, %d %B 1%Y\")";
+          text = ''cmd[update:43200000] echo "$(date +"%A, %d %B 1%Y")"'';
           color = "$text";
           font_size = 25;
           font_family = "$font";

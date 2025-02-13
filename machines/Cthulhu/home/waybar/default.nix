@@ -79,7 +79,7 @@
         };
 
         "clock#calendar" = {
-          format = "{:%F}";
+          format = "1{:%F}";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
           actions = {
             on-click-right = "mode";

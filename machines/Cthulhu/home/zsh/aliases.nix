@@ -11,6 +11,7 @@
       lzg = "lazygit";
       lzd = "lazydocker";
       kctx = "kubectx";
+      ff = "fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc";
 
       ## Common ansible playbooks
       # Tofu definiton
