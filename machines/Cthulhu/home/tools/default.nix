@@ -49,6 +49,7 @@
     glxinfo
     gnupg1
     gparted
+    graphviz-nox
     greetd.tuigreet
     grim
     helm-docs
@@ -69,6 +70,7 @@
     kittysay
     krename
     kubectl
+    kubectl-graph
     kubectl-neat
     kubectl-tree
     kubectl-klock
