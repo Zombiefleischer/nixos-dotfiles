@@ -74,6 +74,7 @@
     librewolf
     libva
     lm_sensors
+    lmstudio
     lsof
     lunarvim
     lutris
