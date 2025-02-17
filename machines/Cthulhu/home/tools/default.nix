@@ -22,6 +22,7 @@
     dig
     dive
     docker-buildx
+    dotacat
     eza
     fastfetch
     fd
