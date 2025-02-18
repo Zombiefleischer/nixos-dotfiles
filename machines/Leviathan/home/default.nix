@@ -25,6 +25,7 @@
     ./lazygit
     ./lsps
     ./minecraft
+    ./mpd
     ./obs
     ./tools
     ./zsh
