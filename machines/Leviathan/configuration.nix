@@ -20,8 +20,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use the latest Linux Kernel
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages;
 
   networking.hostName = "Leviathan"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
