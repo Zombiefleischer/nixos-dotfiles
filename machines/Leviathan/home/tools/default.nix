@@ -146,6 +146,7 @@
     vivaldi-ffmpeg-codecs
     vlc
     vscodium
+    vulkan-hdr-layer-kwin6
     wayland
     wayland-utils
     wget
