@@ -213,7 +213,7 @@
         "workspace 1, class:(com.mitchellh.ghostty)"
         "workspace 2, class:(firefox)"
         "workspace 3, class:(obsidian)"
-        "workspace 4, class:(thunderbird)"
+        "workspace 4 silent, suppressevent activatefocus, class:(thunderbird)"
         "workspace 9, class:(libreoffice-calc), title:(Zeiterfassung_MS_2025.xlsx — LibreOffice Calc)"
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
