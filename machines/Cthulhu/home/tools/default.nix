@@ -1,5 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+
+    jetbrains.pycharm-community-src 
+    jetbrains-toolbox
+
+
     alejandra
     ansible
     # ansible-doctor

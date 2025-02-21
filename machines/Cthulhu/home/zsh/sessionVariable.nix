@@ -43,6 +43,7 @@
     # Change ansible output
     ANSIBLE_STDOUT_CALLBACK = "yaml";
 
-    #
+    # Allow Unfree nixpkgs
+    NIXPKGS_ALLOW_UNFREE = 1;
   };
 }
