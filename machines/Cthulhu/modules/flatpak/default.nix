@@ -41,7 +41,6 @@ _: {
       "com.github.tchx84.Flatseal"
       "io.github.flattool.Warehouse"
       "xyz.ketok.Speedtest"
-      "io.github.zen_browser.zen"
       "me.iepure.devtoolbox"
       "io.dbeaver.DBeaverCommunity"
     ];
