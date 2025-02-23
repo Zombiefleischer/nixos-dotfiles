@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-
     jetbrains-toolbox
 
     alejandra
