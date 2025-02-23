@@ -9,7 +9,10 @@
         name "My PipeWire Output"
       }
     '';
+    # TODO: Configure Controls, Album Covers
   };
+
+  # TODO: Configure ListenBrainz for music metadata
 
   services.mpd-mpris = {
     enable = true;
