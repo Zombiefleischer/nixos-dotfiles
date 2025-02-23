@@ -29,7 +29,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.variables = {
-    "KWIN_DRM_ALLOW_NVIDIA_COLORSPACE" = 1;
+    # "KWIN_DRM_ALLOW_NVIDIA_COLORSPACE" = 1;
   };
 
   # Configure network proxy if necessary
