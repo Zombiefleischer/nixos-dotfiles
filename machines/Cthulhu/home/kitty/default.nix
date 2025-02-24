@@ -1,6 +1,6 @@
 {...}: {
   programs.kitty = {
-    enable = true;
+    enable = false;
 
     font = {
       name = "FiraCode Nerd Font Ret";

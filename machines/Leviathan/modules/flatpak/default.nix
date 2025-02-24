@@ -47,6 +47,8 @@ _: {
       # };
     };
 
+    uninstallUnmanaged = true;
+
     packages = [
       "io.github.diegopvlk.Dosage"
       "com.github.tchx84.Flatseal"

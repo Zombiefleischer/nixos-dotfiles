@@ -10,7 +10,7 @@ _: {
 
     update.auto = {
       enable = true;
-      onCalendar = "10:00";
+      onCalendar = "weekly";
     };
 
     overrides = {
@@ -36,6 +36,8 @@ _: {
         };
       };
     };
+
+    uninstallUnmanaged = true;
 
     packages = [
       "com.github.tchx84.Flatseal"
