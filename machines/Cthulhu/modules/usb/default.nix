@@ -4,8 +4,8 @@
 
   # Enable USB Guard
   services.usbguard = {
-    enable = true;
-    dbus.enable = true;
+    enable = false;
+    dbus.enable = false;
     implicitPolicyTarget = "block";
     # set your pref USB devices (change {id} to your trusted USB device), use `lsusb` command (from usbutils package) to get list of all connected USB devices including integrated devices like camera, bluetooth, wifi, etc. with their IDs or just disable `usbguard`
     rules = ''
