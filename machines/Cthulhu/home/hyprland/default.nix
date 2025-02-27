@@ -70,6 +70,9 @@
         kb_options = "terminate:ctrl_alt_bksp";
         numlock_by_default = true;
 
+        repeat_rate = 50;
+        repeat_delay = 300;
+
         follow_mouse = 1;
 
         touchpad = {
