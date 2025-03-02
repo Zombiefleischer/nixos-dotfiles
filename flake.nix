@@ -26,11 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-alien = {
-      url = "github:thiagokokada/nix-alien";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,7 +55,6 @@
     hyprland,
     hyprland-plugins,
     lan-mouse,
-    nix-alien,
     nix-flatpak,
     nixpkgs,
     nixvim,
@@ -102,14 +96,6 @@
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
-        ({
-          self,
-          system,
-          ...
-        }: {
-          programs.nix-ld.enable = true;
-        })
-
         {
           nixpkgs.overlays = systemSpecificOverlays;
         }
@@ -167,16 +153,6 @@
               imports = [
                 ./machines/Cthulhu/home
                 catppuccin.homeManagerModules.catppuccin
-
-                ({
-                  self,
-                  system,
-                  ...
-                }: {
-                  home.packages = with self.inputs.nix-alien.packages.${system}; [
-                    nix-alien
-                  ];
-                })
               ];
             };
             backupFileExtension = "hm.bak";
