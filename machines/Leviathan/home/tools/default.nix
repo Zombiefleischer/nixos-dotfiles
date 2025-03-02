@@ -152,6 +152,7 @@
     wget
     wineWowPackages.full
     winetricks
+    wireguard-tools
     wl-clipboard
     yazi
     zed-editor

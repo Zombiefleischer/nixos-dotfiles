@@ -34,6 +34,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.nameservers = ["192.168.178.34"];
+  networking.wireguard.enable = true;
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;

@@ -91,6 +91,7 @@
         ./machines/Leviathan/modules/kdePackages
         ./machines/Leviathan/modules/keychron
         ./machines/Leviathan/modules/nh
+        ./machines/Leviathan/modules/nix
         ./machines/Leviathan/modules/openrgb
         ./machines/Leviathan/modules/simracing
         ./machines/Leviathan/modules/steam
@@ -106,9 +107,6 @@
           system,
           ...
         }: {
-          environment.systemPackages = with self.inputs.nix-alien.packages.${system}; [
-            nix-alien
-          ];
           programs.nix-ld.enable = true;
         })
 
@@ -169,6 +167,16 @@
               imports = [
                 ./machines/Cthulhu/home
                 catppuccin.homeManagerModules.catppuccin
+
+                ({
+                  self,
+                  system,
+                  ...
+                }: {
+                  home.packages = with self.inputs.nix-alien.packages.${system}; [
+                    nix-alien
+                  ];
+                })
               ];
             };
             backupFileExtension = "hm.bak";
