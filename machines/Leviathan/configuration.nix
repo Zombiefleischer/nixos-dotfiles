@@ -24,7 +24,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   environment.variables = {
-    "KWIN_DRM_ALLOW_NVIDIA_COLORSPACE" = 1;
+    # "KWIN_DRM_ALLOW_NVIDIA_COLORSPACE" = 1;
   };
 
   # Configure network proxy if necessary
