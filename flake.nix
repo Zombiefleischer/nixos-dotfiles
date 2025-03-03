@@ -62,12 +62,6 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-
-    systemSpecificOverlays = [
-      (final: prev: {
-        banana-cursor-dreams = prev.callPackage ./machines/Leviathan/drv/banana-cursor.nix {};
-      })
-    ];
   in {
     # Leviathan
     nixosConfigurations.Leviathan = nixpkgs.lib.nixosSystem {
@@ -96,10 +90,6 @@
         envfs.nixosModules.envfs
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
-        {
-          nixpkgs.overlays = systemSpecificOverlays;
-        }
-
         {
           home-manager = {
             # useGlobalPkgs = true;

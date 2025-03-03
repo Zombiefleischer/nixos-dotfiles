@@ -26,7 +26,6 @@
     ./lsps
     ./minecraft
     ./mpd
-    ./nix-alien
     ./obs
     ./tools
     ./zsh

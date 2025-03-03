@@ -229,6 +229,7 @@
   programs.zsh.enable = true;
   programs.kdeconnect.enable = true;
   # programs.k3b.enable = true;
+  programs.nix-ld.enable = true;
 
   # Enable zsh for all users
   users.defaultUserShell = pkgs.zsh;
