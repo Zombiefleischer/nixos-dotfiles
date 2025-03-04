@@ -93,7 +93,7 @@
             format = {
               months = "<span color='#f5e0dc'><b>{}</b></span>";
               days = "<span color='#cdd6f4'><b>{}</b></span>";
-              weeks = "<span color='#cba6f7'><b>W{}</b></span>";
+              weeks = "<span color='#cba6f7'><b>W{:%V}</b></span>";
               weekdays = "<span color='#a6e3a1'><b>{}</b></span>";
               today = "<span color='#74c7ec'><b><u>{}</u></b></span>";
             };
