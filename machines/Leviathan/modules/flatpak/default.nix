@@ -66,7 +66,7 @@ _: {
       "com.vivaldi.Vivaldi"
       "com.github.vikdevelop.photopea_app"
       "fr.handbrake.ghb"
-      # "app.zen_browser.zen"
+      "app.zen_browser.zen"
     ];
   };
 }
