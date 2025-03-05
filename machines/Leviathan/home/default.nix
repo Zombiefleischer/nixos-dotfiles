@@ -20,6 +20,7 @@
     ./go
     ./hyprland
     ./i3
+    ./kdePackages
     ./kitty
     ./lan-mouse
     ./lazygit

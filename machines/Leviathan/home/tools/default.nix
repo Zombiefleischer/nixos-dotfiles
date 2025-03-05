@@ -59,8 +59,6 @@
     jq
     jstest-gtk
     junction
-    kate
-    kdialog
     keymapp
     kile
     kittysay
@@ -97,13 +95,11 @@
     overlayed
     oversteer
     owofetch
-    partition-manager
     pavucontrol
     pinentry
     pipes
     pipes-rs
     playerctl
-    plasma-browser-integration
     powertop
     protonmail-bridge
     protonup-qt

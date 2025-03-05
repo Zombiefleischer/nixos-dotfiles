@@ -76,7 +76,6 @@
         ./machines/Leviathan/modules/bindfs
         ./machines/Leviathan/modules/firefox-addons
         ./machines/Leviathan/modules/fonts
-        ./machines/Leviathan/modules/kdePackages
         ./machines/Leviathan/modules/keychron
         ./machines/Leviathan/modules/nh
         ./machines/Leviathan/modules/nix

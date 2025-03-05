@@ -1,12 +1,14 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs.kdePackages; [
+  home.packages = with pkgs.kdePackages; [
     discover
     dolphin-plugins
     filelight
+    kate
     kbackup
     kcalc
     kde-gtk-config
     kdenlive
+    kdialog
     kjournald
     kmines
     kmousetool
@@ -25,7 +27,9 @@
     kwallet-pam
     kwalletmanager
     # palapeli
+    partitionmanager
     plasma5support
+    plasma-browser-integration
     plasma-wayland-protocols
     qtmultimedia
     qtstyleplugin-kvantum
