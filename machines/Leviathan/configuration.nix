@@ -172,7 +172,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # FIXME inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages."${system}".default
   ];
 
   # Enable xone for Xbox Controller
