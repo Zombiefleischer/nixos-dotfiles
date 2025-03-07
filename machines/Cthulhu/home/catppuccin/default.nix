@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{inputs,pkgs, ...}: {
+  imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
+  ];
+
   catppuccin = {
     enable = true;
     accent = "sapphire";

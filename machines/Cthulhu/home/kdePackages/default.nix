@@ -1,11 +1,13 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs.kdePackages; [
+  home.packages = with pkgs.kdePackages; [
     discover
     dolphin-plugins
     # karousel
+    kate
     kbackup
     kcalc
     kde-gtk-config
+    kdialog
     kjournald
     kmines
     kmousetool
@@ -25,6 +27,7 @@
     kwallet-pam
     kwalletmanager
     kzones
+    plasma-browser-integration
     plasma-wayland-protocols
     qtmultimedia
     qtstyleplugin-kvantum

@@ -30,6 +30,7 @@
     ./hypridle
     ./hyprland
     ./hyprlock
+    ./kdePackages
     ./keyboard
     ./kitty
     ./lan-mouse

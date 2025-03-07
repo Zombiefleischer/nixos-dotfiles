@@ -26,11 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +40,13 @@
       url = "github:feschber/lan-mouse";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    textfox.url = "github:adriankarlen/textfox";
   };
 
   outputs = {
@@ -57,7 +59,7 @@
     lan-mouse,
     nix-flatpak,
     nixpkgs,
-    nixvim,
+    nvf,
     zen-browser,
     ...
   } @ inputs: let
@@ -117,7 +119,6 @@
         ./machines/Cthulhu/modules/flatpak
         ./machines/Cthulhu/modules/hyprland
         ./machines/Cthulhu/modules/kde-plasma
-        ./machines/Cthulhu/modules/kdePackages
         ./machines/Cthulhu/modules/linux-kernel
         ./machines/Cthulhu/modules/nh
         ./machines/Cthulhu/modules/nix-settings
@@ -141,7 +142,6 @@
             users."zombiefleischer" = {
               imports = [
                 ./machines/Cthulhu/home
-                catppuccin.homeManagerModules.catppuccin
               ];
             };
             backupFileExtension = "hm.bak";

@@ -1,35 +1,24 @@
 {inputs, ...}: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-
-    # General Configuration
-    ./settings.nix
-    ./file_types.nix
-
-    # Themes
-    ./plugins/themes/default.nix
-
-    # Completion
-
-    # Snippets
-
-    # Editor plugins and configurations
-
-    # UI plugins
+    inputs.nvf.homeManagerModules.default
 
     # LSP and formatting
+    ./lsp.nix
 
-    # Git
+    # Visuals and Theme
+    ./visuals.nix
 
-    # Utils
+    # Binds
+    ./binds.nix
+
+    # Utility
+    ./utility.nix
+
+    # Notes
+    ./notes.nix
   ];
 
-  programs.nixvim = {
+  programs.nvf = {
     enable = true;
-
-    # viAlias = true;
-    # vimAlias = true;
-    # vimdiffAlias = true;
-    defaultEditor = true;
   };
 }

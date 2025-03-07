@@ -67,8 +67,6 @@
     # input-leap
     jira-cli-go
     jq
-    kate
-    kdialog
     keymapp
     kittysay
     krename
@@ -102,7 +100,6 @@
     pamixer
     pavucontrol
     # picom-pijulius
-    plasma-browser-integration
     playerctl
     poweralertd
     powertop
