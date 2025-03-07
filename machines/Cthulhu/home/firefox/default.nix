@@ -17,8 +17,8 @@
 
       border = {
         color = "#313244";
-        transition = "1.0s ease";
-        radius = "3px";
+        transition = "0.2s ease";
+        radius = "8px";
       };
 
       displayNavButtons = true;
@@ -30,7 +30,12 @@
       };
 
       icons = {
+        # Icons for context items
         context.firefox.enable = true;
+
+        # Monochrome Icons
+        toolbar.extensions.enable = true;
+        context.extensions.enable = true;
       };
     };
   };
