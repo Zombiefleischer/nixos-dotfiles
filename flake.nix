@@ -86,6 +86,7 @@
         ./machines/Leviathan/modules/steam
         ./machines/Leviathan/modules/time_i18n
         ./machines/Leviathan/modules/variables
+        ./machines/Leviathan/modules/wireguard
 
         catppuccin.nixosModules.catppuccin
         envfs.nixosModules.envfs
