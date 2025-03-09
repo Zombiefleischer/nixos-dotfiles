@@ -1,6 +1,6 @@
-{inputs,...}: {
+{inputs, ...}: {
   imports = [
-     inputs.textfox.homeManagerModules.default
+    inputs.textfox.homeManagerModules.default
   ];
 
   programs.firefox = {
@@ -11,7 +11,7 @@
     enable = true;
     profile = "rlpepp97.default-esr";
     config = {
-      background = {  
+      background = {
         color = "#1E1E2E";
       };
 
