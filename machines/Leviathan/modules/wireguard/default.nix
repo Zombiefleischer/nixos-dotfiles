@@ -5,5 +5,12 @@ _: {
   };
 
   networking.networkmanager.dns = "systemd-resolved";
-  services.resolved.enable = true;
+  services.resolved = {
+    enable = true;
+    fallbackDns = [
+      "192.168.178.34"
+    ];
+    dnssec = "allow-downgrade";
+    dnsovertls = "opportunistic";
+  };
 }
