@@ -5,6 +5,7 @@ _: {
   };
 
   networking.networkmanager.dns = "systemd-resolved";
+  networking.nameservers = ["192.168.178.34"];
   services.resolved = {
     enable = true;
     fallbackDns = [
@@ -12,5 +13,6 @@ _: {
     ];
     dnssec = "allow-downgrade";
     dnsovertls = "opportunistic";
+    domains = ["fritz.box" "~."];
   };
 }
