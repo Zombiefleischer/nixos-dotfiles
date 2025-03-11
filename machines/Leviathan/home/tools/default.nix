@@ -124,6 +124,7 @@
     tidal-hifi
     tldr
     unar
+    ungoogled-chromium
     universal-android-debloater
     unzip
     usbtop
