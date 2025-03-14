@@ -79,6 +79,11 @@
     masterpdfeditor
     mc
     # mission-center
+    (mommy.override {
+      mommySettings = {
+        sweetie = "little darling";
+      };
+    })
     ncdu
     neovim
     nextcloud-client
