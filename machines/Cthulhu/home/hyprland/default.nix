@@ -200,14 +200,14 @@
 
       windowrule = [
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-        "opaque, class:(firefox)"
-        "opaque, class:(.*floorp.*)"
-        "opaque, class:(Slack)"
+        "opacity 1.0 override, class:(firefox)"
+        "opacity 1.0 override, class:(.*floorp.*)"
+        "opacity 1.0 override, class:(Slack)"
         "float, class:(.*imv.*)"
-        "opaque, class:(.*imv.*)"
+        "opacity 1.0 override, class:(.*imv.*)"
         "float, class:(.*mpv.*)"
-        "opaque, class:(.*mpv.*)"
-        "opaque, class:(thunderbird)"
+        "opacity 1.0 override, class:(.*mpv.*)"
+        "opacity 1.0 override, class:(thunderbird)"
         "workspace 1, class:(com.mitchellh.ghostty)"
         "workspace 2, class:(firefox)"
         "workspace 3, class:(obsidian)"
@@ -215,8 +215,8 @@
         "workspace 9, class:(libreoffice-calc), title:(Zeiterfassung_MS_2025.xlsx — LibreOffice Calc)"
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
-        "opaque, class:(com.mitchellh.ghostty)"
-        "opaque, class:(obsidian), focus:1"
+        "opacity 1.0 override, class:(com.mitchellh.ghostty)"
+        "opacity 1.0 override, class:(obsidian), focus:1"
         "plugin:hyprbars:bar_color $base, focus:0"
         "plugin:hyprbars:title_color $sapphire, focus:0"
       ];
