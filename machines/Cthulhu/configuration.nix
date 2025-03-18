@@ -36,15 +36,15 @@
   hardware.bluetooth.enable = true;
 
   # Enable i3
-  services.xserver.windowManager.i3 = {
-    enable = true;
-    extraPackages = with pkgs; [
-      dmenu
-      i3status
-      i3lock
-      rofi
-    ];
-  };
+  # services.xserver.windowManager.i3 = {
+    # enable = false;
+    # extraPackages = with pkgs; [
+      # dmenu
+      # i3status
+      # i3lock
+      # rofi
+    # ];
+  # };
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -107,7 +107,10 @@
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde pkgs.xdg-desktop-portal];
+    extraPortals = [
+      # pkgs.kdePackages.xdg-desktop-portal-kde 
+      pkgs.xdg-desktop-portal
+    ];
   };
 
   # Install fonts

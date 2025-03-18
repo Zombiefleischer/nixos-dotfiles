@@ -198,21 +198,16 @@
         "10, monitor:DP-5, default:true"
       ];
 
-      # Windowrule v1
       windowrule = [
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-        "opaque, firefox"
-        "opaque, floorp"
-        "opaque, Slack"
-        "float, imv"
-        "opaque, imv"
-        "float, mpv"
-        "opaque, mpv"
-        "opaque, thunderbird"
-      ];
-
-      # Windowrule v2
-      windowrulev2 = [
+        "opaque, class:(firefox)"
+        "opaque, class:(.*floorp.*)"
+        "opaque, class:(Slack)"
+        "float, class:(.*imv.*)"
+        "opaque, class:(.*imv.*)"
+        "float, class:(.*mpv.*)"
+        "opaque, class:(.*mpv.*)"
+        "opaque, class:(thunderbird)"
         "workspace 1, class:(com.mitchellh.ghostty)"
         "workspace 2, class:(firefox)"
         "workspace 3, class:(obsidian)"

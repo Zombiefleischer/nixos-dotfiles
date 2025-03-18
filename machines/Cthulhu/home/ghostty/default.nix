@@ -21,6 +21,7 @@
       gtk-titlebar = false;
       gtk-tabs-location = "bottom";
       gtk-wide-tabs = false;
+      gtk-single-instance = true;
 
       copy-on-select = "clipboard";
 

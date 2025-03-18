@@ -16,6 +16,7 @@
     kolf
     kolourpaint
     konquest
+    konsole
     krdc
     krfb
     # krohnkite
