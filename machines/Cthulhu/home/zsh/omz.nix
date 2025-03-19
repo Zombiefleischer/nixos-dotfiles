@@ -30,6 +30,7 @@
       "eza"
       "fzf"
       "git"
+      "git-auto-fetch"
       "gh"
       "golang"
       "helm"
