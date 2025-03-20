@@ -81,6 +81,7 @@
     lazydocker
     libnotify
     libreoffice-qt6-fresh
+    libsecret
     lm_sensors
     lsof
     lunarvim
