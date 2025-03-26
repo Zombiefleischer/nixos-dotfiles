@@ -20,6 +20,7 @@
     cloudlens
     copier
     corefonts
+    curlie
     # dbeaver-bin
     dig
     dive
@@ -102,6 +103,7 @@
     pavucontrol
     # picom-pijulius
     playerctl
+    posting
     poweralertd
     powertop
     psi-notify
