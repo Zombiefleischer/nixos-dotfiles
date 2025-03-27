@@ -15,6 +15,7 @@
     ./cursor
     ./droidcam
     ./firefox
+    ./fonts
     ./ghostty
     ./git
     ./go

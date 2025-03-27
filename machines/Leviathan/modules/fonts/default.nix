@@ -30,7 +30,9 @@ in {
     enableDefaultPackages = true;
     fontDir.enable = true;
     fontconfig.defaultFonts = {
-      monospace = ["FiraCode Nerd Font"];
+      serif = ["Noto Serif" "serif"];
+      sansSerif = ["Noto Sans" "sans-serif"];
+      monospace = ["FiraCode Nerd Font Ret"];
       emoji = ["Noto Color Emoji"];
     };
   };
