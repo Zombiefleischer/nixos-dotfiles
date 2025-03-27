@@ -128,8 +128,6 @@
     thunderbird
     tidal-hifi
     tldr
-    twemoji-color-font
-    twitter-color-emoji
     unar
     ungoogled-chromium
     universal-android-debloater

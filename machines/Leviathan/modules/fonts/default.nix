@@ -10,11 +10,8 @@
 in {
   fonts = {
     packages = with pkgs; [
-      nerd-fonts.symbols-only
       nerd-fonts.hack
       nerd-fonts.fira-code
-      fira-code
-      hack-font
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default
@@ -24,6 +21,8 @@ in {
       noto-fonts-emoji
       noto-fonts-color-emoji # default
       noto-fonts-cjk-sans
+      twemoji-color-font
+      twitter-color-emoji
       PentimentFonts
       ElectricPanda
     ];
