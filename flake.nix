@@ -118,6 +118,7 @@
         ./machines/Cthulhu/modules/bootloader
         ./machines/Cthulhu/modules/display-manager
         ./machines/Cthulhu/modules/flatpak
+        ./machines/Cthulhu/modules/fonts
         ./machines/Cthulhu/modules/hyprland
         ./machines/Cthulhu/modules/kde-plasma
         ./machines/Cthulhu/modules/linux-kernel

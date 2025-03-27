@@ -113,27 +113,6 @@
     ];
   };
 
-  # Install fonts
-  fonts = {
-    packages = with pkgs; [
-      nerd-fonts.hack
-      nerd-fonts.fira-code
-      dejavu_fonts # default
-      freefont_ttf # default
-      gyre-fonts # default
-      liberation_ttf # default
-      unifont # default
-      noto-fonts
-      noto-fonts-emoji
-      noto-fonts-color-emoji # default
-      noto-fonts-cjk-sans
-      corefonts
-    ];
-    enableDefaultPackages = false;
-    fontDir.enable = true;
-    fontconfig.defaultFonts.monospace = ["FiraCode Nerd Font"];
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;

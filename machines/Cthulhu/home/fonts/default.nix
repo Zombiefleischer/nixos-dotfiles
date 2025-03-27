@@ -3,10 +3,10 @@
     enable = true;
 
     defaultFonts = {
-      sansSerif = ["Fira Code Nerd Font Ret" "sans-serif"];
-      serif = ["Fira Code Nerd Font Ret" "serif"];
+      sansSerif = ["Noto Sans" "sans-serif"];
+      serif = ["Noto Serif" "serif"];
       monospace = ["Fira Code Nerd Font Ret"];
-      emoji = ["noto-fonts-color-emoji"];
+      emoji = ["Noto Color Emoji"];
     };
   };
 }
