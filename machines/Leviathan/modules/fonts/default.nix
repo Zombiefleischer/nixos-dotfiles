@@ -20,6 +20,7 @@ in {
     ];
     # enableDefaultPackages = true;
     fontDir.enable = true;
+    fontconfig.useEmbeddedBitmaps = true;
     fontconfig.defaultFonts = {
       serif = ["Noto Serif" "serif"];
       sansSerif = ["Noto Sans" "sans-serif"];
