@@ -37,13 +37,13 @@
 
   # Enable i3
   # services.xserver.windowManager.i3 = {
-    # enable = false;
-    # extraPackages = with pkgs; [
-      # dmenu
-      # i3status
-      # i3lock
-      # rofi
-    # ];
+  # enable = false;
+  # extraPackages = with pkgs; [
+  # dmenu
+  # i3status
+  # i3lock
+  # rofi
+  # ];
   # };
 
   # Enable CUPS to print documents.
@@ -108,7 +108,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      # pkgs.kdePackages.xdg-desktop-portal-kde 
+      # pkgs.kdePackages.xdg-desktop-portal-kde
       pkgs.xdg-desktop-portal
     ];
   };
