@@ -12,7 +12,7 @@ in {
     packages = with pkgs; [
       nerd-fonts.symbols-only
       fira-code
-      hack
+      hack-font
       dejavu_fonts # default
       freefont_ttf # default
       gyre-fonts # default
