@@ -12,21 +12,13 @@ in {
     packages = with pkgs; [
       nerd-fonts.hack
       nerd-fonts.fira-code
-      # dejavu_fonts # default
-      # freefont_ttf # default
-      # gyre-fonts # default
-      # liberation_ttf # default
-      # unifont # default
       noto-fonts
-      # noto-fonts-emoji
-      # noto-fonts-color-emoji # default
+      noto-fonts-emoji
       noto-fonts-cjk-sans
-      # twemoji-color-font
-      # twitter-color-emoji
       PentimentFonts
       ElectricPanda
     ];
-    enableDefaultPackages = true;
+    # enableDefaultPackages = true;
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       serif = ["Noto Serif" "serif"];
