@@ -18,7 +18,7 @@ in {
       # liberation_ttf # default
       # unifont # default
       noto-fonts
-      noto-fonts-emoji
+      # noto-fonts-emoji
       # noto-fonts-color-emoji # default
       noto-fonts-cjk-sans
       # twemoji-color-font
