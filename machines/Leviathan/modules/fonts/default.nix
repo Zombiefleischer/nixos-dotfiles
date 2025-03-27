@@ -11,6 +11,8 @@ in {
   fonts = {
     packages = with pkgs; [
       nerd-fonts.symbols-only
+      nerd-fonts.hack
+      nerd-fonts.fira-code
       fira-code
       hack-font
       dejavu_fonts # default
@@ -28,7 +30,7 @@ in {
     enableDefaultPackages = false;
     fontDir.enable = true;
     fontconfig.defaultFonts = {
-      monospace = ["FiraCode" "Symbols Nerd Font"];
+      monospace = ["FiraCode Nerd Font"];
       emoji = ["Noto Color Emoji"];
     };
   };
