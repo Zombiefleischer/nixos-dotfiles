@@ -3,15 +3,19 @@
 
   programs.lan-mouse = {
     enable = true;
-    systemd = false;
+    systemd = true;
 
     settings = {
       port = 4242;
 
-      left = {
-        hostname = "Leviathan";
-        activate_on_startup = true;
-      };
+      clients = [
+        {
+          position = "left";
+          hostname = "Leviathan";
+          activate_on_startup = true;
+          ips = ["192.168.178.71"];
+        }
+      ];
     };
   };
 }
