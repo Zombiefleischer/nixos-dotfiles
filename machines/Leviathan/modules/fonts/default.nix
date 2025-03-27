@@ -27,7 +27,7 @@ in {
       PentimentFonts
       ElectricPanda
     ];
-    enableDefaultPackages = false;
+    enableDefaultPackages = true;
     fontDir.enable = true;
     fontconfig.defaultFonts = {
       monospace = ["FiraCode Nerd Font"];
