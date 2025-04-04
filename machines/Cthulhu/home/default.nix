@@ -1,7 +1,4 @@
 {
-  inputs,
-  system,
-  pkgs,
   ...
 }: {
   home.stateVersion = "24.11";
@@ -20,6 +17,7 @@
     ./catppuccin
     ./cursor
     ./dir
+    ./droidcam
     ./dunst
     ./firefox
     ./fonts

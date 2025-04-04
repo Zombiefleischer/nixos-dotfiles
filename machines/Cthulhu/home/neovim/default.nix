@@ -9,6 +9,9 @@
     settings.vim = {
       withNodeJs = true;
       withPython3 = true;
+      viAlias = true;
+      vimAlias = true;
+      useSystemClipboard = true;
 
       options = {
         tabstop = 2;

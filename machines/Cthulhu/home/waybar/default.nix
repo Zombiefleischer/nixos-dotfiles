@@ -56,6 +56,7 @@
 
         "clock#time" = {
           format = "{:%H:%M:%S %Z %Ez}";
+          interval = 1;
           # locale = "en_US.UTF-8"
           # timezones = [ "Europe/Berlin" ]
         };
