@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, lib, ...}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -19,9 +19,16 @@
         relativenumber = true;
         wrap = true;
         mousemoveevent = true;
+        cursorlineopt = "both";
       };
 
       keymaps = [
+        {
+          key = "<leader>e";
+          mode = ["n"];
+          action = "<cmd>Neotree toggle<cr>";
+          desc = "File browser toggle";
+        }
         {
           key = "<leader>w";
           mode = ["n"];
@@ -41,30 +48,40 @@
           desc = "Clear search highlights";
         }
         {
-          key = "<leader>e";
-          mode = ["n"];
-          action = "<cmd>Neotree toggle<cr>";
-          desc = "File browser toggle";
-        }
-        {
-          key = "<leader>st";
+          key = "<leader>fg";
           mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
+        }
+        {
+          key = "<C-h>";
+          mode = ["i"];
+          action = "<Left>";
+          desc = "Move left in insert mode";
+        }
+        {
+          key = "<C-j>";
+          mode = ["i"];
+          action = "<Down>";
+          desc = "Move down in insert mode";
+        }
+        {
+          key = "<C-k>";
+          mode = ["i"];
+          action = "<Up>";
+          desc = "Move up in insert mode";
+        }
+        {
+          key = "<C-l>";
+          mode = ["i"];
+          action = "<Right>";
+          desc = "Move right in insert mode";
         }
       ];
 
       binds = {
         cheatsheet.enable = true;
-
-        whichKey = {
-          enable = true;
-
-          register = {
-            "<leader>w" = "<cmd>w<cr>";
-            "<leader>q" = "<cmd>q<cr>";
-          };
-        };
+        whichKey.enable = true;
       };
 
       lsp = {
@@ -77,6 +94,7 @@
         otter-nvim.enable = true;
         lsplines.enable = true;
         nvim-docs-view.enable = true;
+        null-ls.enable = lib.mkForce false; # INFO #754
       };
 
       debugger = {
@@ -88,12 +106,15 @@
 
       languages = {
         enableLSP = true;
-        enableFormat = true;
+        enableFormat = false; # INFO #754
         enableTreesitter = true;
         enableExtraDiagnostics = true;
 
         nix.enable = true;
-        markdown.enable = true;
+        markdown = {
+          enable = true;
+          extensions.render-markdown-nvim.enable = true;
+        };
         bash.enable = true;
         css.enable = true;
         html.enable = true;
@@ -102,7 +123,39 @@
         go.enable = true;
         lua.enable = true;
         python.enable = true;
+        terraform.enable = true;
       };
+
+      formatter = {
+        conform-nvim = {
+          enable = true;
+          setupOpts = {
+            format_on_save = {
+              timeout_ms = 500;
+              lsp_format = "fallback";
+            };
+
+            formatters_by_ft = {
+              lua = ["stylua"];
+              python = ["black"];
+              javascript = ["prettier"];
+              typescript = ["prettier"];
+              javascriptreact = ["prettier"];
+              typescriptreact = ["prettier"];
+              css = ["prettier"];
+              html = ["prettier"];
+              json = ["prettier"];
+              yaml = ["prettier"];
+              markdown = ["prettier"];
+              nix = ["alejandra"];
+              go = ["gofmt"];
+              terraform = ["tf-fmt"];
+            };
+          };
+        };
+      };
+      
+      pluginOverrides.none-ls-nvim = null; # INFO #754
 
       autopairs.nvim-autopairs.enable = true;
 
@@ -110,7 +163,7 @@
       snippets.luasnip.enable = true;
 
       notes = {
-        obsidian.enable = true;
+        obsidian.enable = false; # Outdated
         todo-comments.enable = true;
       };
 
@@ -120,7 +173,7 @@
         icon-picker.enable = true;
         surround.enable = true;
         leetcode-nvim.enable = true;
-        multicursors.enable = true;
+        multicursors.enable = false; # Throws errors
 
         motion = {
           hop.enable = true;
@@ -139,6 +192,7 @@
         nvim-cursorline.enable = true;
         cinnamon-nvim.enable = true;
         fidget-nvim.enable = true;
+        rainbow-delimiters.enable = true;
 
         highlight-undo.enable = true;
         indent-blankline.enable = true;
@@ -161,9 +215,46 @@
         transparent = true;
       };
 
+      highlight = {
+        LineNr = {
+          fg = "#74c7ec";
+        };
+        CursorLineNr = {
+          fg = "#cba6f7";
+        };
+        CursorLine = {
+          bg = "#181825";
+        };
+      };
+
       filetree = {
         neo-tree = {
           enable = true;
+          setupOpts = {
+            add_blank_line_at_top = true;
+            filesystem = {
+              follow_current_file = true;
+              filtered_items = {
+                visible = true;
+                hide_dotfiles = false;
+                hide_gitignored = false;
+                never_show = [
+                  ".DS_Store"
+                  "thumbs.db"
+                ];
+              };
+            };
+            source_selector = {
+              winbar = true;
+            };
+            close_if_last_window = true;
+            window = {
+              width = 35;
+            };
+            buffers = {
+              follow_current_file = true;
+            };
+          };
         };
       };
 
@@ -218,13 +309,23 @@
         };
         smartcolumn = {
           enable = true;
-          setupOpts.custom_colorcolumn = {
-            nix = "110";
-            ruby = "120";
-            java = "130";
-            go = ["90" "130"];
-            markdown = ["80" "100"];
-            python = ["80" "120"];
+          setupOpts = {
+            colorcolumn = ["80" "160"];
+            custom_colorcolumn = {
+              nix = "110";
+              ruby = "120";
+              java = "130";
+              go = ["90" "130"];
+              markdown = ["80" "100"];
+              python = ["80" "120"];
+            };
+            disabled_filetypes = [
+              "help"
+              "NvimTree"
+              "NeoTree"
+              "Neotree"
+              "alpha"
+            ];
           };
         };
         fastaction.enable = true;
