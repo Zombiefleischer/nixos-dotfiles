@@ -100,7 +100,7 @@
             users."zombiefleischer" = {
               imports = [
                 ./machines/Leviathan/home
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
             backupFileExtension = "hm.bak";

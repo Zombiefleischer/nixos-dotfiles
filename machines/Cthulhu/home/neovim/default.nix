@@ -1,4 +1,8 @@
-{inputs, lib, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -154,7 +158,7 @@
           };
         };
       };
-      
+
       pluginOverrides.none-ls-nvim = null; # INFO #754
 
       autopairs.nvim-autopairs.enable = true;
