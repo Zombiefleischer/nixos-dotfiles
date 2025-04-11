@@ -5,6 +5,7 @@
     audacity
     bat
     # bitwarden-cli
+    bitwarden-desktop
     btop
     catppuccin
     catppuccin-kvantum
