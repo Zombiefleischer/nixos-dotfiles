@@ -25,6 +25,7 @@
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
+        # ", preferred, auto, 1"
         "DP-7, 3440x1440@100, 0x380, 1"
         "DP-5, 2560x1440@60, 3440x0, 1, transform, 3"
         "eDP-1, disable"

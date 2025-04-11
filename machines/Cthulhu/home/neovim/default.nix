@@ -22,7 +22,12 @@
         shiftwidth = 2;
         relativenumber = true;
         wrap = true;
+        textwidth = 0;
+        wrapmargin = 0;
+        linebreak = true;
         mousemoveevent = true;
+        cursorline = true;
+        cursorcolumn = true;
         cursorlineopt = "both";
       };
 
@@ -96,7 +101,6 @@
         trouble.enable = true;
         lspSignature.enable = true;
         otter-nvim.enable = true;
-        lsplines.enable = true;
         nvim-docs-view.enable = true;
         null-ls.enable = lib.mkForce false; # INFO #754
       };
@@ -194,12 +198,35 @@
         nvim-scrollbar.enable = true;
         nvim-web-devicons.enable = true;
         nvim-cursorline.enable = true;
-        cinnamon-nvim.enable = true;
+        cinnamon-nvim = {
+          enable = true;
+          setupOpts.keymaps = {
+            basic = true;
+            extra = true;
+          };
+        };
         fidget-nvim.enable = true;
         rainbow-delimiters.enable = true;
 
         highlight-undo.enable = true;
-        indent-blankline.enable = true;
+        indent-blankline = {
+          enable = true;
+          setupOpts = {
+            indent = {
+              char = "▏";
+              highlight = [
+                "RainbowDelimiterRed"
+                "RainbowDelimiterYellow"
+                "RainbowDelimiterBlue"
+                "RainbowDelimiterOrange"
+                "RainbowDelimiterGreen"
+                "RainbowDelimiterViolet"
+                "RainbowDelimiterCyan"
+              ];
+            };
+            scope.char = "▎";
+          };
+        };
 
         # Fun
         cellular-automaton.enable = true;
@@ -263,12 +290,59 @@
       };
 
       tabline = {
-        nvimBufferline.enable = true;
+        nvimBufferline = {
+          enable = true;
+          setupOpts = {
+            highlights = {
+              separator_visible = {
+                fg = "#31363b";
+              };
+              separator = {
+                fg = "#31363b";
+              };
+              separator_selected = {
+                fg = "#31363b";
+              };
+            };
+            options = {
+              offsets = [
+                {
+                  filetype = "neo-tree";
+                  text = {
+                    _type = "lua-inline";
+                    expr = ''
+                      function()
+                        return vim.fn.getcwd()
+                      end
+                    '';
+                  };
+                  highlight = "Directory";
+                  text_align = "center";
+                }
+              ];
+              right_mouse_command = "bdelete! %d";
+              middle_mouse_command = "vertical sbuffer %d";
+              separator_style = "slant";
+            };
+          };
+        };
       };
 
-      treesitter.context.enable = true;
+      treesitter = {
+        context.enable = true;
+      };
 
-      telescope.enable = true;
+      telescope = {
+        enable = true;
+        setupOpts = {
+          defaults = {
+            layout_config = {
+              horizontal.prompt_position = "bottom";
+            };
+            layout_strategy = "flex";
+          };
+        };
+      };
 
       git = {
         enable = true;
@@ -287,7 +361,10 @@
       };
 
       notify = {
-        nvim-notify.enable = true;
+        nvim-notify = {
+          enable = true;
+          setupOpts.timeout = 2500;
+        };
       };
 
       projects = {
@@ -297,7 +374,10 @@
       terminal = {
         toggleterm = {
           enable = true;
-          lazygit.enable = true;
+          lazygit = {
+            enable = true;
+            direction = "tab";
+          };
         };
       };
 

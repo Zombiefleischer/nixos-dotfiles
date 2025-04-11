@@ -130,7 +130,9 @@
         ./machines/Cthulhu/modules/sound
         ./machines/Cthulhu/modules/ssh
         ./machines/Cthulhu/modules/time_i18n
+        ./machines/Cthulhu/modules/tlp
         ./machines/Cthulhu/modules/usb
+        ./machines/Cthulhu/modules/variables
         ./machines/Cthulhu/modules/virtualisation
         ./machines/Cthulhu/modules/yubikey
 
