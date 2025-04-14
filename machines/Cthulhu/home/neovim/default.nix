@@ -9,6 +9,7 @@
 
   programs.nvf = {
     enable = true;
+    enableManpages = true;
 
     settings.vim = {
       withNodeJs = true;
@@ -122,6 +123,10 @@
         markdown = {
           enable = true;
           extensions.render-markdown-nvim.enable = true;
+          extraDiagnostics.enable = true;
+          format.enable = true;
+          lsp.enable = true;
+          treesitter.enable = true;
         };
         bash.enable = true;
         css.enable = true;
@@ -131,7 +136,11 @@
         go.enable = true;
         lua.enable = true;
         python.enable = true;
-        terraform.enable = true;
+        terraform = {
+          enable = true;
+          lsp.enable = true;
+          treesitter.enable = true;
+        };
       };
 
       formatter = {
@@ -154,10 +163,10 @@
               html = ["prettier"];
               json = ["prettier"];
               yaml = ["prettier"];
-              markdown = ["prettier"];
+              # markdown = ["prettier"];
               nix = ["alejandra"];
               go = ["gofmt"];
-              terraform = ["tf-fmt"];
+              # terraform = ["tf-fmt"];
             };
           };
         };
