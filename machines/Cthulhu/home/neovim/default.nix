@@ -202,7 +202,7 @@
           enable = true;
           setupOpts.keymaps = {
             basic = true;
-            extra = true;
+            extra = false;
           };
         };
         fidget-nvim.enable = true;
