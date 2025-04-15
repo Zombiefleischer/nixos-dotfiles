@@ -7,7 +7,7 @@
     installVimSyntax = true;
 
     settings = {
-      background-opacity = 0.75;
+      background-opacity = 0.85;
       background-blur = false;
 
       font-family = "FiraCode Nerd Font Ret";
