@@ -121,7 +121,7 @@
     scanmem
     showmethekey
     signal-cli
-    signal-desktop
+    signal-desktop-bin
     smartmontools
     starfetch
     steamtinkerlaunch
