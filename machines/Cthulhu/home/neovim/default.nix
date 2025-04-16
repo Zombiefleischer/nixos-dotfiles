@@ -30,6 +30,7 @@
         cursorline = true;
         cursorcolumn = true;
         cursorlineopt = "both";
+        scrolloff = 5;
       };
 
       keymaps = [
