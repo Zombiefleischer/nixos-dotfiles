@@ -124,7 +124,10 @@
           enable = true;
           extensions.render-markdown-nvim.enable = true;
           extraDiagnostics.enable = true;
-          format.enable = true;
+          format = {
+            enable = true;
+            type = "prettierd";
+          };
           lsp.enable = true;
           treesitter.enable = true;
         };
