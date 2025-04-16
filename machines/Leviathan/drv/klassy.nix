@@ -13,7 +13,9 @@
       "5" = libsForQt5;
       "6" = kdePackages;
     }
-    .${qtMajorVersion};
+    .${
+      qtMajorVersion
+    };
 in
   assert lib.assertOneOf "qtMajorVersion" qtMajorVersion [
     "5"
