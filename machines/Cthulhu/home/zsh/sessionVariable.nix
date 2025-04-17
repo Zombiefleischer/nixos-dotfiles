@@ -28,7 +28,7 @@
     AWS_DEFAULT_REGION = "eu-central-1";
 
     # Tofu access token to nb boring registry
-    TF_CLI_CONFIG_FILE = "~/tofu.tfrc";
+    TF_CLI_CONFIG_FILE = "/home/zombiefleischer/tofu.tfrc";
 
     # Setting Battery Thresholds
     START_CHARGE_THRESH_BAT0 = 70;
