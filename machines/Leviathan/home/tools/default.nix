@@ -8,6 +8,9 @@
     bitwarden-desktop
     btop
     calibre
+    # (calibre.override {
+    # unrarSupport = true;
+    # })
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders

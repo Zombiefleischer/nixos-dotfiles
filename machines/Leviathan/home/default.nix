@@ -28,6 +28,7 @@
     ./lsps
     ./minecraft
     ./mpd
+    ./neovim
     ./obs
     ./tools
     ./zsh
