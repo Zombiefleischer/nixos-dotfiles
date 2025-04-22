@@ -7,6 +7,7 @@
     # bitwarden-cli
     bitwarden-desktop
     btop
+    calibre
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
@@ -56,7 +57,7 @@
     imagemagick
     inetutils
     inkscape-with-extensions
-    input-leap
+    # input-leap
     jq
     jstest-gtk
     junction
