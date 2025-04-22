@@ -212,10 +212,10 @@
         nvim-web-devicons.enable = true;
         nvim-cursorline.enable = true;
         cinnamon-nvim = {
-          enable = true;
+          enable = false;
           setupOpts.keymaps = {
             basic = true;
-            extra = false;
+            extra = true;
           };
         };
         fidget-nvim.enable = true;
