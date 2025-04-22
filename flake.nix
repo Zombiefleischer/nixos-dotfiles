@@ -47,6 +47,8 @@
     };
 
     textfox.url = "github:adriankarlen/textfox";
+
+    calibrePlugins.url = "git+https://codeberg.org/Nydragon/calibre-plugins.git";
   };
 
   outputs = {
@@ -61,6 +63,7 @@
     nixpkgs,
     nvf,
     zen-browser,
+    calibrePlugins,
     ...
   } @ inputs: let
     system = "x86_64-linux";

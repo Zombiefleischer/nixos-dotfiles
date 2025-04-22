@@ -33,6 +33,24 @@
         "type": "github"
       }
     },
+    "calibrePlugins": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1742395204,
+        "narHash": "sha256-RhI3wa1OCIjpkgwI8FEt1n3DlDP6w9W4jA+E3h6KdZU=",
+        "ref": "refs/heads/main",
+        "rev": "a131835a6016b8538d4e66e79eeb6393f436ee8c",
+        "revCount": 6,
+        "type": "git",
+        "url": "https://codeberg.org/Nydragon/calibre-plugins.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/Nydragon/calibre-plugins.git"
+      }
+    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": [
@@ -561,16 +579,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1744932701,
-        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
-        "owner": "NixOs",
+        "lastModified": 1742335908,
+        "narHash": "sha256-unmSiGsXmUAZ4fAcSgf1iwssLmt/FLrczhLAsosyLh8=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
+        "rev": "fb9a9ddebc6c9685d2b6b98b35f134573e1872c8",
         "type": "github"
       },
       "original": {
-        "owner": "NixOs",
-        "ref": "nixos-unstable",
+        "owner": "nixos",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -591,6 +608,22 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1744932701,
+        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
+        "owner": "NixOs",
+        "repo": "nixpkgs",
+        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOs",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1728492678,
         "narHash": "sha256-9UTxR8eukdg+XZeHgxW5hQA9fIKHsKCdOIUycTryeVw=",
@@ -671,6 +704,7 @@
     },
     "root": {
       "inputs": {
+        "calibrePlugins": "calibrePlugins",
         "catppuccin": "catppuccin",
         "envfs": "envfs",
         "home-manager": "home-manager",
@@ -678,7 +712,7 @@
         "hyprland-plugins": "hyprland-plugins",
         "lan-mouse": "lan-mouse",
         "nix-flatpak": "nix-flatpak",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nvf": "nvf",
         "textfox": "textfox",
         "zen-browser": "zen-browser"
@@ -774,7 +808,7 @@
     },
     "textfox": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nur": "nur"
       },
       "locked": {
