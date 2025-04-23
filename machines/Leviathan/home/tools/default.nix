@@ -63,6 +63,7 @@
     goxlr-utility
     gparted
     gpu-viewer
+    grayjay
     hyfetch
     imagemagick
     inetutils
