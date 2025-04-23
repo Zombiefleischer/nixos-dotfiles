@@ -12,6 +12,7 @@
     # bitwarden-cli
     brightnessctl
     btop
+    calibre
     catppuccin
     catppuccin-kvantum
     catppuccin-papirus-folders
