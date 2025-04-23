@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs.kdePackages; [
+    ark
     discover
     dolphin-plugins
     # karousel
