@@ -29,7 +29,7 @@
     ./lsps
     ./minecraft
     ./mpd
-    ./neovim
+    ../../Cthulhu/home/neovim
     ./obs
     ./tools
     ./zsh

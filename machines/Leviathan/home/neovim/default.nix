@@ -1,1 +1,0 @@
-/home/zombiefleischer/nixos-dotfiles/machines/Cthulhu/home/neovim/default.nix
