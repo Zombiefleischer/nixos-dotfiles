@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   programs.zsh = {
     # Extra local variables defined at the top of .zshrc.
     localVariables = {
@@ -43,7 +43,8 @@
     };
 
     # Commands that should be added to top of .zshrc.
-    initExtraFirst =
+    initContent =
+      lib.mkBefore
       /*
       bash
       */
