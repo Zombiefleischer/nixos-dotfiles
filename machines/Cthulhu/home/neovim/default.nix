@@ -36,15 +36,15 @@ in {
       };
 
       autocmds = [
-        {
-          desc = "Highlight yanked lines";
-          enable = true;
-          event = ["TextYankPost"];
-          pattern = ["*"];
-          callback = mkLuaInline ''
-            silent! lua vim.hl.on_yank {higroup='Visual', timeout=300}
-          '';
-        }
+#        {
+#          desc = "Highlight yanked lines";
+#          enable = true;
+#          event = ["TextYankPost"];
+#          pattern = ["*"];
+#          callback = mkLuaInline ''
+#	    silent! lua vim.hl.on_yank {higroup='Visual', timeout=300}
+#	  '';
+#        }
       ];
 
       keymaps = [
