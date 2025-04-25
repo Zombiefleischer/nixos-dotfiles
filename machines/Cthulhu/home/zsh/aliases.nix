@@ -71,6 +71,10 @@
 
       # Add color to iproute command
       ip = "ip -c";
+
+      # Kubernetes
+      nbs = "nextbike-staging";
+      nbp = "nextbike-production";
     };
 
     shellGlobalAliases = {

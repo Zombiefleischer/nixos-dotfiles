@@ -42,9 +42,8 @@
       ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS = 8;
     };
 
-    # Commands that should be added to top of .zshrc.
+    # Commands that should be added to .zshrc.
     initContent =
-      lib.mkBefore
       /*
       bash
       */
@@ -57,17 +56,8 @@
         fi
 
         use_color=true
-      '';
 
-    # Commands that should be added to .zshrc before compinit.
-    initExtraBeforeCompInit = '''';
 
-    # Commands that should be added to .zshrc.
-    initExtra =
-      /*
-      bash
-      */
-      ''
         source ~/.zsh/jira.zsh
         [ -f ~/.fzf.zsh ] && source ~/.fzf.sh
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -88,6 +78,9 @@
           eval "$(aws configure export-credentials --profile dv-msc-staging --format env)"
         }
       '';
+
+    # Commands that should be added to .zshrc before compinit.
+    initExtraBeforeCompInit = '''';
 
     envExtra =
       /*
