@@ -128,6 +128,7 @@
     xfce.thunar
     thunderbird-unwrapped
     unar
+    ungoogled-chromium
     unzip
     usbtop
     usbutils
