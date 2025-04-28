@@ -51,6 +51,7 @@
         "lan-mouse -d"
         # "/home/zombiefleischer/scripts/swww_randomize_multi.sh /home/zombiefleischer/Pictures/i3_wallpapers"
         "hyprctl setcursor Posy_Cursor_Black_HC 64"
+        "droidcam"
       ];
 
       env = [
@@ -195,6 +196,10 @@
         "2, monitor:DP-7"
         "3, monitor:DP-7"
         "4, monitor:DP-7"
+        "5, monitor:DP-7"
+        "6, monitor:DP-7"
+        "7, monitor:DP-7"
+        "8, monitor:DP-7"
         "9, monitor:DP-7"
         "10, monitor:DP-5, default:true"
       ];
@@ -213,6 +218,7 @@
         "workspace 2, class:(firefox)"
         "workspace 3, class:(obsidian)"
         "workspace 4 silent, suppressevent activatefocus, class:(thunderbird)"
+        "workspace 8, class:(droidcam)"
         "workspace 9, class:(libreoffice-calc), title:(Zeiterfassung_MS_2025.xlsx — LibreOffice Calc)"
         "workspace 10, title:(Slack)"
         "noblur, class:(com.mitchellh.ghostty)"
