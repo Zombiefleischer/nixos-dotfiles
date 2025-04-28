@@ -33,6 +33,7 @@ in {
         cursorcolumn = true;
         cursorlineopt = "both";
         scrolloff = 5;
+        title = true;
       };
 
       autocmds = [
