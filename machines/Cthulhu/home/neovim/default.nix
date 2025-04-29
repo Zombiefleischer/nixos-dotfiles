@@ -346,7 +346,14 @@ in {
                   text_align = "center";
                 }
               ];
-              right_mouse_command = "bdelete! %d";
+              right_mouse_command = {
+                _type = "lua-inline";
+                expr = ''
+                  function(bufnum)
+                    require("bufdelete").bufdelete(bufnum, false)
+                  end
+                '';
+              };
               middle_mouse_command = "vertical sbuffer %d";
               separator_style = "slant";
             };
