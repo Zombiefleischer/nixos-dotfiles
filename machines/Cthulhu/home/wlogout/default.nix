@@ -49,7 +49,8 @@
     enable = true;
     flavor = "mocha";
     accent = "sapphire";
-    iconStyle = "wleave";
+    # iconStyle = "wleave";
+    iconStyle = "wlogout";
     extraStyle = ''
       button {
         margin: 8px;

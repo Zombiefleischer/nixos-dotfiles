@@ -35,6 +35,7 @@
   networking.networkmanager.enable = true;
   networking.nameservers = ["192.168.178.34"];
   networking.wireguard.enable = true;
+  systemd.network.wait-online.enable = false;
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;

@@ -3,6 +3,19 @@
   pkgs,
   ...
 }: {
+  home.file.".config/hypr/xdph.conf".text = ''
+    screencopy {
+      max_fps = 60
+      allow_token_by_default = true
+    }
+  '';
+
+  home.file.".config/xdg-desktop-portal/hyprland-portals.conf".text = ''
+    [preferred]
+    default = hyprland;gtk
+    org.freedesktop.impl.portal.FileChooser = kde
+  '';
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -187,7 +200,7 @@
       };
 
       binds = {
-        workspace_back_and_forth = true;
+        workspace_back_and_forth = false;
       };
 
       # Workspaces
@@ -382,6 +395,11 @@
       bind = $mainMod SHIFT, O, togglesplit, # dwindle
       bind = $mainMod ALT, M, exit,
       bind = $mainMod, G, togglegroup
+      bind = $mainMod, [, changegroupactive, b
+      bind = $mainMod, (, changegroupactive, b
+      bind = $mainMod, ], changegroupactive, f
+      bind = $mainMod, ), changegroupactive, f
+      bind = $mainMod CTRL SHIFT, R, forcerendererreload
 
       # ZSH Functions
       bind = $mainMod, ESCAPE, exec, zsh -c wlogout_unique

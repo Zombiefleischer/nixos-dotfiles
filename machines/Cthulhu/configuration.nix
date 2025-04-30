@@ -29,8 +29,11 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
-  networking.nameservers = ["192.168.178.34"];
+  networking = {
+    networkmanager.enable = true;
+    nameservers = ["192.168.178.34"];
+  };
+  systemd.network.wait-online.enable = false;
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
@@ -128,8 +131,10 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.settings.PermitRootLogin = "no";
+  services.openssh = {
+    enable = true;
+    settings.PermitRootLogin = "no";
+  };
   programs.ssh = {
     startAgent = true;
     extraConfig = ''
@@ -142,16 +147,18 @@
   security.pam.services.zombiefleischer.enableKwallet = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [
-    22 # ssh
-    5900 # krfb-virtualmonitor
-    24800 # input-leap
-  ];
-  networking.firewall.allowedUDPPorts = [
-    4242 # lan-mouse
-  ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = true;
+  networking = {
+    firewall.allowedTCPPorts = [
+      22 # ssh
+      5900 # krfb-virtualmonitor
+      24800 # input-leap
+    ];
+    firewall.allowedUDPPorts = [
+      4242 # lan-mouse
+    ];
+    # Or disable the firewall altogether.
+    firewall.enable = true;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
