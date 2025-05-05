@@ -16,6 +16,8 @@
       enable = true;
       flavor = "mocha";
     };
+
+    mako.enable = false; # Fix #552 in catppuccin/nix
   };
 
   gtk = {

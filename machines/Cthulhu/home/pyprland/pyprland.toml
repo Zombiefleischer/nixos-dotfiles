@@ -9,7 +9,7 @@ plugins = [
 ]
 
 [scratchpads.volume]
-command = "pavucontrol --class volume_sidemenu"
+command = "pwvucontrol --class volume_sidemenu"
 animation = "fromLeft"
 class = "volume_sidemenu"
 size = "40% 70%"

@@ -7,6 +7,14 @@
     terminal = "${pkgs.kitty}/bin/kitty";
     plugins = [
       pkgs.rofi-calc
+      pkgs.rofi-network-manager
+      pkgs.rofi-emoji-wayland
+      pkgs.rofi-file-browser
+      pkgs.rofi-power-menu
+      pkgs.rofi-bluetooth
+      pkgs.rofi-obsidian
+      pkgs.rofi-systemd
+      pkgs.rofi-vpn
     ];
     extraConfig = {
       modi = "combi,run,drun,window";

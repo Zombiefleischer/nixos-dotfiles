@@ -21,7 +21,8 @@
 
         # Modules Config
         "hyprland/workspaces" = {
-          on-click = "activate";
+          # on-click = "activate";
+          on-click = "";
           format = "{icon}";
           format-icons = {
             "1" = "󰲠";
@@ -410,7 +411,7 @@
           };
           reverse-scrolling = true;
           reverse-mouse-scrolling = true;
-          on-click = "pavucontrol";
+          on-click = "pwvucontrol";
         };
 
         "systemd-failed-units" = {

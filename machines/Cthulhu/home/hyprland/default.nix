@@ -306,7 +306,7 @@
 
       # Scratchpads (dropdowns & togglable poppups)
       bind = $mainMod CTRL, V, exec, pypr toggle volume
-      $volume_sidemenu = class:(^(pavucontrol)$)
+      $volume_sidemenu = class:(^(pwvucontrol)$)
       windowrule = float, $volume_sidemenu
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more

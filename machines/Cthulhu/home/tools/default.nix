@@ -101,7 +101,6 @@
     overskride
     owofetch
     pamixer
-    pavucontrol
     # picom-pijulius
     playerctl
     posting
@@ -111,6 +110,7 @@
     psmisc
     pyprland
     (python3.withPackages (ps: [ps.ansible ps.dnspython ps.pip ps.requests]))
+    pwvucontrol
     # quickemu
     # quickgui
     ripgrep
