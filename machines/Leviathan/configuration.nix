@@ -131,6 +131,7 @@
   # Enable goxlr-utility
   services.udev.packages = [pkgs.goxlr-utility pkgs.zsa-udev-rules];
   xdg.autostart.enable = true;
+  services.goxlr-utility.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
