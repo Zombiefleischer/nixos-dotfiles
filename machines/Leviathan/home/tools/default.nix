@@ -60,7 +60,6 @@
     glxinfo
     gnupg1
     gomatrix
-    goxlr-utility
     gparted
     gpu-viewer
     grayjay
