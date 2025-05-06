@@ -21,8 +21,7 @@
 
         # Modules Config
         "hyprland/workspaces" = {
-          # on-click = "activate";
-          on-click = "";
+          on-click = "echo 'nope'";
           format = "{icon}";
           format-icons = {
             "1" = "󰲠";
