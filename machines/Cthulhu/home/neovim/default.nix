@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  pkgs,
   ...
 }: let
   inherit (lib.generators) mkLuaInline;
@@ -103,12 +104,20 @@ in {
         }
       ];
 
+      lazy.plugins = {
+        "${pkgs.vimPlugins.neoscroll-nvim.pname}" = {
+          package = pkgs.vimPlugins.neoscroll-nvim;
+          setupModule = "neoscroll";
+        };
+      };
+
       binds = {
         cheatsheet.enable = true;
         whichKey.enable = true;
       };
 
       lsp = {
+        enable = true;
         formatOnSave = true;
         lspkind.enable = true;
         lightbulb.enable = true;
@@ -128,7 +137,6 @@ in {
       };
 
       languages = {
-        enableLSP = true;
         enableFormat = false; # INFO #754
         enableTreesitter = true;
         enableExtraDiagnostics = true;
@@ -446,10 +454,6 @@ in {
           };
         };
         fastaction.enable = true;
-      };
-
-      comments = {
-        comment-nvim.enable = true;
       };
     };
   };
