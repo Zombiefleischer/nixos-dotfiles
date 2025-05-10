@@ -44,6 +44,18 @@
         "eDP-1, disable"
       ];
 
+      ecosystem = {
+        enforce_permissions = true;
+
+        permission = [
+          ".*firefox.*, screencopy, allow"
+          ".*slack.*, screencopy, allow"
+          ".*wl-screenrec.*, screencopy, allow"
+          ".*xdg-desktop-portal.*, screencopy, allow"
+          ".*grim.*, screencopy, allow"
+        ];
+      };
+
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
       # Execute your favorite apps at launch
