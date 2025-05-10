@@ -63,6 +63,7 @@
     gparted
     gpu-viewer
     grayjay
+    guvcview
     hyfetch
     imagemagick
     inetutils
@@ -147,6 +148,7 @@
     usbtop
     usbutils
     uwuify
+    v4l-utils
     vesktop
     via
     vial
