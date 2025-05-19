@@ -144,17 +144,22 @@
   };
 
   # Enable passwordless sudo
-  security.sudo.extraRules = [
-    {
-      users = ["zombiefleischer"];
-      commands = [
-        {
-          command = "ALL";
-          options = ["NOPASSWD" "SETENV"];
-        }
-      ];
-    }
-  ];
+  security.sudo.enable = false;
+  security.sudo-rs = {
+    enable = true;
+    wheelNeedsPassword = false;
+    extraRules = [
+      {
+        users = ["zombiefleischer"];
+        commands = [
+          {
+            command = "ALL";
+            options = ["NOPASSWD" "SETENV"];
+          }
+        ];
+      }
+    ];
+  };
 
   # Activate protonmail bridge
   systemd.user.services.protonmail-bridge = {
