@@ -19,7 +19,11 @@ in {
       withPython3 = true;
       viAlias = true;
       vimAlias = true;
-      useSystemClipboard = true;
+
+      clipboard = {
+        enable = true;
+        providers.wl-copy.enable = true;
+      };
 
       options = {
         tabstop = 2;

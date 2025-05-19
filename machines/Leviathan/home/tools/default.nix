@@ -26,7 +26,7 @@
     clinfo
     codevis
     corefonts
-    davinci-resolve
+    # davinci-resolve
     delta
     dig
     egl-wayland
