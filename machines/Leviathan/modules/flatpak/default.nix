@@ -68,6 +68,7 @@ _: {
       "fr.handbrake.ghb"
       # "app.zen_browser.zen"
       "net.mkiol.SpeechNote"
+      "net.mkiol.SpeechNote.Addon.nvidia"
     ];
   };
 }
