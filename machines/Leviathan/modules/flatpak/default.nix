@@ -67,6 +67,7 @@ _: {
       "com.github.vikdevelop.photopea_app"
       "fr.handbrake.ghb"
       # "app.zen_browser.zen"
+      "net.mkiol.SpeechNote"
     ];
   };
 }
