@@ -82,6 +82,7 @@
         ./machines/Leviathan/modules/firefox-addons
         ./machines/Leviathan/modules/fonts
         ./machines/Leviathan/modules/keychron
+        ./machines/Leviathan/modules/nginx
         ./machines/Leviathan/modules/nh
         ./machines/Leviathan/modules/nix
         ./machines/Leviathan/modules/openrgb
