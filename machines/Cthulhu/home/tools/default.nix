@@ -58,6 +58,7 @@
     graphviz-nox
     greetd.tuigreet
     grim
+    guvcview
     helm-docs
     helmfile
     home-manager
@@ -134,6 +135,7 @@
     usbtop
     usbutils
     uwuify
+    v4l-utils
     vim
     vlc
     wget
