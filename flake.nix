@@ -121,7 +121,7 @@
         ./machines/Cthulhu/modules/bindfs
         ./machines/Cthulhu/modules/bootloader
         ./machines/Cthulhu/modules/display-manager
-        ./machines/Cthulhu/modules/droidcam
+        # ./machines/Cthulhu/modules/droidcam
         ./machines/Cthulhu/modules/flatpak
         ./machines/Cthulhu/modules/fonts
         ./machines/Cthulhu/modules/hyprland

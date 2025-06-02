@@ -32,6 +32,9 @@
   networking = {
     networkmanager.enable = true;
     nameservers = ["192.168.178.34"];
+    hosts = {
+      "10.46.136.104" = ["vcenter-ber2cgjn14.ionoscloud.tools" "nsx-ber2cgjn14.ionoscloud.tools" "vidm-ber2cgjn14.ionoscloud.tools"];
+    };
   };
   systemd.network.wait-online.enable = false;
 

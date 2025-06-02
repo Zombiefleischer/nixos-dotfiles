@@ -15,7 +15,7 @@
     ./catppuccin
     ./cursor
     ./dir
-    ./droidcam
+    # ./droidcam
     ./dunst
     ./firefox
     ./fonts
