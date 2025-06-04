@@ -81,7 +81,7 @@
     # kstars
     lazydocker
     libportal
-    libreoffice
+    # libreoffice
     librewolf
     libva
     lm_sensors
@@ -110,6 +110,7 @@
     oh-my-zsh
     okteta
     onefetch
+    onlyoffice-desktopeditors
     overlayed
     oversteer
     owofetch

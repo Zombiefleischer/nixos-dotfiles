@@ -84,7 +84,7 @@
     kubernetes-helm
     lazydocker
     libnotify
-    # libreoffice-qt6-fresh
+    libreoffice-qt6-fresh
     libsecret
     lm_sensors
     lsof
@@ -99,7 +99,6 @@
     nvd
     obsidian
     oh-my-zsh
-    onlyoffice-desktopeditors
     opentofu
     overskride
     owofetch
