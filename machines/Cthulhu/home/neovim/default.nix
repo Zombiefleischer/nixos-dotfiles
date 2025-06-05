@@ -113,6 +113,11 @@ in {
           package = pkgs.vimPlugins.neoscroll-nvim;
           setupModule = "neoscroll";
         };
+        "${pkgs.vimPlugins.monaspace-nvim.pname}" = {
+          package = pkgs.vimPlugins.monaspace-nvim;
+          setupModule = "monaspace";
+          lazy = false;
+        };
       };
 
       binds = {

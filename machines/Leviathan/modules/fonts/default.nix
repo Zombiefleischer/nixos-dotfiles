@@ -12,6 +12,7 @@ in {
     packages = with pkgs; [
       nerd-fonts.hack
       nerd-fonts.fira-code
+      monaspace
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk-sans

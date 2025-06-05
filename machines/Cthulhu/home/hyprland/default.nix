@@ -184,7 +184,7 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = false;
         background_color = "$base";
-        font_family = "Fira Code Nerd Font";
+        font_family = "Monaspace Neon Frozen";
         vfr = true;
       };
 
@@ -194,7 +194,7 @@
           bar_part_of_window = true;
 
           bar_color = "$sapphire";
-          bar_text_font = "Fira Code Nerd Font";
+          bar_text_font = "Monaspace Neon Frozen";
           "col.text" = "$base";
 
           # buttons (R -> L)

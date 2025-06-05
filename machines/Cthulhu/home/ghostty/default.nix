@@ -10,7 +10,10 @@
       background-opacity = 0.85;
       background-blur = false;
 
-      font-family = "FiraCode Nerd Font Ret";
+      font-family = "Monaspace Neon Frozen";
+      font-family-bold = "Monaspace Xenon Frozen";
+      font-family-italic = "Monaspace Radon Frozen";
+      font-family-bold-italic = "Monaspace Krypton Frozen";
       font-size = 14;
 
       theme = "catppuccin-mocha";

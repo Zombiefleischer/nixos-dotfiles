@@ -3,6 +3,7 @@
     packages = with pkgs; [
       nerd-fonts.hack
       nerd-fonts.fira-code
+      monaspace
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk-sans
@@ -14,7 +15,7 @@
       defaultFonts = {
         serif = ["Noto Serif" "serif"];
         sansSerif = ["Noto Sans" "sans-serif"];
-        monospace = ["FiraCode Nerd Font Ret"];
+        monospace = ["Monaspace Neon Frozen"];
         emoji = ["Noto Color Emoji"];
       };
     };

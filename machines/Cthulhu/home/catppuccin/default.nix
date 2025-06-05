@@ -28,8 +28,8 @@
       gtk-application-prefer-dark-theme = true;
     };
     font = {
-      name = "Fira Code Nerd Font";
-      pkgs = pkgs.nerd-fonts.fira-code;
+      name = "Monaspace Neon Frozen";
+      pkgs = pkgs.monaspace;
       size = 14;
     };
   };
