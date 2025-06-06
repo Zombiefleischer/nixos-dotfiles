@@ -10,11 +10,16 @@
       background-opacity = 0.85;
       background-blur = false;
 
+      font-size = 14;
       font-family = "Monaspace Neon Frozen";
       font-family-bold = "Monaspace Xenon Frozen";
       font-family-italic = "Monaspace Radon Frozen";
       font-family-bold-italic = "Monaspace Krypton Frozen";
-      font-size = 14;
+      # Test font styles
+      font-style = "Medium";
+      font-style-bold = "Italic";
+      font-style-italic = "Italic";
+      font-style-bold-italic = "Regular";
 
       theme = "catppuccin-mocha";
 
