@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = [
-    pkgs.droidcam
+    # pkgs.droidcam
     pkgs.android-tools
   ];
 
