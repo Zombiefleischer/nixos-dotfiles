@@ -122,6 +122,8 @@
     powertop
     protonmail-bridge
     protonup-qt
+    protonvpn-cli
+    protonvpn-gui
     qmk
     qpwgraph
     r2modman
