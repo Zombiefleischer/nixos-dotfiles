@@ -42,7 +42,7 @@
           command = "glab mr view -w {{.SelectedLocalBranch.UpstreamBranch}}";
           context = "localBranches";
           description = "Go to MR in gitlab";
-          stream = true;
+          output = "log";
         }
         {
           key = "M";
@@ -50,7 +50,7 @@
           context = "files";
           loadingText = "opening git mergetool";
           description = "Use git mergetool";
-          subprocess = true;
+          output = "terminal";
         }
         {
           key = "b";
