@@ -7,7 +7,7 @@
     # bitwarden-cli
     bitwarden-desktop
     btop
-    calibre
+    # FIXME: calibre
     # (calibre.overrideAttrs (old: {
     #   postInstall = ''
     #     wrapProgram $out/bin/calibre \
@@ -130,6 +130,7 @@
     rar
     reaper
     resources
+    revolt-desktop
     ripgrep
     rsibreak
     sc-im

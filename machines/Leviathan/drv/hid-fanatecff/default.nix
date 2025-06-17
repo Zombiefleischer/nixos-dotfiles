@@ -1,6 +1,7 @@
 {
   lib,
   stdenv,
+  fetchzip,
   fetchFromGitHub,
   kernel,
   kmod,
@@ -14,11 +15,16 @@ in
     version = version-info.version;
     name = "${pname}-${version}-${kernel.modDirVersion}";
 
-    src = fetchFromGitHub {
-      owner = version-info.owner;
-      repo = version-info.repo;
-      rev = version-info.version;
-      sha256 = version-info.sha256;
+    # src = fetchFromGitHub {
+    #   owner = version-info.owner;
+    #   repo = version-info.repo;
+    #   rev = version-info.version;
+    #   sha256 = version-info.sha256;
+    # };
+
+    src = fetchzip {
+      url = "https://github.com/gotzl/hid-fanatecff/archive/refs/heads/master.zip";
+      hash = "sha256-M2jm8pyxHRiswV4iJEawo57GkJ2XOclIo3NxEFgK+q0=";
     };
 
     hardeningDisable = ["pic" "format"];
