@@ -29,6 +29,7 @@
     kwallet-pam
     kwalletmanager
     kzones
+    okular
     plasma-browser-integration
     plasma-wayland-protocols
     qtmultimedia
