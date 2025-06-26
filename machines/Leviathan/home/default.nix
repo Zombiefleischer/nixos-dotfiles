@@ -20,7 +20,7 @@
     ./ghostty
     ./git
     ./go
-    ./hyprland
+    # ./hyprland
     ./i3
     ./kdePackages
     ./kitty
