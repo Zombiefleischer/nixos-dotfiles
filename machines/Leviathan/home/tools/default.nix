@@ -29,6 +29,7 @@
     # davinci-resolve
     delta
     dig
+    dotnet-sdk
     egl-wayland
     eza
     fastfetch
@@ -166,7 +167,6 @@
     vivaldi-ffmpeg-codecs
     vlc
     vscodium
-    vulkan-hdr-layer-kwin6
     wayland
     wayland-utils
     wget
