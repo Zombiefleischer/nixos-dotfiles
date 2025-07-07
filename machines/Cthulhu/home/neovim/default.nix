@@ -135,7 +135,6 @@ in {
         lspSignature.enable = true;
         otter-nvim.enable = true;
         nvim-docs-view.enable = true;
-        null-ls.enable = lib.mkForce false; # INFO #754
       };
 
       debugger = {
@@ -146,7 +145,7 @@ in {
       };
 
       languages = {
-        enableFormat = false; # INFO #754
+        enableFormat = true;
         enableTreesitter = true;
         enableExtraDiagnostics = true;
 
@@ -205,8 +204,6 @@ in {
           };
         };
       };
-
-      pluginOverrides.none-ls-nvim = null; # INFO #754
 
       autopairs.nvim-autopairs.enable = true;
 

@@ -5,6 +5,19 @@
 
   programs.firefox = {
     enable = true;
+    profiles = {
+      "rlpepp97.default-esr" = {
+        isDefault = true;
+        id = 0;
+        name = "Zombiefox";
+        path = "rlpepp97.default-esr";
+      };
+      default = {
+        isDefault = false;
+        id = 1;
+        extensions.force = true;
+      };
+    };
   };
 
   textfox = {
@@ -25,7 +38,7 @@
       displayUrlbarIcons = true;
 
       font = {
-        family = "\"FiraCode Nerd Font Ret\", \"SF Mono\", Consolas, monospace";
+        family = "\"Monaspace Neon Frozen\", \"SF Mono\", Consolas, monospace";
         accent = "#74C7EC";
       };
 
