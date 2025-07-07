@@ -173,7 +173,7 @@ in {
           enable = true;
           lsp = {
             enable = true;
-            package = pkgs.tofu-ls;
+            # package = pkgs.tofu-ls;
           };
           treesitter.enable = true;
         };
