@@ -171,7 +171,10 @@ in {
         python.enable = true;
         terraform = {
           enable = true;
-          lsp.enable = true;
+          lsp = {
+            enable = true;
+            package = pkgs.tofu-ls;
+          };
           treesitter.enable = true;
         };
       };
