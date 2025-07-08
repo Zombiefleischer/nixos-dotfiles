@@ -1,9 +1,9 @@
 {...}: {
   programs.kitty = {
-    enable = false;
+    enable = true;
 
     font = {
-      name = "FiraCode Nerd Font Ret";
+      name = "Monaspace Neon Frozen";
       size = 14.0;
     };
 
@@ -100,8 +100,8 @@
 
       # Layout management
       "kitty_mod+l" = "next_layout";
-      "kitty_mod+backslash" = "launch --location=vsplit --cwd=current";
-      "kitty_mod+minus" = "launch --location=hsplit --cwd=current";
+      "kitty_mod+o" = "launch --location=vsplit --cwd=current";
+      "kitty_mod+e" = "launch --location=hsplit --cwd=current";
 
       # Font sizes
       "kitty_mod+equal" = "change_font_size all +1.0";

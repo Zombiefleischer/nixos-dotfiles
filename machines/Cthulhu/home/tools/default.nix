@@ -72,7 +72,6 @@
     jira-cli-go
     jq
     keymapp
-    kitty
     kittysay
     krename
     kubectl
