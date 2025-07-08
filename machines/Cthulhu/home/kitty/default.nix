@@ -3,7 +3,7 @@
     enable = true;
 
     font = {
-      name = "Monaspace Neon Frozen";
+      name = "Monaspace Neon Var";
       size = 14.0;
     };
 
@@ -15,9 +15,9 @@
     themeFile = "Catppuccin-Mocha";
 
     settings = {
-      bold_font = "Monaspace Xenon Frozen";
-      italic_font = "Monaspace Radon Frozen";
-      bold_italic_font = "Monaspace Krypton Frozen";
+      bold_font = ''family="Monaspace Xenon Var" variable_name=MonaspaceXenonVar wght=400'';
+      italic_font = ''family="Monaspace Radon Var" variable_name=MonaspaceRadonVar wght=400'';
+      bold_italic_font = ''family"Monaspace Krypton Var" variable_name=MonaspaceKryptonVar slnt=0'';
 
       # Cursor customization
       cursor_shape = "block";
