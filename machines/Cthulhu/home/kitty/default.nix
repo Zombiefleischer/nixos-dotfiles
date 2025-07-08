@@ -15,6 +15,10 @@
     themeFile = "Catppuccin-Mocha";
 
     settings = {
+      bold_font = "Monaspace Xenon Frozen";
+      italic_font = "Monaspace Radon Frozen";
+      bold_italic_font = "Monaspace Krypton Frozen";
+
       # Cursor customization
       cursor_shape = "block";
 
