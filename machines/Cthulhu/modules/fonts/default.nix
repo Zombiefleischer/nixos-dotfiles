@@ -3,6 +3,7 @@
     packages = with pkgs; [
       nerd-fonts.hack
       nerd-fonts.fira-code
+      nerd-fonts.monaspace
       monaspace
       noto-fonts
       noto-fonts-emoji

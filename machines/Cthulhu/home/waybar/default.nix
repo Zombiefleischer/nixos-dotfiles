@@ -127,15 +127,15 @@
         };
 
         "network" = {
-          format = "󰤭 ";
+          format = "󰤭";
           format-wifi = "{icon}({signalStrength}%){essid}";
           format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤥 " "󰤨 "];
-          format-disconnected = "󰪎  Disconnected";
+          format-disconnected = "󰪎 Disconnected";
           tooltip-format = "wifi <span color='#eba0ac'>off</span>";
           tooltip-format-wifi = "SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6e3a1'>{bandwidthUpBits}</span>\t<span color='#eba0ac'>{bandwidthDownBits}</span>\t<span color='#cba6f7'>󰹹{bandwidthTotalBits}</span>";
           tooltip-format-disconnected = "<span color='#f38ba8'>disconnected</span>";
-          format-ethernet = "󰈀  {ipaddr}/{cidr}";
-          format-linked = "󰈀  {ifname} (No IP)";
+          format-ethernet = "󰈀 {ipaddr}/{cidr}";
+          format-linked = "󰈀 {ifname} (No IP)";
           tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6e3a1'>{bandwidthUpBits}</span>\t<span color='#eba0ac'>{bandwidthDownBits}</span>\t<span color='#cba6f7'>󰹹{bandwidthTotalBits}</span>";
           max-length = 35;
           on-click = "zsh -c wifi_toggle";
@@ -143,7 +143,7 @@
         };
 
         "custom/vpn" = {
-          format = "VPN  ";
+          format = "VPN ";
           exec = "echo '{\"class\": \"connected\"}'";
           exec-if = "test -d /proc/sys/net/ipv4/conf/tun0";
           return-type = "json";
@@ -207,8 +207,8 @@
         "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
-            activated = "󰛐 ";
-            deactivated = "󰛑 ";
+            activated = "󰛐";
+            deactivated = "󰛑";
           };
           tooltip-format-activated = "idle-inhibitor <span color='#a6e3a1'>on</span>";
           tooltip-format-deactivated = "idle-inhibitor <span color='#eba0ac'>off</span>";
@@ -217,7 +217,7 @@
 
         "custom/logout_menu" = {
           return-type = "json";
-          exec = "echo '{ \"text\":\"󰐥 \", \"tooltip\": \"logout menu\" }'";
+          exec = "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'";
           interval = "once";
           on-click = "zsh -c wlogout_unique";
         };
@@ -237,22 +237,22 @@
 
         # Modules Config
         "hyprland/window" = {
-          format = "  {title} 󰭟 ";
+          format = " {title} 󰭟";
           max-length = 50;
         };
 
         "keyboard-state" = {
           capslock = true;
           numlock = true;
-          format = "{name} {icon}";
+          format = "{icon} {name}";
           format-icons = {
-            locked = " ";
-            unlocked = " ";
+            locked = "";
+            unlocked = "";
           };
         };
 
         "user" = {
-          format = "<span color='#11111b'> 󰄛  </span><span color='#94e2d5'>{user}</span> (up <span color='#f5c2e7'>{work_d} d</span> <span color='#89b4fa'>{work_H} h</span> <span color='#f9e2af'>{work_M} min</span> <span color='#a6e3a1'>↑</span>)";
+          format = "<span color='#11111b'> 󰄛 </span><span color='#94e2d5'>{user}</span> (up <span color='#f5c2e7'>{work_d} d</span> <span color='#89b4fa'>{work_H} h</span> <span color='#f9e2af'>{work_M} min</span> <span color='#a6e3a1'>↑</span>)";
           icon = true;
         };
       }
@@ -288,7 +288,7 @@
         };
 
         "cpu" = {
-          format = "󰻠  {usage}%";
+          format = "󰻠 {usage}%";
           states = {
             high = 90;
             upper-medium = 70;
@@ -300,7 +300,7 @@
         };
 
         "memory" = {
-          format = "  {percentage}%";
+          format = " {percentage}%";
           tooltip-format = "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB";
           states = {
             high = 90;
@@ -313,7 +313,7 @@
         };
 
         "disk" = {
-          format = "󰋊  {percentage_used}%";
+          format = "󰋊 {percentage_used}%";
           tooltip-format = "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)";
           states = {
             high = 90;
@@ -426,7 +426,7 @@
       ''
         * {
           border: none;
-          /* font-family: "Fira Code Nerd Font", "Noto Color Emoji", sans-serif; */
+          font-family: "MonaspiceNe Nerd Font Propo";
         }
 
         window.bottom_bar#waybar {
