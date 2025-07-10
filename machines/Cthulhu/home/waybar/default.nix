@@ -244,7 +244,7 @@
         "keyboard-state" = {
           capslock = true;
           numlock = true;
-          format = "{icon} {name}";
+          format = " {icon} {name}";
           format-icons = {
             locked = "";
             unlocked = "";
