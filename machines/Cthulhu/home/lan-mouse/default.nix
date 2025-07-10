@@ -13,7 +13,7 @@
           position = "left";
           hostname = "Leviathan";
           activate_on_startup = true;
-          ips = ["192.168.178.71" "192.168.178.79"];
+          ips = ["192.168.178.71" "192.168.178.78" "192.168.178.79"];
         }
       ];
     };
