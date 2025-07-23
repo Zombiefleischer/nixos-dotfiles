@@ -13,10 +13,14 @@
     ./modules/obs
   ];
 
-  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd" "wireguard"];
-  boot.extraModulePackages = [];
+  boot = {
+    initrd = {
+      availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "nvidia_uvm" "nvidia_drm" "nvidia"];
+      kernelModules = [];
+    };
+    kernelModules = ["kvm-amd" "wireguard"];
+    extraModulePackages = [];
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/0ac0d8d3-154e-4092-be01-6493983622dd";

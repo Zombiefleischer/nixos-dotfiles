@@ -63,7 +63,7 @@
     gomatrix
     gparted
     gpu-viewer
-    grayjay
+    # grayjay
     guvcview
     hyfetch
     imagemagick
