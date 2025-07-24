@@ -122,6 +122,7 @@
     playerctl
     powertop
     protonmail-bridge
+    protonplus
     protonup-qt
     protonvpn-cli
     protonvpn-gui
