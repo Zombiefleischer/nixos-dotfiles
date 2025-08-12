@@ -1,0 +1,49 @@
+CanonicalizeHostname yes
+CanonicalDomains nextbike.lan
+
+Host m23conpapdb* 10.25.*
+  ProxyJump conpa.bastion.nextbike.net,m23conpajmp0002
+
+Host m23conpa* 10.24.*
+  ProxyJump conpa.bastion.nextbike.net
+
+Host ps?cowor*
+  ProxyJump cowor.bastion.nextbike.net
+
+Host ps?copol*
+  ProxyJump copol.bastion.nextbike.net
+
+Host ps?coinf*
+  ProxyJump coinf.bastion.nextbike.net
+
+Host ps?cswor*
+  ProxyJump cswor.bastion.nextbike.net
+
+Host ps?comvg*
+  ProxyJump comvg.bastion.nextbike.net
+
+Host ps?csmvg*
+  ProxyJump csmvg.bastion.nextbike.net
+
+Host 10.46.*
+  ProxyJump pluscloud-production-internal.nextbike.net
+
+Host sv1* 10.66.*
+  ProxyJump 185.212.46.228
+
+host m23coinfbkp0001.nextbike.net 62.113.232.44
+  ProxyJump cowor.bastion.nextbike.net
+
+Host m23* ps1* ps2* sv1* 10.24.* 10.25.* 10.46.* 10.66.*
+  PreferredAuthentications publickey
+  ServerAliveInterval 60
+  VisualHostKey yes
+  PasswordAuthentication no
+
+Host *
+  User mschoenleben
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/mschoenleben_nextbike.ed25519
+  ServerAliveInterval 60
+  VisualHostKey yes
+  PasswordAuthentication no

@@ -3,6 +3,7 @@
     git = {
       # TODO: configure more options
       enable = true;
+      package = pkgs.gitFull;
       delta = {
         enable = true;
         options = {
@@ -10,6 +11,9 @@
           line-numbers = true;
           side-by-side = true;
         };
+      };
+      extraConfig = {
+        credential.helper = "libsecret";
       };
     };
 

@@ -2,7 +2,9 @@
   home.packages = with pkgs.kdePackages; [
     ark
     discover
+    dolphin
     dolphin-plugins
+    gwenview
     # karousel
     kate
     kbackup
@@ -22,6 +24,7 @@
     krfb
     # krohnkite
     kruler
+    kservice
     kspaceduel
     ksshaskpass
     ksystemlog

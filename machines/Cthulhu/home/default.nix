@@ -14,6 +14,7 @@
     ./btop
     ./catppuccin
     ./cursor
+    ./dconf
     ./dir
     # ./droidcam
     ./dunst
@@ -32,15 +33,19 @@
     ./lan-mouse
     ./lazygit
     ./lsps
+    ./mime
     ./neovim
     ./pyprland
     ./rofi
+    ./ssh
     ./swappy
     ./tealdeer
+    ./thunderbird
     ./tools
     ./wallpaper
     ./waybar
     ./wlogout
+    ./yazi
     ./zsh
   ];
 

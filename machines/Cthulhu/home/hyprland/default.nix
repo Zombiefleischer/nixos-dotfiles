@@ -392,7 +392,7 @@
       bind = $mainMod SHIFT, B, exec, floorp
       bind = $mainMod, Enter, exec, ghostty
       bind = ALT CTRL, T, exec, ghostty
-      bind = $mainMod, F, exec, thunar
+      bind = $mainMod, F, exec, dolphin
       bind = $mainMod, D, exec, rofi -show combi
       bind = , code:225, exec, rofi -show combi
       bind = $mainMod, C, exec, hyprpicker -a

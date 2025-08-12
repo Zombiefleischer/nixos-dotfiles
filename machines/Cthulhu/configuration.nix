@@ -39,7 +39,7 @@
         networkmanager-openconnect
         networkmanager-openvpn
         networkmanager-sstp
-        networkmanager-strongswan
+        # networkmanager-strongswan
         networkmanager-vpnc
       ];
     };

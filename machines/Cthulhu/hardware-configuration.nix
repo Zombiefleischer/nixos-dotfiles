@@ -19,18 +19,20 @@
   boot.kernelParams = ["acpi_backlight=native"];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/922c9bfe-d236-4e6c-a4f2-92c5417f8e1c";
+    device = "/dev/disk/by-uuid/b5a58f51-7c9d-4528-ad06-34c7cd4d02d0";
     fsType = "ext4";
   };
 
+  boot.initrd.luks.devices."luks-4ce7a585-8ee8-4e81-8262-97261fc9dfa0".device = "/dev/disk/by-uuid/4ce7a585-8ee8-4e81-8262-97261fc9dfa0";
+
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/BCD4-A4EF";
+    device = "/dev/disk/by-uuid/7D5D-0720";
     fsType = "vfat";
     options = ["fmask=0077" "dmask=0077"];
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/36544335-f62a-4995-a958-5b90016a34b8";}
+    {device = "/dev/disk/by-uuid/ceb780d9-92d6-45f6-aed4-350f65e37d72";}
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

@@ -4,7 +4,7 @@
   boot.kernelParams = [
     "acpi_backlight=native"
     "splash"
-    "quiet" # TODO: Test, if quiet is needed
+    # "quiet" # TODO: Test, if quiet is needed
     "video4linux"
     "usbcore.autosuspend=-1"
   ];

@@ -49,7 +49,6 @@
     }))
     fzf
     gimp
-    git
     gitui
     glab
     glxinfo
@@ -128,7 +127,6 @@
     swappy
     swww
     xfce.thunar
-    thunderbird-unwrapped
     unar
     ungoogled-chromium
     unzip
@@ -144,7 +142,6 @@
     wlrctl
     wlr-randr
     wtype
-    yazi
     yubikey-manager
     zoxide
     zsa-udev-rules
