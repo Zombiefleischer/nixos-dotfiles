@@ -60,9 +60,10 @@
 
       # Execute your favorite apps at launch
       exec-once = [
+        "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
+        "scu-start plasma-kwallet-pam.service"
         "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.slack}/bin/slack"
-        "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
         # "${pkgs.input-leap}/bin/input-leap"
         "${pkgs.thunderbird}/bin/thunderbird"
         "${pkgs.obsidian}/bin/obsidian"

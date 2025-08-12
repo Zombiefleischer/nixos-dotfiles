@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
   ];
@@ -21,16 +17,22 @@
   };
 
   gtk = {
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
+    gtk3 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+      };
     };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
+    gtk4 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+      };
     };
     font = {
-      name = "Monaspace Neon Frozen";
-      pkgs = pkgs.monaspace;
+      name = "Noto Sans";
       size = 14;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
     };
   };
   catppuccin.gtk = {

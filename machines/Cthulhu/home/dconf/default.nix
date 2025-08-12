@@ -10,7 +10,7 @@ with lib.hm.gvariant; {
       cursor-size = 64;
       cursor-theme = "Posy_Cursor_Black";
       enable-animations = true;
-      font-name = "Monaspace Neon Frozen,  10";
+      font-name = "Noto Sans,  10";
       icon-theme = "Papirus-Dark";
       scaling-factor = mkUint32 1;
       text-scaling-factor = 1.0;

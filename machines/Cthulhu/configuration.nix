@@ -92,7 +92,7 @@
   users.users.zombiefleischer = {
     isNormalUser = true;
     description = "Max Schönleben";
-    extraGroups = ["networkmanager" "wheel" "docker" "plugdev"];
+    extraGroups = ["networkmanager" "wheel" "docker" "plugdev" "input"];
   };
   users.users.root.openssh.authorizedKeys.keys = config.users.users.zombiefleischer.openssh.authorizedKeys.keys;
 
