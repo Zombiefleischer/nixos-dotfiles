@@ -35,18 +35,6 @@
       name = "Papirus-Dark";
     };
   };
-  catppuccin.gtk = {
-    enable = true;
-    accent = "sapphire";
-    flavor = "mocha";
-    icon = {
-      enable = true;
-      accent = "sapphire";
-      flavor = "mocha";
-    };
-    size = "standard";
-    tweaks = ["black" "rimless"];
-  };
 
   qt = {
     enable = true;

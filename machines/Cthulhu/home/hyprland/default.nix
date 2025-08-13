@@ -60,6 +60,7 @@
 
       # Execute your favorite apps at launch
       exec-once = [
+        "xdg-settings set default-web-browser firefox.desktop"
         "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
         "scu-start plasma-kwallet-pam.service"
         "${pkgs.swww}/bin/swww-daemon"

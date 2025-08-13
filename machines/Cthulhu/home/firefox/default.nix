@@ -11,6 +11,10 @@
         id = 0;
         name = "Zombiefox";
         path = "rlpepp97.default-esr";
+        extensions.force = true;
+        settings = {
+          "widget.use-xdg-desktop-portal.file-picker" = 1;
+        };
       };
       default = {
         isDefault = false;

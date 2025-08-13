@@ -55,7 +55,7 @@
     gnupg1
     gparted
     graphviz-nox
-    greetd.tuigreet
+    tuigreet
     grim
     guvcview
     helm-docs
