@@ -50,4 +50,11 @@
   ];
 
   xdg.enable = true;
+
+  home.sessionVariables = {
+    SSH_ASKPASS = "ksshaskpass";
+    SSH_ASKPASS_REQUIRE = "prefer";
+
+    GIT_ASKPASS = "ksshaskpass";
+  };
 }

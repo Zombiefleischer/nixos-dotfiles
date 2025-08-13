@@ -159,7 +159,11 @@
   };
 
   # Enable KWallet
-  security.pam.services.zombiefleischer.enableKwallet = true;
+  security.pam.services.zombiefleischer.kwallet = {
+    enable = true;
+    forceRun = true;
+    package = pkgs.kdePackages.kwallet-pam;
+  };
 
   # Open ports in the firewall.
   networking = {
