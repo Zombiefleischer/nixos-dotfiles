@@ -62,7 +62,7 @@
       exec-once = [
         "xdg-settings set default-web-browser firefox.desktop"
         "rfkill block wifi"
-        # "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
+        "${pkgs.kdePackages.kwallet}/bin/kwalletd6"
         "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.slack}/bin/slack"
         # "${pkgs.input-leap}/bin/input-leap"

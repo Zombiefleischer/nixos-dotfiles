@@ -269,7 +269,7 @@
         margin-bottom = 10;
         modules-left = ["wlr/taskbar"];
         modules-center = ["cpu" "memory" "disk" "temperature" "battery" "backlight" "pulseaudio" "systemd-failed-units"];
-        modules-right = ["tray"];
+        # modules-right = ["tray"];
 
         # Modules Config
         "wlr/taskbar" = {
@@ -282,10 +282,10 @@
           on-click-middle = "fullscreen";
         };
 
-        "tray" = {
-          icon-size = 20;
-          spacing = 2;
-        };
+        # "tray" = {
+        #   icon-size = 20;
+        #   spacing = 2;
+        # };
 
         "cpu" = {
           format = "󰻠 {usage}%";
