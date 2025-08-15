@@ -7,7 +7,7 @@
 
     settings = {
       authorized_fingerprints = {
-        "cf:1b:dd:73:db:5d:a9:87:ce:0e:02:60:c4:f7:99:77:95:69:7d:27:ce:66:d6:c6:a6:9a:5b:f7:31:c9:f8:d4" = "Cthulhu";
+        "b4:5e:69:16:8c:6d:61:b9:78:8c:f3:e1:38:0c:3c:19:c3:e7:ce:44:83:ad:2c:7a:b6:f8:3b:d2:78:be:01:da" = "Cthulhu";
       };
     };
   };

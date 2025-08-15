@@ -27,6 +27,7 @@
     ./lan-mouse
     ./lazygit
     ./lsps
+    ./mangohud
     ./minecraft
     ./mpd
     ../../Cthulhu/home/neovim
