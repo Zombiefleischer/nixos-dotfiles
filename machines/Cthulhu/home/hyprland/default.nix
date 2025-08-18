@@ -53,6 +53,7 @@
           ".*wl-screenrec.*, screencopy, allow"
           ".*xdg-desktop-portal.*, screencopy, allow"
           ".*grim.*, screencopy, allow"
+          ".*hyprlock, screencopy, allow"
         ];
       };
 
