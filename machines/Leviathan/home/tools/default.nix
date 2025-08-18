@@ -112,6 +112,7 @@
     okteta
     onefetch
     onlyoffice-desktopeditors
+    openseeface
     overlayed
     oversteer
     owofetch
